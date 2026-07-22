@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Consultation from "./pages/Consultation";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import ServiceDetail from "./pages/ServiceDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/consultation" element={<Consultation />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />

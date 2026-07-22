@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import { useIsMobile } from "@/hooks/use-mobile";
 import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
 import { Heart, Eye, Target, BookOpen } from "lucide-react";
 import doctorImage from "@/assets/doctorimages/Doctor Portrait 2.png";
@@ -11,8 +12,10 @@ const values = [
   { icon: BookOpen, title: "Ancient Wisdom", desc: "Grounded in 5,000 years of Ayurvedic knowledge, validated by experience." },
 ];
 
-const About = () => (
-  <>
+const About = () => {
+  const isMobile = useIsMobile();
+  return (
+    <>
     <title>About Dr. Harsh Vardhan Sharma| Vaidyam Hospital & HealthCare Wellness Center</title>
 
     {/* Doctor Profile */}
@@ -96,5 +99,6 @@ const About = () => (
     </section>
   </>
 );
+};
 
 export default About;

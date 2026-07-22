@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeading from "@/components/SectionHeading";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import contactBanner from "@/assets/pagebanners/Contact Banner.png";
-const Contact = () => (
-  <>
-    <title>Contact Us | Vaidyam Hospital & HealthCare Wellness Center</title>
+const Contact = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <>
+      <title>Contact Us | Vaidyam Hospital & HealthCare Wellness Center</title>
 
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -82,7 +86,8 @@ const Contact = () => (
         </div>
       </div>
     </section>
-  </>
-);
+    </>
+  );
+};
 
 export default Contact;

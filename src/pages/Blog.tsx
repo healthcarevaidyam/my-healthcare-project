@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowRight, Clock, Heart, Bookmark } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import BlogPopup from "@/components/BlogPopup";
 
 // ✅ For Vite - Dynamically import ALL images from folders

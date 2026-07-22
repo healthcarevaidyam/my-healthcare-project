@@ -45,14 +45,14 @@ const mobileBanners: Record<string, string> = {
 
 const Layout = () => {
   const location = useLocation();
-
+const isServiceDetail = location.pathname.startsWith("/services/");
   const bannerTitle =
     pageTitles[location.pathname] ?? "Ayurveda Wellness";
 
   const desktopBanner = desktopBanners[location.pathname];
   const mobileBanner = mobileBanners[location.pathname];
 
-  const showBanner = location.pathname !== "/";
+  const showBanner = location.pathname !== "/" && !isServiceDetail;
 
   useEffect(() => {
     window.scrollTo({
@@ -76,12 +76,14 @@ const Layout = () => {
             />
 
             {/* Desktop Image */}
+           {desktopBanner && (
             <img
               src={desktopBanner}
               alt={`${bannerTitle} banner`}
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
             />
+          )}
           </picture>
         </header>
       )}

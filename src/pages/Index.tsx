@@ -4,11 +4,25 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeading from "@/components/SectionHeading";
+import { getAllServicePages } from "@/data/serviceLoader";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import doctorImage from "@/assets/doctorimages/Doctor Portrait 1.png";
 import {
-  Stethoscope, Leaf, HeartPulse, Apple, Brain, Weight,
-  Sparkles, Bone, Activity, Star, ArrowRight, Quote,
+  Activity,
+  Apple,
+  ArrowRight,
+  Bone,
+  Brain,
+  HeartPulse,
+  Leaf,
+  Sparkles,
+  Star,
+  Stethoscope,
+  Thermometer,
+  Weight,
+  type LucideIcon,
+  Quote,
 } from "lucide-react";
 
 const bannerImages = Object.entries(
@@ -30,14 +44,25 @@ const mobileBannerMap = Object.fromEntries(
   })
 ) as Record<string, string>;
 
-const services = [
-  { icon: Stethoscope, title: "Ayurvedic Consultation", desc: "Comprehensive health assessment based on Ayurvedic principles" },
-  { icon: Leaf, title: "Panchakarma Therapy", desc: "Five-fold detoxification and rejuvenation therapy" },
-  { icon: HeartPulse, title: "Herbal Medicine", desc: "Personalized herbal formulations for holistic healing" },
-  { icon: Apple, title: "Diet & Lifestyle", desc: "Customized Ayurvedic diet and daily routine guidance" },
-  { icon: Brain, title: "Stress Management", desc: "Natural therapies for mental peace and clarity" },
-  { icon: Weight, title: "Weight Management", desc: "Holistic approach to achieving your ideal weight" },
-];
+const iconMap: Record<string, LucideIcon> = {
+  Stethoscope,
+  Leaf,
+  HeartPulse,
+  Apple,
+  Brain,
+  Weight,
+  Sparkles,
+  Bone,
+  Activity,
+  Thermometer,
+};
+
+const homeServices = getAllServicePages().slice(0, 6).map((service) => ({
+  title: service.title,
+  desc: service.summary,
+  icon: iconMap[service.icon ?? ""] ?? Sparkles,
+  slug: service.slug,
+}));
 
 const testimonials = [
   { name: "Priya Mehta", text: "Dr. Sharma's Panchakarma treatment completely transformed my health. I feel rejuvenated and energetic after years of chronic fatigue.", rating: 5 },
@@ -55,29 +80,13 @@ const fadeUp = {
 
 const Index = () => {
   const [heroIndex, setHeroIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
   const [imageKey, setImageKey] = useState(0);
   const [currentHeroImage, setCurrentHeroImage] = useState("");
   const [pendingHeroImage, setPendingHeroImage] = useState("");
 
   useEffect(() => {
     if (bannerImages.length === 0) return;
-
-    const checkMobile = () => {
-      const mobile = window.innerWidth <= 640;
-      setIsMobile(mobile);
-      setImageKey(prev => prev + 1);
-    };
-
-    checkMobile();
-
-    let resizeTimeout: NodeJS.Timeout;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(checkMobile, 200);
-    };
-
-    window.addEventListener("resize", handleResize);
 
     const interval = window.setInterval(() => {
       setHeroIndex((current) => (current + 1) % bannerImages.length);
@@ -86,8 +95,6 @@ const Index = () => {
 
     return () => {
       window.clearInterval(interval);
-      window.removeEventListener("resize", handleResize);
-      clearTimeout(resizeTimeout);
     };
   }, []);
 
@@ -181,7 +188,7 @@ const Index = () => {
             description="Comprehensive Ayurvedic treatments designed to restore your body's natural balance and promote lasting wellness."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
+            {homeServices.map((s, i) => (
               <motion.div
                 key={s.title}
                 custom={i}
@@ -197,6 +204,9 @@ const Index = () => {
                     </div>
                     <h3 className="font-heading text-lg font-semibold text-foreground">{s.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                    <Button variant="link" className="mt-4 p-0" asChild>
+                      <Link to={`/services/${s.slug}`}>Read more</Link>
+                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>

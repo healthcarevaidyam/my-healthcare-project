@@ -1,414 +1,78 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { getAllServicePages } from "@/data/serviceLoader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeading from "@/components/SectionHeading";
-import servicesBanner from "@/assets/pagebanners/Services Banner.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
-  Stethoscope, Leaf, HeartPulse, Apple, Brain, Weight,
-  Sparkles, Bone, Activity, ArrowRight, Clock, CheckCircle,
-  Star, Users, Award, Shield, Calendar, Phone,
-  Pill, Heart, HeartHandshake, Baby, Eye,
-  Microscope, TestTube, Thermometer, Sparkle
+  Activity,
+  Apple,
+  ArrowRight,
+  Award,
+  Bone,
+  Brain,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Heart,
+  HeartPulse,
+  Leaf,
+  Phone,
+  Pill,
+  Sparkles,
+  Star,
+  Stethoscope,
+  Thermometer,
+  Users,
+  Weight,
+  type LucideIcon,
 } from "lucide-react";
-const services = [
-  {
-    id: 1,
-    icon: Stethoscope,
-    title: "Ayurvedic Consultation",
-    subtitle: "Personalized Health Assessment",
-    desc: "A thorough evaluation of your body constitution (Prakriti), current imbalances (Vikriti), and health history to create a personalized treatment plan.",
-    fullDescription: `
-      <p>Our comprehensive Ayurvedic consultation goes beyond symptom management to understand your unique constitution and imbalances.</p>
-      <h4>What to Expect:</h4>
-      <ul>
-        <li>Detailed health history analysis</li>
-        <li>Pulse diagnosis (Nadi Pariksha)</li>
-        <li>Dosha identification and imbalance assessment</li>
-        <li>Personalized treatment plan development</li>
-        <li>Follow-up care and progress tracking</li>
-      </ul>
-    `,
-    benefits: [
-      "Personalized health assessment",
-      "Dosha identification",
-      "Custom treatment plan",
-      "Ongoing guidance",
-      "Preventive care strategies"
-    ],
-    duration: "60-90 minutes",
-    price: "₹1,500 - ₹2,500",
-    category: "Consultation",
-    popular: true,
-    gradient: "from-blue-500/10 to-cyan-500/10"
-  },
-  {
-    id: 2,
-    icon: Leaf,
-    title: "Panchakarma Therapy",
-    subtitle: "Ultimate Detox & Rejuvenation",
-    desc: "The ultimate Ayurvedic detoxification program consisting of five therapeutic procedures that cleanse and rejuvenate the body at the deepest level.",
-    fullDescription: `
-      <p>Panchakarma is the most profound healing therapy in Ayurveda, designed to eliminate deep-rooted toxins (ama) and restore balance.</p>
-      <h4>The Five Procedures:</h4>
-      <ul>
-        <li><strong>Vamana:</strong> Therapeutic emesis for Kapha cleansing</li>
-        <li><strong>Virechana:</strong> Therapeutic purgation for Pitta cleansing</li>
-        <li><strong>Basti:</strong> Medicated enema for Vata disorders</li>
-        <li><strong>Nasya:</strong> Nasal administration for head conditions</li>
-        <li><strong>Raktamokshana:</strong> Blood purification therapy</li>
-      </ul>
-      <h4>Pre & Post Care:</h4>
-      <ul>
-        <li>Preparatory therapies (Purvakarma)</li>
-        <li>Post-detox restorative diet (Samsarjana Karma)</li>
-        <li>Lifestyle modification guidance</li>
-      </ul>
-    `,
-    benefits: [
-      "Deep detoxification",
-      "Immune system boost",
-      "Mental clarity",
-      "Rejuvenation",
-      "Disease prevention",
-      "Stress reduction"
-    ],
-    duration: "7-21 days",
-    price: "₹15,000 - ₹50,000",
-    category: "Detox",
-    popular: true,
-    featured: true,
-    gradient: "from-green-500/10 to-emerald-500/10"
-  },
-  {
-    id: 3,
-    icon: Pill,
-    title: "Herbal Medicine Prescription",
-    subtitle: "Natural Healing Formulations",
-    desc: "Customized herbal formulations using time-tested Ayurvedic herbs, prepared specifically for your unique condition and body type.",
-    fullDescription: `
-      <p>Our experienced Ayurvedic physicians prescribe personalized herbal formulations using the highest quality ingredients.</p>
-      <h4>Types of Formulations:</h4>
-      <ul>
-        <li><strong>Classical Formulations:</strong> Time-tested Ayurvedic remedies</li>
-        <li><strong>Proprietary Blends:</strong> Custom combinations for specific conditions</li>
-        <li><strong>Fresh Herbal Juices:</strong> Extracted from fresh plants</li>
-        <li><strong>Medicated Oils & Ghees:</strong> For internal and external use</li>
-        <li><strong>Powder (Churna):</strong> Easy-to-use herbal powders</li>
-      </ul>
-      <h4>Quality Assurance:</h4>
-      <ul>
-        <li>100% natural ingredients</li>
-        <li>GMP certified manufacturing</li>
-        <li>No harmful additives</li>
-        <li>Regular quality testing</li>
-      </ul>
-    `,
-    benefits: [
-      "Natural ingredients",
-      "No side effects",
-      "Targeted healing",
-      "Sustainable wellness",
-      "Customized formulation",
-      "Quality assured"
-    ],
-    duration: "Varies by condition",
-    price: "₹500 - ₹3,000/month",
-    category: "Medicine",
-    popular: false,
-    gradient: "from-amber-500/10 to-orange-500/10"
-  },
-  {
-    id: 4,
-    icon: Apple,
-    title: "Diet & Lifestyle Counseling",
-    subtitle: "Nutrition for Your Dosha",
-    desc: "Personalized dietary plans and daily routine (Dinacharya) recommendations aligned with your Dosha type for optimal health.",
-    fullDescription: `
-      <p>Nutrition is the foundation of health in Ayurveda. Our expert counselors guide you on the right foods and lifestyle for your constitution.</p>
-      <h4>Our Approach:</h4>
-      <ul>
-        <li><strong>Dosha-Specific Nutrition:</strong> Foods that balance your unique constitution</li>
-        <li><strong>Seasonal Eating:</strong> Ritucharya - eating according to seasons</li>
-        <li><strong>Daily Routines:</strong> Dinacharya for optimal health</li>
-        <li><strong>Digestive Health:</strong> Understanding Agni (digestive fire)</li>
-        <li><strong>Mindful Eating:</strong> Practices for better digestion</li>
-      </ul>
-      <h4>Areas Covered:</h4>
-      <ul>
-        <li>Meal planning and recipes</li>
-        <li>Food combinations and cooking methods</li>
-        <li>Timing of meals</li>
-        <li>Herbal teas and drinks</li>
-        <li>Detox diets and fasting</li>
-      </ul>
-    `,
-    benefits: [
-      "Dosha-specific diet",
-      "Seasonal guidance",
-      "Routine optimization",
-      "Long-term health",
-      "Better digestion",
-      "Increased energy"
-    ],
-    duration: "45-60 minutes",
-    price: "₹1,200 - ₹2,000",
-    category: "Lifestyle",
-    popular: false,
-    gradient: "from-red-500/10 to-rose-500/10"
-  },
-  {
-    id: 5,
-    icon: Brain,
-    title: "Stress & Anxiety Management",
-    subtitle: "Mental Wellness Program",
-    desc: "Holistic therapies including Shirodhara, meditation, and herbal supplements to calm the mind and restore emotional balance.",
-    fullDescription: `
-      <p>Modern life brings unprecedented stress, but Ayurveda offers effective solutions for mental well-being.</p>
-      <h4>Our Services Include:</h4>
-      <ul>
-        <li><strong>Shirodhara:</strong> Warm oil poured on the forehead</li>
-        <li><strong>Meditation Guidance:</strong> Personalized meditation techniques</li>
-        <li><strong>Herbal Support:</strong> Adaptogenic herbs for stress</li>
-        <li><strong>Breathing Exercises:</strong> Pranayama for relaxation</li>
-        <li><strong>Counseling:</strong> Psychological support</li>
-      </ul>
-      <h4>Benefits:</h4>
-      <ul>
-        <li>Immediate stress relief</li>
-        <li>Improved sleep quality</li>
-        <li>Enhanced mental clarity</li>
-        <li>Emotional resilience</li>
-        <li>Reduced anxiety</li>
-      </ul>
-    `,
-    benefits: [
-      "Mental peace",
-      "Better sleep",
-      "Emotional balance",
-      "Natural approach",
-      "Stress resilience",
-      "Clarity of mind"
-    ],
-    duration: "60-90 minutes",
-    price: "₹2,000 - ₹4,000",
-    category: "Mental Health",
-    popular: true,
-    gradient: "from-purple-500/10 to-violet-500/10"
-  },
-  {
-    id: 6,
-    icon: Weight,
-    title: "Weight Management Program",
-    subtitle: "Holistic Weight Balance",
-    desc: "A holistic weight management program combining Ayurvedic therapies, dietary modifications, and lifestyle changes for sustainable results.",
-    fullDescription: `
-      <p>Our weight management program addresses the root cause of weight issues through a holistic approach.</p>
-      <h4>Program Components:</h4>
-      <ul>
-        <li><strong>Metabolic Assessment:</strong> Understanding your Agni (digestive fire)</li>
-        <li><strong>Personalized Diet Plan:</strong> Based on your dosha</li>
-        <li><strong>Herbal Support:</strong> Ayurvedic metabolism boosters</li>
-        <li><strong>Exercise Guidance:</strong> Yoga and physical activity</li>
-        <li><strong>Behavioral Counseling:</strong> Lifestyle modifications</li>
-      </ul>
-      <h4>Our Approach:</h4>
-      <ul>
-        <li>No crash diets or fasting</li>
-        <li>Gradual, sustainable weight loss</li>
-        <li>Focus on overall health, not just weight</li>
-        <li>Long-term weight maintenance strategies</li>
-      </ul>
-    `,
-    benefits: [
-      "Metabolism boost",
-      "Healthy digestion",
-      "Sustainable results",
-      "Body-type specific",
-      "Holistic approach",
-      "Lasting change"
-    ],
-    duration: "3-6 months",
-    price: "₹8,000 - ₹25,000",
-    category: "Wellness",
-    popular: false,
-    gradient: "from-teal-500/10 to-cyan-500/10"
-  },
-  {
-    id: 7,
-    icon: Sparkles,
-    title: "Skin & Hair Treatment",
-    subtitle: "Natural Beauty Care",
-    desc: "Natural Ayurvedic treatments for skin conditions like eczema, acne, and hair issues using herbal remedies and specialized therapies.",
-    fullDescription: `
-      <p>Beautiful skin and healthy hair reflect inner health. Our treatments address underlying imbalances causing skin and hair issues.</p>
-      <h4>Skin Treatments:</h4>
-      <ul>
-        <li><strong>Acne & Pimples:</strong> Herbal formulations and therapies</li>
-        <li><strong>Eczema & Psoriasis:</strong> Medicated oil applications</li>
-        <li><strong>Anti-Aging:</strong> Rejuvenation therapies</li>
-        <li><strong>Skin Glow:</strong> Herbal facials and masks</li>
-      </ul>
-      <h4>Hair Treatments:</h4>
-      <ul>
-        <li>Hair fall control</li>
-        <li>Premature greying</li>
-        <li>Scalp conditions (dandruff, psoriasis)</li>
-        <li>Hair rejuvenation</li>
-      </ul>
-    `,
-    benefits: [
-      "Natural glow",
-      "Hair nourishment",
-      "Chemical-free",
-      "Root cause treatment",
-      "Long-lasting results"
-    ],
-    duration: "Varies by condition",
-    price: "₹1,500 - ₹5,000",
-    category: "Cosmetology",
-    popular: false,
-    gradient: "from-pink-500/10 to-rose-500/10"
-  },
-  {
-    id: 8,
-    icon: Bone,
-    title: "Joint & Arthritis Treatment",
-    subtitle: "Pain Management & Mobility",
-    desc: "Specialized Ayurvedic therapies including Janu Basti, herbal oil massages, and internal medicines for joint pain and arthritis relief.",
-    fullDescription: `
-      <p>Arthritis and joint pain affect millions. Our comprehensive Ayurvedic approach provides effective relief without side effects.</p>
-      <h4>Our Therapies:</h4>
-      <ul>
-        <li><strong>Janu Basti:</strong> Specialized knee treatment</li>
-        <li><strong>Abhyanga:</strong> Medicated oil massage</li>
-        <li><strong>Swedana:</strong> Herbal steam therapy</li>
-        <li><strong>Local Applications:</strong> Herbal pastes and oils</li>
-      </ul>
-      <h4>Conditions Treated:</h4>
-      <ul>
-        <li>Osteoarthritis</li>
-        <li>Rheumatoid arthritis</li>
-        <li>Gout</li>
-        <li>Joint stiffness</li>
-        <li>Muscular pain</li>
-      </ul>
-    `,
-    benefits: [
-      "Pain relief",
-      "Improved mobility",
-      "Reduced inflammation",
-      "Strengthened joints",
-      "Drug-free approach"
-    ],
-    duration: "30-60 minutes",
-    price: "₹2,000 - ₹4,000",
-    category: "Pain Management",
-    popular: false,
-    gradient: "from-indigo-500/10 to-blue-500/10"
-  },
-  {
-    id: 9,
-    icon: Activity,
-    title: "Digestive Disorders Treatment",
-    subtitle: "Gut Health Restoration",
-    desc: "Comprehensive treatment for IBS, acidity, constipation, and other digestive issues through Ayurvedic medicine and dietary corrections.",
-    fullDescription: `
-      <p>Ayurveda places great importance on digestive health (Agni). Our program addresses chronic digestive issues at their root.</p>
-      <h4>Conditions Treated:</h4>
-      <ul>
-        <li><strong>IBS & IBD:</strong> Irritable bowel syndrome and related conditions</li>
-        <li><strong>Acidity & GERD:</strong> Acid reflux and heartburn</li>
-        <li><strong>Constipation:</strong> Chronic bowel issues</li>
-        <li><strong>Bloating & Gas:</strong> Digestive discomfort</li>
-        <li><strong>Food Intolerances:</strong> Dietary sensitivities</li>
-      </ul>
-      <h4>Treatment Approach:</h4>
-      <ul>
-        <li>Gentle digestive cleanses</li>
-        <li>Herbal formulations for digestion</li>
-        <li>Dietary corrections</li>
-        <li>Lifestyle modifications</li>
-        <li>Stress reduction techniques</li>
-      </ul>
-    `,
-    benefits: [
-      "Improved digestion",
-      "Gut health restoration",
-      "Appetite regulation",
-      "Toxin elimination",
-      "Better nutrient absorption"
-    ],
-    duration: "45-60 minutes",
-    price: "₹1,500 - ₹3,000",
-    category: "Internal Medicine",
-    popular: false,
-    gradient: "from-yellow-500/10 to-amber-500/10"
-  }
-];
 
-const specializedServices = [
-  {
-    id: 10,
-    icon: Eye,
-    title: "Eye & ENT Care",
-    subtitle: "Specialized Treatments",
-    desc: "Netratarpan (eye therapy), Karnapuran (ear therapy), and other specialized ENT treatments using Ayurvedic methods.",
-    price: "₹1,000 - ₹3,000",
-    gradient: "from-sky-500/10 to-blue-500/10"
-  },
-  {
-    id: 11,
-    icon: HeartHandshake,
-    title: "Women's Health",
-    subtitle: "Complete Wellness for Women",
-    desc: "Specialized care for PCOD, menstrual health, menopause, pregnancy, and reproductive wellness.",
-    price: "₹1,500 - ₹4,000",
-    gradient: "from-rose-500/10 to-pink-500/10"
-  },
-  {
-    id: 12,
-    icon: Baby,
-    title: "Pediatric Ayurveda",
-    subtitle: "Children's Health & Wellness",
-    desc: "Gentle Ayurvedic treatments for children's health, immunity building, and developmental support.",
-    price: "₹1,000 - ₹2,000",
-    gradient: "from-emerald-500/10 to-green-500/10"
-  },
-  {
-    id: 13,
-    icon: Thermometer,
-    title: "Fever & Infection Care",
-    subtitle: "Natural Immune Support",
-    desc: "Ayurvedic management of fevers, infections, and immune system support using natural remedies.",
-    price: "₹800 - ₹1,500",
-    gradient: "from-red-500/10 to-orange-500/10"
-  },
-  {
-    id: 14,
-    icon: Microscope,
-    title: "Diagnostic Services",
-    subtitle: "Advanced Health Assessment",
-    desc: "Comprehensive diagnostic services including pulse diagnosis, tongue examination, and health screenings.",
-    price: "₹500 - ₹2,000",
-    gradient: "from-violet-500/10 to-purple-500/10"
-  },
-  {
-    id: 15,
-    icon: TestTube,
-    title: "Laboratory Services",
-    subtitle: "Comprehensive Testing",
-    desc: "Full range of Ayurvedic and modern diagnostic laboratory services for accurate health assessment.",
-    price: "₹500 - ₹3,000",
-    gradient: "from-cyan-500/10 to-teal-500/10"
-  }
-];
+const iconMap: Record<string, LucideIcon> = {
+  Stethoscope,
+  Leaf,
+  HeartPulse,
+  Apple,
+  Brain,
+  Weight,
+  Sparkles,
+  Bone,
+  Activity,
+  Pill,
+  Thermometer,
+};
+
+const services = getAllServicePages().map((service, index) => {
+  const IconComponent = iconMap[service.icon ?? ""] ?? Sparkles;
+
+  return {
+    id: 1000 + index,
+    icon: IconComponent,
+    title: service.title,
+    subtitle: service.subtitle,
+    desc: service.summary,
+    imageDesktop: service.imageDesktop,
+    imageMobile: service.imageMobile,
+    benefits: service.benefits,
+    highlights: service.highlights,
+    treatmentSteps: service.treatmentSteps,
+    duration: service.duration ?? "Customized",
+    price: service.price ?? "Contact us",
+    category: service.category ?? "General",
+    popular: service.popular ?? false,
+    featured: service.featured ?? false,
+    gradient: service.gradient ?? "from-primary/10 to-secondary/10",
+    slug: service.slug,
+  };
+});
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showAll, setShowAll] = useState(false);
-  const [expandedService, setExpandedService] = useState(null);
+  const [expandedService, setExpandedService] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const categories = ["All", ...new Set(services.map(s => s.category))];
 
@@ -418,7 +82,7 @@ const Services = () => {
 
   const displayedServices = showAll ? filteredServices : filteredServices.slice(0, 6);
 
-  const toggleExpand = (id) => {
+  const toggleExpand = (id: number) => {
     setExpandedService(expandedService === id ? null : id);
   };
 
@@ -551,6 +215,11 @@ const Services = () => {
                     <div className="p-6 md:p-8">
                       <div className="flex flex-col lg:flex-row gap-6">
                         {/* Icon & Badge */}
+                        <img
+                          src={isMobile ? s.imageMobile : s.imageDesktop}
+                          alt={s.title}
+                          className="w-full lg:w-64 h-48 rounded-xl object-cover"
+                        />
                         <div className="flex flex-col items-start gap-3">
                           <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${s.gradient} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
                             <s.icon className="h-8 w-8 text-primary" />
@@ -581,10 +250,6 @@ const Services = () => {
                                 <Clock className="h-4 w-4 text-primary" />
                                 {s.duration}
                               </div>
-                              <div className="flex items-center gap-1.5 text-muted-foreground bg-secondary/30 px-3 py-1.5 rounded-full">
-                                <Pill className="h-4 w-4 text-primary" />
-                                {s.price}
-                              </div>
                             </div>
                           </div>
 
@@ -605,17 +270,36 @@ const Services = () => {
                             )}
                           </div>
 
-                          {/* Full Description */}
-                          {s.fullDescription && expandedService === s.id && (
+                          {/* Expanded Details */}
+                          {expandedService === s.id && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="mt-4 p-5 bg-secondary/20 rounded-xl border border-border/30"
+                              className="mt-4 grid gap-4 rounded-xl border border-border/30 bg-secondary/20 p-5 md:grid-cols-2"
                             >
-                              <div className="prose prose-sm max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
-                                <div dangerouslySetInnerHTML={{ __html: s.fullDescription }} />
+                              <div>
+                                <h4 className="font-semibold text-foreground">Highlights</h4>
+                                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                                  {s.highlights.map((item) => (
+                                    <li key={item} className="flex items-start gap-2">
+                                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                                      <span>{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div>
+                                <h4 className="font-semibold text-foreground">Treatment journey</h4>
+                                <ol className="mt-3 space-y-2 text-sm text-muted-foreground">
+                                  {s.treatmentSteps.map((item, index) => (
+                                    <li key={item} className="flex gap-2">
+                                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">{index + 1}</span>
+                                      <span>{item}</span>
+                                    </li>
+                                  ))}
+                                </ol>
                               </div>
                             </motion.div>
                           )}
@@ -624,8 +308,8 @@ const Services = () => {
                         {/* Actions */}
                         <div className="flex flex-col items-center gap-3 shrink-0 min-w-[140px]">
                           <Button asChild className="w-full gap-2 shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-shadow">
-                            <Link to="/consultation">
-                              Book Now
+                            <Link to={s.slug ? `/services/${s.slug}` : "/consultation"}>
+                              View Details
                               <ArrowRight className="h-4 w-4" />
                             </Link>
                           </Button>
@@ -635,7 +319,7 @@ const Services = () => {
                             className="w-full gap-1"
                             onClick={() => toggleExpand(s.id)}
                           >
-                            {expandedService === s.id ? "Hide Details" : "View Details"}
+                            {expandedService === s.id ? "Hide Details" : "More Details"}
                             <ArrowRight className={`h-3 w-3 transition-transform duration-300 ${expandedService === s.id ? 'rotate-90' : ''}`} />
                           </Button>
                         </div>
@@ -667,51 +351,6 @@ const Services = () => {
               </motion.div>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Specialized Services */}
-      <section className="py-24 bg-gradient-to-b from-secondary/20 to-secondary/5">
-        <div className="container mx-auto px-4">
-          <SectionHeading 
-            title="Specialized Services"
-            subtitle="Additional treatments for comprehensive care"
-            center
-          />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specializedServices.map((s, index) => (
-              <motion.div
-                key={s.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08, duration: 0.5 }}
-                whileHover={{ y: -8 }}
-              >
-                <Card className="h-full hover:shadow-2xl transition-all duration-500 hover:border-primary/20 group border-border/50">
-                  <CardContent className="p-6 text-center">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${s.gradient} text-primary mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <s.icon className="h-8 w-8" />
-                    </div>
-                    <h3 className="font-heading font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
-                      {s.title}
-                    </h3>
-                    <p className="text-sm text-primary font-medium">{s.subtitle}</p>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                    <div className="mt-4 text-sm font-semibold text-primary bg-primary/5 px-4 py-2 rounded-full inline-block">
-                      {s.price}
-                    </div>
-                    <Button variant="link" size="sm" className="mt-3 gap-1 group-hover:gap-2 transition-all" asChild>
-                      <Link to="/consultation">
-                        Learn More <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

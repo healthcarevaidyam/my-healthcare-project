@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useIsMobile } from "@/hooks/use-mobile";
 import consultationBanner from "@/assets/pagebanners/Consultation Banner.png";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,6 +11,7 @@ import { Calendar, MessageCircle, Phone, Video } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Consultation = () => {
+  const isMobile = useIsMobile();
   const { toast } = useToast();
   const [form, setForm] = useState({
     name: "", phone: "", email: "", problem: "", date: "",
@@ -87,8 +89,8 @@ const Consultation = () => {
               className="space-y-6"
             >
               {[
-                { icon: MessageCircle, title: "WhatsApp Consultation", desc: "Chat directly with Dr. Sharma's team for quick queries and appointment booking.", action: "Chat on WhatsApp", href: "https://wa.me/919627986822" },
-                { icon: Phone, title: "Call Us", desc: "Speak with our team directly for urgent consultations or inquiries.", action: "Call Now", href: "tel:+919627986822" },
+                { icon: MessageCircle, title: "WhatsApp Consultation", desc: "Chat directly with Dr. Sharma's team for quick queries and appointment booking.", action: "Chat on WhatsApp", href: "https://wa.me/918377085976" },
+                { icon: Phone, title: "Call Us", desc: "Speak with our team directly for urgent consultations or inquiries.", action: "Call Now", href: "tel:+918377085976" },
                 { icon: Video, title: "Online Consultation", desc: "Get expert Ayurvedic advice from the comfort of your home via video call.", action: "Book Online", href: "/consultation" },
               ].map((item) => (
                 <Card key={item.title} className="bg-background">

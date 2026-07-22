@@ -4,8 +4,15 @@ import SectionHeading from "@/components/SectionHeading";
 import { useIsMobile } from "@/hooks/use-mobile";
 import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
 import { Heart, Eye, Target, BookOpen } from "lucide-react";
-import doctorImage1 from "@/assets/doctorimages/Doctor Portrait 1.png";
-import doctorImage2 from "@/assets/doctorimages/Doctor Portrait 2.png";
+const imageModules = import.meta.glob(
+  "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  }
+);
+
+const images = Object.values(imageModules) as string[];
 
 const values = [
   { icon: Heart, title: "Compassionate Care", desc: "Every patient is treated with empathy, respect, and individualized attention." },
@@ -16,7 +23,6 @@ const values = [
 
 
 const About = () => {
-  const images = [doctorImage1, doctorImage2];
 
 const [currentImage, setCurrentImage] = useState(0);
 

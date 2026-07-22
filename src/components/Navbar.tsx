@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -20,8 +21,19 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <Link to="/" className="flex items-center gap-2">
+        {/* <Link to="/" className="flex items-center gap-2">
           <Leaf className="h-7 w-7 text-primary" />
+          <span className="font-heading text-xl font-bold text-foreground">
+            Vaidyam Hospital & HealthCare
+          </span>
+        </Link> */}
+
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Vaidyam Hospital & HealthCare"
+            className="h-10 w-auto"
+          />
           <span className="font-heading text-xl font-bold text-foreground">
             Vaidyam Hospital & HealthCare
           </span>

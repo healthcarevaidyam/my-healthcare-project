@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import { useIsMobile } from "@/hooks/use-mobile";
 import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
 import { Heart, Eye, Target, BookOpen } from "lucide-react";
-import doctorImage from "@/assets/doctorimages/Doctor Portrait 2.png";
+import doctorImage1 from "@/assets/doctorimages/Doctor Portrait 1.png";
+import doctorImage2 from "@/assets/doctorimages/Doctor Portrait 2.png";
 
 const values = [
   { icon: Heart, title: "Compassionate Care", desc: "Every patient is treated with empathy, respect, and individualized attention." },
@@ -12,7 +14,20 @@ const values = [
   { icon: BookOpen, title: "Ancient Wisdom", desc: "Grounded in 5,000 years of Ayurvedic knowledge, validated by experience." },
 ];
 
+
 const About = () => {
+  const images = [doctorImage1, doctorImage2];
+
+const [currentImage, setCurrentImage] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
   const isMobile = useIsMobile();
   return (
     <>
@@ -22,13 +37,14 @@ const About = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.img
-            src={doctorImage}
+         <motion.img
+            key={currentImage}
+            src={images[currentImage]}
             alt="Dr. Harsh Vardhan Sharma"
             className="rounded-2xl shadow-elevated w-full max-w-md mx-auto"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           />
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Harsh Vardhan Sharma</h2>

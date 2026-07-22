@@ -23,9 +23,9 @@ const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: MapPin, title: "Clinic Address", lines: ["Vaidyam Hospital & HealthCare Wellness Center", "Uttarakhand, India"] },
-                { icon: Phone, title: "Phone", lines: ["+91-7818085195"] },
-                { icon: Mail, title: "Email", lines: ["info@sharmaayurvedic.com"] },
+                { icon: MapPin, title: "Clinic Address", lines: ["Vaidyam Hospital & HealthCare", "Ranikhet, Almora,Uttarakhand,263645, India"] },
+                { icon: Phone, title: "Phone", lines: ["+91-8377085976"] },
+                { icon: Mail, title: "Email", lines: ["healthcarevaidyam@gmail.com"] },
                 { icon: Clock, title: "Working Hours", lines: ["Mon – Sat: 9:00 AM – 7:00 PM", "Sunday: By Appointment Only"] },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
@@ -49,7 +49,7 @@ const Contact = () => {
               <CardContent className="p-0 h-full">
                 <iframe
                   title="Clinic Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.0!2d79.4334!3d29.6423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDM4JzM1LjAiTiA3OcKwMjYnMTguMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                  src="https://www.google.com/maps?q=Ranikhet,Uttarakhand&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: 400 }}

@@ -144,8 +144,8 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Users, label: "Happy Patients", value: "10,000+" },
-              { icon: Award, label: "Years Experience", value: "25+" },
+              { icon: Users, label: "Happy Patients", value: "500+" },
+              { icon: Award, label: "Years Experience", value: "3+" },
               { icon: Heart, label: "Services Offered", value: "50+" },
               { icon: Star, label: "Success Rate", value: "95%" }
             ].map((stat, index) => (

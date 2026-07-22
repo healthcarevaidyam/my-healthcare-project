@@ -43,15 +43,24 @@ useEffect(() => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-         <motion.img
-            key={currentImage}
-            src={images[currentImage]}
-            alt="Dr. Harsh Vardhan Sharma"
-            className="rounded-2xl shadow-elevated w-full max-w-md mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          />
+       <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
+  {images.map((image, index) => (
+    <motion.img
+      key={image}
+      src={image}
+      alt="Dr. Harsh Vardhan Sharma"
+      className="absolute inset-0 w-full h-full object-cover"
+      initial={false}
+      animate={{
+        opacity: currentImage === index ? 1 : 0,
+      }}
+      transition={{
+        duration: 1.2,
+        ease: "easeInOut",
+      }}
+    />
+  ))}
+</div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Harsh Vardhan Sharma</h2>
             <p className="text-accent font-medium mt-1">BAMS — Bachelor of Ayurvedic Medicine and Surgery</p>

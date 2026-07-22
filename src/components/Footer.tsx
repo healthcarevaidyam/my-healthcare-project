@@ -48,22 +48,22 @@ const Footer = () => (
           <div className="flex flex-col gap-3 text-sm">
             <div className="flex items-start gap-2 opacity-80">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-              <span>Vaidyam Hospital & HealthCare Wellness Center, Uttarakhand, India</span>
+              <span>Vaidyam Hospital & HealthCare Ranikhet, Almora,Uttarakhand,263645, India</span>
             </div>
             <div className="flex items-center gap-2 opacity-80">
               <Phone className="h-4 w-4 shrink-0" />
-              <span>+91-7818085195</span>
+              <span>+91-8377085976</span>
             </div>
             <div className="flex items-center gap-2 opacity-80">
               <Mail className="h-4 w-4 shrink-0" />
-              <span>info@sharmaayurvedic.com</span>
+              <span>healthcarevaidyam@gmail.com</span>
             </div>
           </div>
         </div>
       </div>
 
       <div className="border-t border-primary-foreground/20 mt-12 pt-6 text-center text-sm opacity-60">
-        © {new Date().getFullYear()} Vaidyam Hospital & HealthCare Wellness Center. All rights reserved.
+        © {new Date().getFullYear()} Vaidyam Hospital & HealthCare. All rights reserved.
       </div>
     </div>
   </footer>

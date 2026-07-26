@@ -37,48 +37,7 @@ useEffect(() => {
   const isMobile = useIsMobile();
   return (
     <>
-    <title>About Dr. Harsh Vardhan Sharma| Vaidyam Hospital & HealthCare Wellness Center</title>
-
-    {/* Doctor Profile */}
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-       <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
-  {images.map((image, index) => (
-    <motion.img
-      key={image}
-      src={image}
-      alt="Dr. Harsh Vardhan Sharma"
-      className="absolute inset-0 w-full h-full object-cover"
-      initial={false}
-      animate={{
-        opacity: currentImage === index ? 1 : 0,
-      }}
-      transition={{
-        duration: 1.2,
-        ease: "easeInOut",
-      }}
-    />
-  ))}
-</div>
-          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Harsh Vardhan Sharma</h2>
-            <p className="text-accent font-medium mt-1">BAMS — Bachelor of Ayurvedic Medicine and Surgery</p>
-            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Dr.Harsh Vardhan Sharma is a dedicated Ayurvedic physician practicing from the heart of Uttarakhand, India. With a degree in Bachelor of Ayurvedic Medicine and Surgery (BAMS), he combines classical Ayurvedic wisdom with a compassionate, patient-centered approach.
-              </p>
-              <p>
-                His practice focuses on understanding each patient's unique constitution (Prakriti) and designing personalized treatment protocols that address the root cause of disease rather than merely suppressing symptoms.
-              </p>
-              <p>
-                Dr.Sharma specializes in Panchakarma detoxification therapies, herbal medicine formulations, and lifestyle modifications that empower patients to take charge of their own health and well-being.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
+    
 
     {/* Vision & Values */}
     <section className="py-20 bg-secondary/50">
@@ -126,6 +85,49 @@ useEffect(() => {
             The Ayurvedic approach identifies your unique body constitution (Vata, Pitta, Kapha) and uses personalized treatments — including herbal remedies, dietary changes, yoga, meditation, and Panchakarma therapies — to restore equilibrium and promote lasting health.
           </p>
         </motion.div>
+      </div>
+    </section>
+
+    <title>About Dr. Harsh Vardhan Sharma| Vaidyam Hospital & HealthCare Wellness Center</title>
+
+    {/* Doctor Profile */}
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+       <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
+  {images.map((image, index) => (
+    <motion.img
+      key={image}
+      src={image}
+      alt="Dr. Harsh Vardhan Sharma"
+      className="absolute inset-0 w-full h-full object-cover"
+      initial={false}
+      animate={{
+        opacity: currentImage === index ? 1 : 0,
+      }}
+      transition={{
+        duration: 1.2,
+        ease: "easeInOut",
+      }}
+    />
+  ))}
+</div>
+          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Harshvardhan Sharma</h2>
+            <p className="text-accent font-medium mt-1">BAMS,CCKS(ATAB),C.Diab(London) — Ayurvedic Physician</p>
+            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Dr.Harshvardhan Sharma is a dedicated Ayurvedic physician practicing from the heart of Uttarakhand, India. With a degree in Bachelor of Ayurvedic Medicine and Surgery (BAMS), he combines classical Ayurvedic wisdom with a compassionate, patient-centered approach.
+              </p>
+              <p>
+                His practice focuses on understanding each patient's unique constitution (Prakriti) and designing personalized treatment protocols that address the root cause of disease rather than merely suppressing symptoms.
+              </p>
+              <p>
+                Dr.Sharma specializes in Panchakarma detoxification therapies, herbal medicine formulations, and lifestyle modifications that empower patients to take charge of their own health and well-being.
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   </>

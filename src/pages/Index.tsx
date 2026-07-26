@@ -23,7 +23,11 @@ import {
   Weight,
   type LucideIcon,
   Quote,
+  ShieldPlus,
+
 } from "lucide-react";
+
+
 
 const bannerImages = Object.entries(
   import.meta.glob("@/assets/homebanners/fordesktop/*.{jpg,jpeg,png,webp}", {
@@ -285,11 +289,11 @@ const Index = () => {
               </span>
 
               <h2 className="mt-2 text-3xl font-bold">
-                Dr. Harsh Vardhan Sharma
+                Dr. Harshvardhan Sharma
               </h2>
 
               <p className="text-primary font-medium mt-1">
-                BAMS • Ayurvedic Physician
+                BAMS,CCKS(ATAB),C.Diab(London) — Ayurvedic Physician
               </p>
 
               <p className="mt-4 text-muted-foreground max-w-2xl">
@@ -299,15 +303,31 @@ const Index = () => {
               </p>
 
               <div className="flex flex-wrap gap-3 mt-5">
-                <span className="px-3 py-1 bg-primary/10 rounded-full text-sm">
-                  🌿 Ayurveda
-                </span>
-                <span className="px-3 py-1 bg-primary/10 rounded-full text-sm">
-                  🩺 Panchakarma
-                </span>
-                <span className="px-3 py-1 bg-primary/10 rounded-full text-sm">
-                  💚 Holistic Care
-                </span>
+              <span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
+  <Stethoscope className="w-4 h-4 text-green-600" />
+  Ayurveda
+</span>
+
+<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
+  <HeartPulse className="w-4 h-4 text-red-500" />
+  Diabetes Care
+</span>
+
+<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
+  <ShieldPlus className="w-4 h-4 text-blue-600" />
+  Ano-Rectal Care
+</span>
+
+<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
+  <Leaf className="w-4 h-4 text-teal-600" />
+  Panchakarma
+</span>
+
+<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
+  <Activity className="w-4 h-4 text-emerald-600" />
+  Holistic Care
+</span>
+                 
               </div>
 
               <Button className="mt-6" asChild>
@@ -333,13 +353,12 @@ const Index = () => {
             </h2>
 
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-              Take the first step towards natural wellness. Book a consultation with
-              Dr. Harsh Vardhan Sharma.
+              Take the first step towards natural wellness. Book a consultation with Us
             </p>
 
             <Button size="lg" variant="secondary" className="mt-8" asChild>
               <Link to="/consultation">
-                Book Free Consultation
+                Book Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

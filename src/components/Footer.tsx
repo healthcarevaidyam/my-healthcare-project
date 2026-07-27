@@ -62,11 +62,9 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-10 flex flex-wrap items-center gap-3 rounded-lg border border-primary-foreground/15 bg-primary-foreground/10 p-4 text-sm">
-        <Lock className="h-4 w-4" />
-        <span>Admin access:</span>
+      <div>
         <Link to="/admin/login" className="font-semibold underline-offset-4 hover:underline">
-          Go to admin login
+          admin login
         </Link>
       </div>
 

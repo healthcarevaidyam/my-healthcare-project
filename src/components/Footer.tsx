@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Leaf, Phone, Mail, MapPin } from "lucide-react";
+import { Leaf, Phone, Mail, MapPin, Lock } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground">
@@ -60,6 +60,14 @@ const Footer = () => (
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="mt-10 flex flex-wrap items-center gap-3 rounded-lg border border-primary-foreground/15 bg-primary-foreground/10 p-4 text-sm">
+        <Lock className="h-4 w-4" />
+        <span>Admin access:</span>
+        <Link to="/admin/login" className="font-semibold underline-offset-4 hover:underline">
+          Go to admin login
+        </Link>
       </div>
 
       <div className="border-t border-primary-foreground/20 mt-12 pt-6 text-center text-sm opacity-60">

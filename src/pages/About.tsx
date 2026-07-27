@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import { useIsMobile } from "@/hooks/use-mobile";
 import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
-import { Heart, Eye, Target, BookOpen } from "lucide-react";
+import { Heart, Eye, Target, BookOpen ,Baby,Activity} from "lucide-react";
 const imageModules = import.meta.glob(
   "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
   {
@@ -14,12 +14,41 @@ const imageModules = import.meta.glob(
 
 const images = Object.values(imageModules) as string[];
 
+
+
 const values = [
-  { icon: Heart, title: "Compassionate Care", desc: "Every patient is treated with empathy, respect, and individualized attention." },
-  { icon: Eye, title: "Holistic Vision", desc: "We treat the whole person — body, mind, and spirit — not just symptoms." },
-  { icon: Target, title: "Root Cause Focus", desc: "Our approach targets the underlying imbalance, not just the surface ailment." },
-  { icon: BookOpen, title: "Ancient Wisdom", desc: "Grounded in 5,000 years of Ayurvedic knowledge, validated by experience." },
+  {
+    icon: Heart,
+    title: "Compassionate Care",
+    desc: "Every patient is treated with empathy, respect, and individualized attention.",
+  },
+  {
+    icon: Eye,
+    title: "Holistic Vision",
+    desc: "We treat the whole person — body, mind, and spirit — not just symptoms.",
+  },
+  {
+    icon: Target,
+    title: "Root Cause Focus",
+    desc: "Our approach targets the underlying imbalance, not just the surface ailment.",
+  },
+  {
+    icon: BookOpen,
+    title: "Ancient Wisdom",
+    desc: "Grounded in 5,000 years of Ayurvedic knowledge, validated by experience.",
+  },
+  {
+    icon: Baby,
+    title: "Infertility Management",
+    desc: "Personalized Ayurvedic care focused on improving reproductive health and supporting natural fertility.",
+  },
+  {
+    icon: Activity,
+    title: "Diabetes Care",
+    desc: "Comprehensive Ayurvedic management to help maintain healthy blood sugar levels and overall well-being.",
+  },
 ];
+
 
 
 const About = () => {

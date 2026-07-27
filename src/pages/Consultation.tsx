@@ -17,18 +17,56 @@ const Consultation = () => {
     name: "", phone: "", email: "", problem: "", date: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.phone || !form.email) {
-      toast({ title: "Please fill in all required fields", variant: "destructive" });
-      return;
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!form.name || !form.phone || !form.email) {
+    toast({
+      title: "Please fill in all required fields",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      "https://vaidyamhealthcare.app.n8n.cloud/webhook/consultation",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Submission failed");
     }
+
     toast({
       title: "Appointment Request Sent!",
-      description: "Dr. Sharma's team will contact you within 24 hours to confirm your appointment.",
+      description: data.message,
     });
-    setForm({ name: "", phone: "", email: "", problem: "", date: "" });
-  };
+
+    setForm({
+      name: "",
+      phone: "",
+      email: "",
+      problem: "",
+      date: "",
+    });
+
+  } catch (error: any) {
+    toast({
+      title: "Submission Failed",
+      description: error.message || "Please try again later.",
+      variant: "destructive",
+    });
+  }
+};
 
   const update = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));

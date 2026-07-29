@@ -91,79 +91,76 @@ const Store = () => {
   ];
 
   return (
-    <section className="!m-0 !p-0">
-      <div className="container mx-auto px-4 !pt-0 pb-20">
-        {/* Page Header */}
-        <div className="max-w-3xl space-y-3">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
-            Store
-          </p>
+<section className="py-10">
+  <div className="container mx-auto px-4">
+    {/* Page Title */}
+    <div className="mb-10 max-w-3xl">
+      <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
+        Store
+      </p>
 
-          <h1 className="font-heading text-3xl font-bold sm:text-4xl">
-            Our wellness products
-          </h1>
+      <h1 className="mt-2 font-heading text-3xl font-bold sm:text-4xl">
+        Our Wellness Products
+      </h1>
 
-          <p className="text-lg text-muted-foreground">
-            Browse the latest Ayurvedic wellness products curated for everyday
-            health and balance.
-          </p>
-        </div>
+      <p className="mt-3 text-lg text-muted-foreground">
+        Browse our carefully selected Ayurvedic wellness products designed to
+        support your daily health and well-being.
+      </p>
+    </div>
 
-        {/* Products Grid */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {dummyProducts.map((product) => (
-            <Card
-              key={product.slug}
-              className="h-full overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-            >
-              {/* Product Image */}
-              <div className="h-56 w-full overflow-hidden bg-muted">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                  onError={(event) => {
-                    event.currentTarget.style.display = "none";
-                  }}
-                />
-              </div>
+    {/* Products Grid */}
+    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {dummyProducts.map((product) => (
+        <Card
+          key={product.slug}
+          className="h-full overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div className="h-56 w-full overflow-hidden bg-muted">
+            <img
+              src={product.image}
+              alt={product.name}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              onError={(event) => {
+                event.currentTarget.style.display = "none";
+              }}
+            />
+          </div>
 
-              {/* Product Information */}
-              <CardHeader>
-                <div className="flex items-start justify-between gap-3">
-                  <CardTitle className="text-xl">
-                    {product.name}
-                  </CardTitle>
+          <CardHeader>
+            <div className="flex items-start justify-between gap-3">
+              <CardTitle className="text-xl">
+                {product.name}
+              </CardTitle>
 
-                  <Badge variant="secondary">
-                    {product.category}
-                  </Badge>
-                </div>
+              <Badge variant="secondary">
+                {product.category}
+              </Badge>
+            </div>
 
-                <CardDescription className="pt-2">
-                  {product.shortDescription}
-                </CardDescription>
-              </CardHeader>
+            <CardDescription className="pt-2">
+              {product.shortDescription}
+            </CardDescription>
+          </CardHeader>
 
-              {/* Product Price */}
-              <CardContent>
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-sm text-muted-foreground">
-                    {product.category}
-                  </span>
+          <CardContent>
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">
+                {product.category}
+              </span>
 
-                  <span className="text-lg font-semibold text-primary">
-                    {product.price}
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+              <span className="text-lg font-semibold text-primary">
+                {product.price}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
   );
 };
 

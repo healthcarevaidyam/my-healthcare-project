@@ -61,9 +61,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div>
-        
-      
+      <div className="mt-8 flex justify-end">
         <Link to="/admin/login" className="font-semibold underline-offset-4 hover:underline">
           <Lock className="h-4 w-4" />
         </Link>

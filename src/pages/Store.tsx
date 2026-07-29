@@ -5,6 +5,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+import { ShoppingCart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
 import infertilityManagementKitDesktop from "@/assets/store/fordesktop/infertility-management-kit.png";
@@ -91,23 +93,25 @@ const Store = () => {
   ];
 
   return (
-<section className="py-10">
-  <div className="container mx-auto px-4">
-    {/* Page Title */}
-    <div className="mb-10 max-w-3xl">
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
-        Store
-      </p>
+<section className="min-h-screen py-10">
+  <div className="container mx-auto px-4 pt-0">
+    <div className="mx-auto mb-12 max-w-3xl text-center">
+ <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+  <ShoppingCart className="h-4 w-4" />
+  Shop Wellness
+</span>
 
-      <h1 className="mt-2 font-heading text-3xl font-bold sm:text-4xl">
-        Our Wellness Products
-      </h1>
+  <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
+    Ayurvedic Wellness Products
+  </h1>
 
-      <p className="mt-3 text-lg text-muted-foreground">
-        Browse our carefully selected Ayurvedic wellness products designed to
-        support your daily health and well-being.
-      </p>
-    </div>
+  <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+    Explore our carefully selected range of authentic Ayurvedic products,
+    crafted to support your daily health, wellness, and natural healing.
+  </p>
+
+  <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-primary" />
+</div>
 
     {/* Products Grid */}
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

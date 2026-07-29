@@ -53,7 +53,9 @@ const isServiceDetail = location.pathname.startsWith("/services/");
   const desktopBanner = desktopBanners[location.pathname];
   const mobileBanner = mobileBanners[location.pathname];
 
-  const showBanner = location.pathname !== "/" && !isServiceDetail;
+  // Don't show the shared banner on the root, service-detail pages, or the Store page
+  const showBanner =
+    location.pathname !== "/" && !location.pathname.startsWith("/store") && !isServiceDetail;
 
   useEffect(() => {
     window.scrollTo({

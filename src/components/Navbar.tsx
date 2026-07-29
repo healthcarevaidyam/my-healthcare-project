@@ -34,6 +34,8 @@ const Navbar = () => {
             src={logo}
             alt="Vaidyam Hospital & HealthCare"
             className="h-10 w-auto"
+            loading="eager"
+            decoding="async"
           />
           <span className="font-heading text-xl font-bold text-foreground">
             Vaidyam Hospital & HealthCare

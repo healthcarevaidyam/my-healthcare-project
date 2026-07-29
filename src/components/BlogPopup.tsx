@@ -51,6 +51,8 @@ const BlogPopup = ({ post, onClose, blogImages, herbImages }) => {
               src={imageUrl} 
               alt={post.title}
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-secondary/30">
@@ -110,6 +112,8 @@ const BlogPopup = ({ post, onClose, blogImages, herbImages }) => {
                   src={herbImageUrl} 
                   alt={post.herbName}
                   className="w-8 h-8 rounded-full object-cover border-2 border-primary"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="w-8 h-8 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">

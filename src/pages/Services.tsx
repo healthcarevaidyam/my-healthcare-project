@@ -219,6 +219,8 @@ const Services = () => {
                           src={isMobile ? s.imageMobile : s.imageDesktop}
                           alt={s.title}
                           className="w-full lg:w-64 h-48 rounded-xl object-cover"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="flex flex-col items-start gap-3">
                           <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${s.gradient} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>

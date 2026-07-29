@@ -130,6 +130,8 @@ useEffect(() => {
       src={image}
       alt="Dr. Harsh Vardhan Sharma"
       className="absolute inset-0 w-full h-full object-cover"
+      loading="lazy"
+      decoding="async"
       initial={false}
       animate={{
         opacity: currentImage === index ? 1 : 0,

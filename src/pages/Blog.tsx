@@ -215,6 +215,8 @@ const Blog = () => {
                           src={imageUrl} 
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-secondary/30">
@@ -232,6 +234,8 @@ const Blog = () => {
                             src={herbImageUrl} 
                             alt={post.herbName}
                             className="w-6 h-6 rounded-full object-cover border-2 border-primary"
+                            loading="lazy"
+                            decoding="async"
                           />
                         ) : (
                           <div className="w-6 h-6 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">

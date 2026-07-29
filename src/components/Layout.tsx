@@ -84,6 +84,7 @@ const isServiceDetail = location.pathname.startsWith("/services/");
               alt={`${bannerTitle} banner`}
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
+              decoding="async"
             />
           )}
           </picture>

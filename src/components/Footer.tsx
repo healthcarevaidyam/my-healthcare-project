@@ -63,8 +63,10 @@ const Footer = () => (
       </div>
 
       <div>
+        
+      
         <Link to="/admin/login" className="font-semibold underline-offset-4 hover:underline">
-          admin login
+          <Lock className="h-4 w-4" />
         </Link>
       </div>
 

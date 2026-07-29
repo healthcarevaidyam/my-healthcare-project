@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
+import SEO from "./SEO";
 
 // Desktop Banners
 import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
@@ -64,6 +65,7 @@ const isServiceDetail = location.pathname.startsWith("/services/");
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO />
       <Navbar />
 
       {showBanner && (

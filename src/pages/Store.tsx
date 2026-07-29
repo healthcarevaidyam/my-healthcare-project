@@ -20,8 +20,8 @@ const dummyProducts: ProductRecord[] = [
   {
     slug: "infertility-management-kit",
     name: "Infertility Management Kit",
-    price: "₹1499-3100",
-    image: "/images/products/infertility-management-kit.jpg",
+    price: "₹1499-₹3100",
+    image: "/assets/store/formobile/infertility-management-kit.png",
     category: "Women's Wellness",
     shortDescription:
       "A thoughtfully curated wellness kit designed to support a healthy lifestyle and reproductive wellness journey.",
@@ -39,7 +39,7 @@ const dummyProducts: ProductRecord[] = [
     slug: "diabetes-care-kit",
     name: "Diabetes Care Kit",
     price: "₹1,199-₹2,499",
-    image: "/images/products/diabetes-care-kit.jpg",
+    image: "/assets/store/formobile/diabetes-care-kit.png",
     category: "Diabetes Wellness",
     shortDescription:
       "A carefully selected wellness kit designed to complement healthy lifestyle and dietary routines.",
@@ -48,7 +48,7 @@ const dummyProducts: ProductRecord[] = [
     slug: "piles-fistula-care-kit",
     name: "Piles/Fistula Care Kit",
     price: "₹999-₹1,499",
-    image: "/images/products/piles-fistula-care-kit.jpg",
+    image: "/assets/store/formobile/piles-fistula-care-kit.png",
     category: "Digestive Wellness",
     shortDescription:
       "A curated herbal wellness kit designed to complement a healthy digestive and lifestyle routine.",
@@ -57,7 +57,7 @@ const dummyProducts: ProductRecord[] = [
     slug: "skin-care-kit",
     name: "Skin Care Kit",
     price: "₹899",
-    image: "/images/products/skin-care-kit.jpg",
+    image: "/assets/store/formobile/skin-care-kit.png",
     category: "Skin Wellness",
     shortDescription:
       "A natural wellness kit featuring carefully selected products to complement your everyday skincare routine.",
@@ -65,8 +65,8 @@ const dummyProducts: ProductRecord[] = [
   {
     slug: "ayurvedic-herbal-tea-kit",
     name: "Ayurvedic Herbal Tea Kit",
-    price: "₹99-399",
-    image: "/images/products/ayurvedic-herbal-tea-kit.jpg",
+    price: "₹99-₹399",
+    image: "/assets/store/formobile/ayurvedic-herbal-tea-kit.png",
     category: "Herbal Wellness",
     shortDescription:
       "A refreshing collection of traditional herbal teas designed to complement your daily wellness routine.",

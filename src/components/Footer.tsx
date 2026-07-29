@@ -7,7 +7,6 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <Leaf className="h-6 w-6" />
             <span className="font-heading text-lg font-bold">Vaidyam Hospital & HealthCare</span>
           </div>
           <p className="text-sm opacity-80 leading-relaxed">

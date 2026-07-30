@@ -61,12 +61,15 @@ const iconMap: Record<string, LucideIcon> = {
   Thermometer,
 };
 
-const homeServices = getAllServicePages().slice(0, 6).map((service) => ({
-  title: service.title,
-  desc: service.summary,
-  icon: iconMap[service.icon ?? ""] ?? Sparkles,
-  slug: service.slug,
-}));
+const homeServices = getAllServicePages()
+  .filter((service) => service.isCore)
+  .slice(0, 6)
+  .map((service) => ({
+    title: service.title,
+    desc: service.summary,
+    icon: iconMap[service.icon ?? ""] ?? Sparkles,
+    slug: service.slug,
+  }));
 
 const testimonials = [
   {

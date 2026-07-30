@@ -40,7 +40,7 @@ const Store = () => {
       slug: "inInfertility-management-kit",
       name: "InInfertility Management Kit",
       price: "₹1499-₹3100",
-      image: isMobile ? inInfertilityManagementKitMobile : inInfertilityManagementKitDesktop,
+      image: isMobile ? InfertilityManagementKitMobile : InfertilityManagementKitDesktop,
       category: "Women's Wellness",
       shortDescription:
         "A thoughtfully curated wellness kit designed to support a healthy lifestyle and reproductive wellness journey.",

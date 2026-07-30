@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { getAllServicePages } from "@/data/serviceLoader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
@@ -21,6 +23,7 @@ import {
   Leaf,
   Phone,
   Pill,
+  Search,
   Sparkles,
   Star,
   Stethoscope,
@@ -61,6 +64,7 @@ const services = getAllServicePages().map((service, index) => {
     duration: service.duration ?? "Customized",
     price: service.price ?? "Contact us",
     category: service.category ?? "General",
+    isCore: service.isCore ?? false,
     popular: service.popular ?? false,
     featured: service.featured ?? false,
     gradient: service.gradient ?? "from-primary/10 to-secondary/10",
@@ -69,18 +73,27 @@ const services = getAllServicePages().map((service, index) => {
 });
 
 const Services = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeTab, setActiveTab] = useState<"core" | "other">("core");
+  const [searchQuery, setSearchQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [expandedService, setExpandedService] = useState<number | null>(null);
   const isMobile = useIsMobile();
 
-  const categories = ["All", ...new Set(services.map(s => s.category))];
+  const normalizedQuery = searchQuery.trim().toLowerCase();
 
-  const filteredServices = selectedCategory === "All" 
-    ? services 
-    : services.filter(s => s.category === selectedCategory);
+  const filteredServices = normalizedQuery
+    ? services.filter((s) =>
+        [s.title, s.subtitle, s.desc, s.category]
+          .filter(Boolean)
+          .some((value) => value.toLowerCase().includes(normalizedQuery)),
+      )
+    : services;
 
-  const displayedServices = showAll ? filteredServices : filteredServices.slice(0, 6);
+  const coreServices = filteredServices.filter((s) => s.isCore);
+  const otherServices = filteredServices.filter((s) => !s.isCore);
+  const activeServices = activeTab === "core" ? coreServices : otherServices;
+  const displayedServices = showAll ? activeServices : activeServices.slice(0, 6);
+  const showMoreVisible = !showAll && activeServices.length > displayedServices.length;
 
   const toggleExpand = (id: number) => {
     setExpandedService(expandedService === id ? null : id);
@@ -179,23 +192,28 @@ const Services = () => {
             center
           />
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {categories.map((category) => (
-              <motion.button
-                key={category}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                    : "bg-secondary/50 text-muted-foreground hover:bg-secondary hover:text-foreground"
-                }`}
-              >
-                {category}
-              </motion.button>
-            ))}
+          {/* Search and Tabs */}
+          <div className="flex flex-col gap-6 mb-12 lg:flex-row lg:items-center lg:justify-between">
+            <div className="relative w-full max-w-2xl">
+              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Search services..."
+                className="pl-11"
+              />
+            </div>
+
+            <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as "core" | "other")}> 
+              <TabsList className="gap-2 p-1 bg-secondary/50 rounded-full">
+                <TabsTrigger value="core">
+                  Core Services ({coreServices.length})
+                </TabsTrigger>
+                <TabsTrigger value="other">
+                  Other Services ({otherServices.length})
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
           </div>
 
           {/* Services Grid */}
@@ -334,7 +352,7 @@ const Services = () => {
           </div>
 
           {/* Show More/Less Button */}
-          {filteredServices.length > 6 && (
+          {showMoreVisible && (
             <div className="text-center mt-12">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -347,7 +365,7 @@ const Services = () => {
                   onClick={() => setShowAll(!showAll)}
                   className="gap-2 hover:shadow-lg transition-all duration-300"
                 >
-                  {showAll ? "Show Less" : `View All ${filteredServices.length} Services`}
+                  {showAll ? "Show Less" : `View All ${activeServices.length} Services`}
                   <ArrowRight className={`h-4 w-4 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`} />
                 </Button>
               </motion.div>

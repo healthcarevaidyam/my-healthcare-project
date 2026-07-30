@@ -9,8 +9,6 @@ const Contact = () => {
 
   return (
     <>
-      <title>Contact Us | Vaidyam Hospital & HealthCare Wellness Center</title>
-
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12">
@@ -23,7 +21,7 @@ const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: MapPin, title: "Clinic Address", lines: ["Vaidyam Hospital & HealthCare", "Ranikhet, Almora,Uttarakhand,263645, India"] },
+                { icon: MapPin, title: "Clinic Address", lines: ["House No. 88, Village & P.O, Tehsil, Sauni, Ranikhet, Uttarakhand 263663, India"] },
                 { icon: Phone, title: "Phone", lines: ["+91-8377085976"] },
                 { icon: Mail, title: "Email", lines: ["healthcarevaidyam@gmail.com"] },
                 { icon: Clock, title: "Working Hours", lines: ["Mon – Sat: 9:00 AM – 7:00 PM", "Sunday: By Appointment Only"] },

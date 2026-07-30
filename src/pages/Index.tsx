@@ -270,10 +270,6 @@ const Index = () => {
 
   return (
     <>
-      {/* SEO */}
-      <title>Best Ayurvedic Doctor in India | Ayurvedic Treatment & Panchakarma | Vaidyam Healthcare</title>
-      <meta name="description" content="Trusted Ayurvedic clinic in India offering Panchakarma, herbal medicine, diabetes care, fertility support, digestive wellness, and holistic healing." />
-
       <section className="relative min-h-[85vh] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 bg-[#f7efe4]">

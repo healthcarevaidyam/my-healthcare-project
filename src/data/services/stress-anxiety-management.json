@@ -22,5 +22,6 @@
     "Therapy selection",
     "Daily calming practices",
     "Progress tracking"
-  ]
+  ],
+  "isCore": true
 }

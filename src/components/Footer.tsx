@@ -47,7 +47,7 @@ const Footer = () => (
           <div className="flex flex-col gap-3 text-sm">
             <div className="flex items-start gap-2 opacity-80">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-              <span>Vaidyam Hospital & HealthCare Ranikhet, Almora,Uttarakhand,263645, India</span>
+              <span>House No. 88, Village & P.O, Tehsil, Sauni, Ranikhet, Uttarakhand 263663</span>
             </div>
             <div className="flex items-center gap-2 opacity-80">
               <Phone className="h-4 w-4 shrink-0" />

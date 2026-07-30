@@ -22,5 +22,6 @@
     "Meal and routine planning",
     "Habit support",
     "Follow-up refinement"
-  ]
+  ],
+  "isCore": true
 }

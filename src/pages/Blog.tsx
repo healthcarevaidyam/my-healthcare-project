@@ -166,8 +166,6 @@ const Blog = () => {
 
   return (
     <>
-      <title>Ayurvedic Blog | Health Tips & Natural Remedies</title>
-      
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 text-center">

@@ -117,7 +117,6 @@ useEffect(() => {
       </div>
     </section>
 
-    <title>About Dr. Harsh Vardhan Sharma | Ayurvedic Doctor in Uttarakhand</title>
 
     {/* Doctor Profile */}
     <section className="py-20">

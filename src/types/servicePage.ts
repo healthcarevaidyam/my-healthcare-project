@@ -9,6 +9,7 @@ export interface ServicePage {
   benefits: string[];
   treatmentSteps: string[];
   category?: string;
+  isCore?: boolean;
   popular?: boolean;
   featured?: boolean;
   gradient?: string;

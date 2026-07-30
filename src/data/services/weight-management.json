@@ -22,5 +22,6 @@
     "Nutrition and routine planning",
     "Therapy and herbal support",
     "Steady follow-up"
-  ]
+  ],
+  "isCore": true
 }

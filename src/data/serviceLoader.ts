@@ -55,6 +55,7 @@ const servicePages: ServicePage[] = Object.values(serviceFiles).map(
 
     return {
       ...service,
+      isCore: service.isCore ?? false,
       imageDesktop: service.slug
         ? desktopImageMap[service.slug]
         : undefined,

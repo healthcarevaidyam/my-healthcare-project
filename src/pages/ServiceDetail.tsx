@@ -15,58 +15,6 @@ const ServiceDetail = () => {
     [slug]
   );
 
-  useEffect(() => {
-    if (!service) {
-      document.title = "Vaidyam Healthcare | Ayurvedic Treatment Center";
-      return;
-    }
-
-    document.title = service.metaTitle;
-
-    const metaDescription = document.querySelector(
-      'meta[name="description"]'
-    );
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        service.metaDescription
-      );
-    }
-
-    const ogTitle = document.querySelector(
-      'meta[property="og:title"]'
-    );
-    if (ogTitle) {
-      ogTitle.setAttribute("content", service.metaTitle);
-    }
-
-    const ogDescription = document.querySelector(
-      'meta[property="og:description"]'
-    );
-    if (ogDescription) {
-      ogDescription.setAttribute(
-        "content",
-        service.metaDescription
-      );
-    }
-
-    let canonicalLink = document.querySelector(
-      'link[rel="canonical"]'
-    );
-
-    if (!canonicalLink) {
-      canonicalLink = document.createElement("link");
-      canonicalLink.setAttribute("rel", "canonical");
-      document.head.appendChild(canonicalLink);
-    }
-
-    canonicalLink.setAttribute(
-      "href",
-      `${window.location.origin}/services/${service.slug}`
-    );
-
-  }, [service]);
-
 
   if (!service) {
     return (

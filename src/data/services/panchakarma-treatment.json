@@ -23,5 +23,6 @@
     "Post-therapy diet and rest",
     "Lifestyle guidance"
   ],
-  "isCore": true
+  "isCore": true,
+  "price": "2000"
 }

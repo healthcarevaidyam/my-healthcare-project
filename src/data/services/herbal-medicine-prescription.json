@@ -22,5 +22,7 @@
     "Formulation selection",
     "Dosage guidance",
     "Progress monitoring"
-  ]
+  ],
+  "isCore": false,
+  "price": "2000"
 }

@@ -23,5 +23,6 @@
     "Habit support",
     "Follow-up refinement"
   ],
-  "isCore": true
+  "isCore": true,
+  "price": "2000"
 }

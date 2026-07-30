@@ -22,5 +22,7 @@
     "Dosha and lifestyle evaluation",
     "Customized Ayurvedic treatment",
     "Follow-up wellness guidance"
-  ]
+  ],
+  "isCore": false,
+  "price": "2000"
 }

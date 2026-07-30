@@ -22,5 +22,7 @@
     "Personalized treatment planning",
     "Herbal therapies and lifestyle guidance",
     "Regular follow-up and wellness monitoring"
-  ]
+  ],
+  "isCore": false,
+  "price": "2000"
 }

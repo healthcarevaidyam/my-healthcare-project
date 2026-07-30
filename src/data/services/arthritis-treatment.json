@@ -22,5 +22,7 @@
     "Therapy planning",
     "Herbal and oil-based care",
     "Follow-up recovery guidance"
-  ]
+  ],
+  "isCore": false,
+  "price": "2000"
 }

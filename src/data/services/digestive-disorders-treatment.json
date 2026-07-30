@@ -22,5 +22,7 @@
     "Diet and routine planning",
     "Therapy support",
     "Follow-up monitoring"
-  ]
+  ],
+  "isCore": false,
+  "price": "2000"
 }

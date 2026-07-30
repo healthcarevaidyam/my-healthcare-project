@@ -22,5 +22,7 @@
     "Root cause analysis",
     "Customized therapy plan",
     "Hair care guidance"
-  ]
+  ],
+  "isCore": true,
+  "price": "2000"
 }

@@ -22,5 +22,6 @@
     "Therapy selection",
     "Ayurvedic sessions",
     "Recovery guidance"
-  ]
+  ],"isCore": false,
+  "price": "2000"
 }

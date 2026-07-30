@@ -23,5 +23,6 @@
     "Lifestyle and diet planning",
     "Ongoing follow-up care"
   ],
-  "isCore": true
+  "isCore": true,
+  "price": "2000"
 }

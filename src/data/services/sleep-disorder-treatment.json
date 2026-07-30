@@ -22,5 +22,7 @@
     "Lifestyle review",
     "Therapy recommendation",
     "Follow-up support"
-  ]
+  ],
+  "isCore": false,
+  "price": "2000"
 }

@@ -23,5 +23,6 @@
     "Therapy and herbal support",
     "Steady follow-up"
   ],
-  "isCore": true
+  "isCore": true,
+  "price": "2000"
 }

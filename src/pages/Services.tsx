@@ -20,6 +20,7 @@ import {
   Clock,
   Heart,
   HeartPulse,
+  IndianRupeeIcon,
   Leaf,
   Phone,
   Pill,
@@ -62,7 +63,7 @@ const services = getAllServicePages().map((service, index) => {
     highlights: service.highlights,
     treatmentSteps: service.treatmentSteps,
     duration: service.duration ?? "Customized",
-    price: service.price ?? "Contact us",
+    price: service.price ?? "Contact for Pricing",
     category: service.category ?? "General",
     isCore: service.isCore ?? false,
     popular: service.popular ?? false,
@@ -269,6 +270,8 @@ const Services = () => {
                               <div className="flex items-center gap-1.5 text-muted-foreground bg-secondary/30 px-3 py-1.5 rounded-full">
                                 <Clock className="h-4 w-4 text-primary" />
                                 {s.duration}
+                                <IndianRupeeIcon className="h-4 w-4 text-primary" />
+                                {s.price}
                               </div>
                             </div>
                           </div>

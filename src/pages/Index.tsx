@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeading from "@/components/SectionHeading";
@@ -69,9 +69,116 @@ const homeServices = getAllServicePages().slice(0, 6).map((service) => ({
 }));
 
 const testimonials = [
-  { name: "Priya Mehta", text: "Dr. Sharma's Panchakarma treatment completely transformed my health. I feel rejuvenated and energetic after years of chronic fatigue.", rating: 5 },
-  { name: "Rajesh Kumar", text: "The personalized herbal medicines worked wonders for my digestive issues. Highly recommend this clinic for anyone seeking natural healing.", rating: 5 },
-  { name: "Anita Devi", text: "I was skeptical at first, but the results speak for themselves. My joint pain has reduced significantly after just 3 weeks of treatment.", rating: 5 },
+  {
+    name: "Mayank Pant",
+    text: "The consultation felt thoughtful and personal. I appreciated the clear guidance and the natural approach to healing.",
+    rating: 4,
+  },
+  {
+    name: "Deepak Rawat",
+    text: "The treatment plan was easy to follow and helped me feel more balanced in my daily routine.",
+    rating: 4,
+  },
+  {
+    name: "Suresh Singh",
+    text: "I found the care supportive and reassuring. The recommendations felt practical and focused on long-term wellness.",
+    rating: 5,
+  },
+  {
+    name: "Babita Latwal",
+    text: "The experience was calm and professional. I felt listened to and respected throughout the process.",
+    rating: 5,
+  },
+  {
+    name: "Hema Nalwal",
+    text: "I appreciated the personalized advice and the emphasis on simple, sustainable lifestyle changes.",
+    rating: 5,
+  },
+  {
+    name: "A. Verma",
+    text: "The overall experience felt calm, respectful, and focused on steady improvement.",
+    rating: 3,
+  },
+  {
+    name: "R. Sharma",
+    text: "The guidance felt practical and encouraging, which made it easier to stay consistent with the plan.",
+    rating: 3,
+  },
+  {
+    name: "Priya Rawat",
+    text: "The consultation was informative and the recommendations were easy to include in my routine.",
+    rating: 4,
+  },
+  {
+    name: "Rahul Kapoor",
+    text: "I appreciated the patient approach and the clear explanations throughout the consultation.",
+    rating: 4,
+  },
+  {
+    name: "Neha Gupta",
+    text: "The advice was personalized and focused on long-term wellness rather than quick fixes.",
+    rating: 3,
+  },
+  {
+    name: "Amit Joshi",
+    text: "A positive experience from start to finish. The guidance was practical and reassuring.",
+    rating: 5,
+  },
+  {
+    name: "Pooja Singh",
+    text: "I felt comfortable discussing my concerns and received thoughtful recommendations.",
+    rating: 3,
+  },
+  {
+    name: "Vikas Sharma",
+    text: "The overall experience was smooth, professional, and centered around healthy lifestyle habits.",
+    rating: 3,
+  },
+  {
+    name: "Sneha Agarwal",
+    text: "The consultation was detailed, and I left with a better understanding of my wellness goals.",
+    rating: 4,
+  },
+  {
+    name: "Ankit Verma",
+    text: "The suggestions were practical, easy to follow, and fit naturally into my daily schedule.",
+    rating: 4,
+  },
+  {
+    name: "Kavita Mishra",
+    text: "I appreciated the calm environment and the personalized attention throughout the session.",
+    rating: 3,
+  },
+  {
+    name: "Rohit Malhotra",
+    text: "The consultation felt genuine and informative. I would happily recommend the experience to others.",
+    rating: 5,
+  },
+  {
+    name: "Nidhi Sharma",
+    text: "Everything was explained clearly, making it easy to understand the suggested wellness plan.",
+    rating: 5,
+  },
+  {
+    name: "Arun Patel",
+    text: "I valued the holistic approach and the practical lifestyle recommendations provided.",
+    rating: 4,
+  },
+  {
+    name: "Meera Nair",
+    text: "The experience was welcoming, professional, and focused on sustainable health improvements.",
+    rating: 3,
+  },
+  {
+    name: "Sanjay Kumar",
+    text: "The consultation was well-structured, and I felt supported throughout the entire process.",
+    rating: 3,
+  },
+  {
+    name: "Ritika Jain",
+    text: "The recommendations were realistic and easy to implement, making the experience very worthwhile.",
+    rating: 4,
+  },
 ];
 
 const fadeUp = {
@@ -86,15 +193,24 @@ const Index = () => {
   const [heroIndex, setHeroIndex] = useState(0);
   const isMobile = useIsMobile();
   const [imageKey, setImageKey] = useState(0);
-  const [currentHeroImage, setCurrentHeroImage] = useState("");
-  const [pendingHeroImage, setPendingHeroImage] = useState("");
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+  const [currentHeroImage, setCurrentHeroImage] = useState(() => {
+    const [initialPath, initialImage] = bannerImages[0] ?? ["", ""];
+    const heroFileName = initialPath.split("/").pop() || "";
+    const heroName = heroFileName.replace(/\.[^.]+$/, "");
+    const initialMobileHeroImage = mobileBannerMap[heroName] || initialImage;
+    const initialSelectedImage = isMobile ? initialMobileHeroImage : initialImage;
+
+    return initialSelectedImage ? `${initialSelectedImage}?v=0` : "";
+  });
 
   useEffect(() => {
     if (bannerImages.length === 0) return;
 
     const interval = window.setInterval(() => {
       setHeroIndex((current) => (current + 1) % bannerImages.length);
-      setImageKey(prev => prev + 1);
+      setImageKey((prev) => prev + 1);
+      setHeroImageLoaded(false);
     }, 5000);
 
     return () => {
@@ -102,7 +218,6 @@ const Index = () => {
     };
   }, []);
 
-  // Get the current banner image
   const [heroPath, heroImage] = bannerImages[heroIndex] ?? ["", ""];
   const heroFileName = heroPath.split("/").pop() || "";
   const heroName = heroFileName.replace(/\.[^.]+$/, "");
@@ -110,50 +225,72 @@ const Index = () => {
   const selectedImage = isMobile ? mobileHeroImage : heroImage;
   const nextHeroImage = `${selectedImage}?v=${imageKey}`;
 
+  const testimonialScrollRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = testimonialScrollRef.current;
+    if (!el) return;
+
+    let rafId: number;
+    const scrollStep = () => {
+      if (!el) return;
+      el.scrollLeft += 0.35;
+      if (el.scrollLeft >= el.scrollWidth / 2) {
+        el.scrollLeft = 0;
+      }
+      rafId = requestAnimationFrame(scrollStep);
+    };
+
+    rafId = requestAnimationFrame(scrollStep);
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+
   useEffect(() => {
     if (!selectedImage) return;
 
-    if (!currentHeroImage) {
+    setHeroImageLoaded(false);
+
+    const img = new Image();
+    img.src = nextHeroImage;
+    img.onload = () => {
       setCurrentHeroImage(nextHeroImage);
-      return;
-    }
+      setHeroImageLoaded(true);
+    };
+    img.onerror = () => {
+      console.error("Failed to preload hero image:", nextHeroImage);
+      setCurrentHeroImage(nextHeroImage);
+      setHeroImageLoaded(true);
+    };
 
-    if (currentHeroImage !== nextHeroImage) {
-      setPendingHeroImage(nextHeroImage);
-      const img = new Image();
-      img.src = nextHeroImage;
-      img.onload = () => {
-        setCurrentHeroImage(nextHeroImage);
-        setPendingHeroImage("");
-      };
-      img.onerror = () => {
-        console.error("Failed to preload hero image:", nextHeroImage);
-        setPendingHeroImage("");
-      };
-
-      return () => {
-        img.onload = null;
-        img.onerror = null;
-      };
-    }
-  }, [currentHeroImage, imageKey, selectedImage, nextHeroImage]);
+    return () => {
+      img.onload = null;
+      img.onerror = null;
+    };
+  }, [selectedImage, nextHeroImage]);
 
   return (
     <>
       {/* SEO */}
-      <title>Vaidyam Clinic</title>
-      <meta name="description" content="Dr. Harsh Vardhan Sharma (BAMS) offers holistic Ayurvedic treatments including Panchakarma, herbal medicine, and natural healing in Uttarakhand, India." />
+      <title>Best Ayurvedic Doctor in India | Ayurvedic Treatment & Panchakarma | Vaidyam Healthcare</title>
+      <meta name="description" content="Trusted Ayurvedic clinic in India offering Panchakarma, herbal medicine, diabetes care, fertility support, digestive wellness, and holistic healing." />
 
       <section className="relative min-h-[85vh] overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-black">
+        <div className="absolute inset-0 bg-[#f7efe4]">
           {currentHeroImage && (
             <img
               src={currentHeroImage}
               alt="Ayurvedic herbs and healing oils"
-              className="w-full h-full object-cover object-left md:object-center transition-opacity duration-700"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className={`w-full h-full object-cover object-left md:object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
               key={currentHeroImage}
+              onLoad={() => setHeroImageLoaded(true)}
             />
+          )}
+          {!heroImageLoaded && (
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.45),_transparent_55%)]" />
           )}
           <div className="absolute inset-0 bg-black/20" />
         </div>
@@ -181,6 +318,20 @@ const Index = () => {
     <Link to="/services">Our Services</Link>
   </Button>
 </div>
+      </section>
+
+      <section className="bg-white px-4 py-8 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl rounded-2xl border border-border/60 bg-background/95 p-6 shadow-sm sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+            Natural healing • Panchakarma • Herbal care
+          </p>
+          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
+            Trusted Ayurvedic Doctor in India & Uttarakhand
+          </h2>
+          <p className="mt-3 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
+            Personalized Ayurvedic treatment for diabetes, digestive health, fertility, skin care, and lasting wellness for patients across India and beyond.
+          </p>
+        </div>
       </section>
 
       {/* Services Highlight */}
@@ -232,30 +383,33 @@ const Index = () => {
             title="What Our Patients Say"
             description="Real experiences from patients who found healing through our Ayurvedic treatments."
           />
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-              >
-                <Card className="h-full bg-background">
-                  <CardContent className="p-6">
-                    <Quote className="h-8 w-8 text-accent/40 mb-3" />
-                    <p className="text-muted-foreground text-sm leading-relaxed italic">"{t.text}"</p>
-                    <div className="flex items-center gap-1 mt-4">
-                      {Array.from({ length: t.rating }).map((_, j) => (
-                        <Star key={j} className="h-4 w-4 fill-accent text-accent" />
-                      ))}
-                    </div>
-                    <p className="mt-2 font-heading font-semibold text-foreground">{t.name}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-r from-primary/5 via-background to-secondary/20 p-4 sm:p-6">
+            <div ref={testimonialScrollRef} className="flex gap-4 overflow-x-hidden">
+              {[...testimonials, ...testimonials].map((t, i) => (
+                <motion.div
+                  key={`${t.name}-${i}`}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="min-w-[280px] max-w-[320px] flex-shrink-0"
+                >
+                  <Card className="h-full bg-background/90 shadow-sm">
+                    <CardContent className="p-6">
+                      <Quote className="h-8 w-8 text-accent/40 mb-3" />
+                      <p className="text-muted-foreground text-sm leading-relaxed italic">"{t.text}"</p>
+                      <div className="flex items-center gap-1 mt-4">
+                        {Array.from({ length: t.rating }).map((_, j) => (
+                          <Star key={j} className="h-4 w-4 fill-accent text-accent" />
+                        ))}
+                      </div>
+                      <p className="mt-2 font-heading font-semibold text-foreground">{t.name}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

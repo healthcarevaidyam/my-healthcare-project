@@ -325,7 +325,7 @@ const Index = () => {
             Trusted Ayurvedic Doctor in India & Uttarakhand
           </h2>
           <p className="mt-3 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Personalized Ayurvedic treatment for diabetes, digestive health, fertility, skin care, and lasting wellness for patients across India and beyond.
+            Personalized Ayurvedic treatment for diabetes, digestive health, Infertility, skin care, and lasting wellness for patients across India and beyond.
           </p>
         </div>
       </section>

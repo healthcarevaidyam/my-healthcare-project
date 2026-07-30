@@ -9,8 +9,8 @@ import {
 import { ShoppingCart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
-import infertilityManagementKitDesktop from "@/assets/store/fordesktop/infertility-management-kit.png";
-import infertilityManagementKitMobile from "@/assets/store/formobile/infertility-management-kit.png";
+import InfertilityManagementKitDesktop from "@/assets/store/fordesktop/infertility-management-kit.png";
+import InfertilityManagementKitMobile from "@/assets/store/formobile/infertility-management-kit.png";
 import pcosCareKitDesktop from "@/assets/store/fordesktop/pcos-care-kit.jpg.png";
 import pcosCareKitMobile from "@/assets/store/formobile/pcos-care-kit.jpg.png";
 import diabetesCareKitDesktop from "@/assets/store/fordesktop/diabetes-care-kit.png";
@@ -37,10 +37,10 @@ const Store = () => {
 
   const dummyProducts: ProductRecord[] = [
     {
-      slug: "infertility-management-kit",
-      name: "Infertility Management Kit",
+      slug: "inInfertility-management-kit",
+      name: "InInfertility Management Kit",
       price: "₹1499-₹3100",
-      image: isMobile ? infertilityManagementKitMobile : infertilityManagementKitDesktop,
+      image: isMobile ? inInfertilityManagementKitMobile : inInfertilityManagementKitDesktop,
       category: "Women's Wellness",
       shortDescription:
         "A thoughtfully curated wellness kit designed to support a healthy lifestyle and reproductive wellness journey.",

@@ -15,14 +15,14 @@ describe("Store", () => {
     render(<Store />);
 
     expect(screen.getByText("Our wellness products")).toBeInTheDocument();
-    expect(screen.getByText("Infertility Management Kit")).toBeInTheDocument();
+    expect(screen.getByText("InInfertility Management Kit")).toBeInTheDocument();
     expect(screen.getByText("₹1499-₹3100")).toBeInTheDocument();
   });
 
   it("renders product images from the local store assets", () => {
     render(<Store />);
 
-    const productImage = screen.getByAltText("Infertility Management Kit");
+    const productImage = screen.getByAltText("InInfertility Management Kit");
     expect(productImage.getAttribute("src")).toContain("/src/assets/store/fordesktop/");
   });
 });

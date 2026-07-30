@@ -120,7 +120,7 @@ const seoConfigByPath: Record<string, SeoConfig> = {
   "/": {
     title: "Best Ayurvedic Doctor in India | Ayurvedic Treatment & Panchakarma | Vaidyam Healthcare",
     description:
-      "Trusted Ayurvedic clinic in India offering Panchakarma, herbal medicine, diabetes care, fertility support, digestive wellness, and holistic healing with expert Ayurvedic care.",
+      "Trusted Ayurvedic clinic in India offering Panchakarma, herbal medicine, diabetes care, Infertility support, digestive wellness, and holistic healing with expert Ayurvedic care.",
     canonical: "https://vaidyamhealthcare.in/",
     keywords:
       "Ayurvedic doctor India, Ayurveda treatment India, Panchakarma clinic, herbal medicine doctor, holistic healing, online Ayurveda consultation, Ayurvedic clinic Ranikhet, natural healing India",
@@ -128,7 +128,7 @@ const seoConfigByPath: Record<string, SeoConfig> = {
   "/about": {
     title: "About Dr. Harsh Vardhan Sharma | Ayurvedic Doctor in India",
     description:
-      "Meet Dr. Harsh Vardhan Sharma, expert Ayurvedic physician at Vaidyam Healthcare, helping patients in India with chronic disease, fertility, digestion, and holistic wellness.",
+      "Meet Dr. Harsh Vardhan Sharma, expert Ayurvedic physician at Vaidyam Healthcare, helping patients in India with chronic disease, Infertility, digestion, and holistic wellness.",
     canonical: "https://vaidyamhealthcare.in/about",
     keywords:
       "Ayurvedic physician India, Dr Harsh Vardhan Sharma, Ayurveda practitioner, holistic healing doctor, natural medicine specialist, Ayurvedic clinic Uttarakhand",
@@ -139,7 +139,7 @@ const seoConfigByPath: Record<string, SeoConfig> = {
       "Explore Ayurvedic treatments, wellness therapies, Panchakarma, and herbal medicine services offered by Vaidyam Healthcare for natural healing across India.",
     canonical: "https://vaidyamhealthcare.in/services",
     keywords:
-      "Ayurvedic treatment India, Panchakarma therapy, herbal medicine, digestive care, infertility treatment Ayurveda, holistic wellness, Ayurvedic clinic Uttarakhand",
+      "Ayurvedic treatment India, Panchakarma therapy, herbal medicine, digestive care, inInfertility treatment Ayurveda, holistic wellness, Ayurvedic clinic Uttarakhand",
   },
   "/consultation": {
     title: "Book Ayurvedic Consultation | Vaidyam Healthcare",

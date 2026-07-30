@@ -426,7 +426,7 @@ const Index = () => {
             >
               <img
                 src={doctorImage}
-                alt="Dr. Harsh Vardhan Sharma"
+                alt="Dr. Prafull Chandra Sharma"
                 className="w-44 h-44 rounded-full object-cover border-4 border-primary/10 shadow-xl"
               />
             </motion.div>
@@ -442,7 +442,7 @@ const Index = () => {
               </span>
 
               <h2 className="mt-2 text-3xl font-bold">
-                Dr. Harshvardhan Sharma
+                Dr. Prafull Chandra Sharma
               </h2>
 
               <p className="text-primary font-medium mt-1">

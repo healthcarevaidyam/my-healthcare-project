@@ -127,7 +127,7 @@ useEffect(() => {
     <motion.img
       key={image}
       src={image}
-      alt="Dr. Harsh Vardhan Sharma"
+      alt="Dr. Prafull Sharma"
       className="absolute inset-0 w-full h-full object-cover"
       loading="lazy"
       decoding="async"
@@ -143,17 +143,19 @@ useEffect(() => {
   ))}
 </div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Harshvardhan Sharma</h2>
+            {/* <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Harshvardhan Sharma</h2>
+             */}
+              <h2 className="font-heading text-3xl font-bold text-foreground">Dr. Prafull Chandra Sharma</h2>
             <p className="text-accent font-medium mt-1">BAMS,CCKS(ATAB),C.Diab(London) — Ayurvedic Physician</p>
             <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Dr.Harshvardhan Sharma is a dedicated Ayurvedic physician practicing from the heart of Uttarakhand, India. With a degree in Bachelor of Ayurvedic Medicine and Surgery (BAMS), he combines classical Ayurvedic wisdom with a compassionate, patient-centered approach.
+                Dr. Prafull Chandra Sharma is a dedicated Ayurvedic physician practicing from the heart of Uttarakhand, India. With a degree in Bachelor of Ayurvedic Medicine and Surgery (BAMS), he combines classical Ayurvedic wisdom with a compassionate, patient-centered approach.
               </p>
               <p>
                 His practice focuses on understanding each patient's unique constitution (Prakriti) and designing personalized treatment protocols that address the root cause of disease rather than merely suppressing symptoms.
               </p>
               <p>
-                Dr.Sharma specializes in Panchakarma detoxification therapies, herbal medicine formulations, and lifestyle modifications that empower patients to take charge of their own health and well-being.
+                Dr. Prafull Chandra Sharma specializes in Panchakarma detoxification therapies, herbal medicine formulations, and lifestyle modifications that empower patients to take charge of their own health and well-being.
               </p>
             </div>
           </motion.div>

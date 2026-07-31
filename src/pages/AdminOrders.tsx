@@ -59,7 +59,9 @@ const AdminOrders = () => {
     return date.toISOString().split("T")[0];
   });
   const [toDate, setToDate] = useState(() => {
-    return new Date().toISOString().split("T")[0];
+    const date = new Date();
+    date.setDate(date.getDate() + 1);
+    return date.toISOString().split("T")[0];
   });
   const [orders, setOrders] = useState<OrderRecord[]>([]);
   const [isLoading, setIsLoading] = useState(false);

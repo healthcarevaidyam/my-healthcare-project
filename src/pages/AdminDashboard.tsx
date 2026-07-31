@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { clearAdminSession, getAdminSession } from "@/lib/adminAuth";
-import { MessageSquareText, Package, LogOut } from "lucide-react";
+import { MessageSquareText, Package, LogOut, ShoppingBag } from "lucide-react";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const AdminDashboard = () => {
                 <p className="text-sm font-medium text-primary">Admin Panel</p>
                 <h2 className="mt-1 text-xl font-semibold">Dashboard</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Manage inquiries and products from one place.
+                  Manage inquiries, orders, and products from one place.
                 </p>
               </div>
 
@@ -48,6 +48,14 @@ const AdminDashboard = () => {
                 >
                   <MessageSquareText className="mr-2 h-4 w-4" />
                   Inquiries
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start"
+                  onClick={() => navigate("/admin/orders")}
+                >
+                  <ShoppingBag className="mr-2 h-4 w-4" />
+                  Orders
                 </Button>
                 {/* <Button
                   variant="ghost"
@@ -69,7 +77,7 @@ const AdminDashboard = () => {
                 <div>
                   <h1 className="font-heading text-3xl font-bold">Admin Dashboard</h1>
                   <p className="text-muted-foreground">
-                    Choose a module to manage inquiries or products.
+                    Choose a module to manage inquiries, orders, or products.
                   </p>
                 </div>
 
@@ -97,17 +105,37 @@ const AdminDashboard = () => {
                   </CardContent>
                 </Card>
 
+                <Card className="hover:border-primary transition-colors">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <ShoppingBag className="h-5 w-5" />
+                      Orders
+                    </CardTitle>
+                    <CardDescription>
+                      View customer orders and export order data to Excel.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button onClick={() => navigate("/admin/orders")} className="w-full">
+                      View Orders
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Uncomment when products management is ready */}
                 {/* <Card className="hover:border-primary transition-colors">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Package className="h-5 w-5" />
                       Products
                     </CardTitle>
-                    <CardDescription>Add new products and manage the catalog.</CardDescription>
+                    <CardDescription>
+                      Manage your product catalog and inventory.
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Button onClick={() => navigate("/admin/products")} className="w-full">
-                      Open Products
+                      Manage Products
                     </Button>
                   </CardContent>
                 </Card> */}

@@ -247,6 +247,7 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    debugger;
     e.preventDefault();
     setIsSubmitting(true);
 

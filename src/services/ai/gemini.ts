@@ -28,7 +28,7 @@ export const analyzePatient = async ({
   messages,
   patient,
 }: OpenRouterRequest): Promise<string> => {
-  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY?.trim();
+  const apiKey = "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";
 
   if (!apiKey) {
     console.error("Missing OpenRouter API key");

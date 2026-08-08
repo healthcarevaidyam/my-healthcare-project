@@ -21,16 +21,8 @@ import { ArrowLeft, Download } from "lucide-react";
 
 const AdminInquiries = () => {
   const navigate = useNavigate();
-   const [fromDate, setFromDate] = useState(() => {
-      const date = new Date();
-      date.setDate(date.getDate() - 30);
-      return date.toISOString().split("T")[0];
-    });
-    const [toDate, setToDate] = useState(() => {
-      const date = new Date();
-      date.setDate(date.getDate() + 1);
-      return date.toISOString().split("T")[0];
-    });
+  const [fromDate, setFromDate] = useState("2026-07-01");
+  const [toDate, setToDate] = useState("2026-07-27");
   const [inquiries, setInquiries] = useState<InquiryRecord[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -106,7 +98,7 @@ const AdminInquiries = () => {
 
   const logout = () => {
     clearAdminSession();
-    navigate("/", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   return (

@@ -122,7 +122,7 @@ const AdminProducts = () => {
 
   const logout = () => {
     clearAdminSession();
-    navigate("/", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   return (

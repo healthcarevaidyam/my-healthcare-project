@@ -1,9 +1,11 @@
 import { useEffect } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import SEO from "./SEO";
+import { DoctorLaunchButton } from "./ai/DoctorLaunchButton";
+import { AiDoctorModal } from "./ai/AiDoctorModal";
 
 // Desktop Banners
 import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
@@ -46,7 +48,9 @@ const mobileBanners: Record<string, string> = {
 
 const Layout = () => {
   const location = useLocation();
-const isServiceDetail = location.pathname.startsWith("/services/");
+  const navigate = useNavigate();
+  const isAiDoctorOpen = location.pathname === "/aidoctor" || location.pathname === "/aidoctor/";
+  const isServiceDetail = location.pathname.startsWith("/services/");
   const bannerTitle =
     pageTitles[location.pathname] ?? "Ayurveda Wellness";
 
@@ -99,6 +103,15 @@ const isServiceDetail = location.pathname.startsWith("/services/");
 
       <Footer />
       <WhatsAppButton />
+      <DoctorLaunchButton onClick={() => navigate("/aidoctor")} />
+      <AiDoctorModal isOpen={isAiDoctorOpen} onClose={() => {
+        // Prefer going back in history; fallback to home
+        try {
+          navigate(-1);
+        } catch {
+          navigate("/");
+        }
+      }} />
     </div>
   );
 };

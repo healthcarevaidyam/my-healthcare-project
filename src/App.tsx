@@ -18,9 +18,7 @@ import AdminInquiries from "./pages/AdminInquiries";
 import AdminProducts from "./pages/AdminProducts";
 import AdminOrders from "@/pages/AdminOrders";
 import NotFound from "./pages/NotFound";
-
-
-
+import AiDoctor from "./pages/ai/AiDoctor";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +38,8 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/store" element={<Store />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/ai-doctor" element={<AiDoctor />} />
+            <Route path="/aidoctor" element={<Index />} />
           </Route>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />

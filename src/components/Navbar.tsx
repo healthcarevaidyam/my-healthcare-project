@@ -37,9 +37,16 @@ const Navbar = () => {
             loading="eager"
             decoding="async"
           />
-          <span className="font-heading text-xl font-bold text-foreground">
-            Vaidyam Hospital & HealthCare
-          </span>
+
+        <div>
+          <span className="font-serif text-[10px] font-semibold uppercase tracking-[0.4em] text-black-700">
+          BALKRISHNA
+        </span>
+
+          <h1 className="font-heading text-3xl font-bold text-slate-800">
+            Vaidyam Hospital &amp; HealthCare
+          </h1>
+        </div>
         </Link>
 
         {/* Desktop */}

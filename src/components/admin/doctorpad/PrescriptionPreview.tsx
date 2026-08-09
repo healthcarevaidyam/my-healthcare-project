@@ -1,6 +1,6 @@
 
 import type { Prescription } from "./types";
-import prescriptionPad from "@/assets/doctorpad/vaidyam-prescription-pad.png";
+import prescriptionPad from "../../../assets/doctorpad/vaidyam-prescription-pad.png";
 
 interface PrescriptionPreviewProps {
   prescription: Prescription;

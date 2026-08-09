@@ -1,5 +1,7 @@
+// src/components/admin/doctorpad/PrescriptionPreview.tsx
 
 import type { Prescription } from "./types";
+
 import prescriptionPad from "../../../assets/doctorpad/vaidyam-prescription-pad.png";
 
 interface PrescriptionPreviewProps {
@@ -9,87 +11,95 @@ interface PrescriptionPreviewProps {
 export default function PrescriptionPreview({
   prescription,
 }: PrescriptionPreviewProps) {
-
-  const formattedDate = prescription.date
-    ? new Date(
-        `${prescription.date}T00:00:00`
-      ).toLocaleDateString("en-GB")
-    : "";
+  const formattedDate =
+    prescription.date
+      ? new Date(
+          `${prescription.date}T00:00:00`
+        ).toLocaleDateString("en-GB")
+      : "";
 
   return (
     <div className="prescription-preview-wrapper">
+      <div className="prescription-paper">
 
-      {/* =====================================
-          A4 PRESCRIPTION
-      ===================================== */}
-
-      <div
-        id="doctor-prescription"
-        className="prescription-paper"
-      >
-
-        {/* ===================================
-            ORIGINAL STATIONERY IMAGE
-        =================================== */}
+        {/* ================================
+            ORIGINAL PRESCRIPTION BACKGROUND
+        ================================= */}
 
         <img
           src={prescriptionPad}
-          alt="Vaidyam Clinic Prescription"
+          alt="Vaidyam Prescription Pad"
           className="prescription-background"
         />
 
-
-        {/* ===================================
-            DATE
-        =================================== */}
+        {/* ================================
+            FEE
+        ================================= */}
 
         {prescription.fee && (
           <div className="prescription-field prescription-fee">
-            <strong>Fee:</strong> {prescription.fee}
+            <strong>Fee:</strong>{" "}
+            {prescription.fee}
           </div>
         )}
+
+        {/* ================================
+            DATE
+        ================================= */}
 
         {formattedDate && (
           <div className="prescription-field prescription-date">
-            <strong>Date:</strong> {formattedDate}
+            <strong>Date:</strong>{" "}
+            {formattedDate}
           </div>
         )}
 
+        {/* ================================
+            PATIENT DETAILS
+        ================================= */}
 
-        {/* ===================================
-            PATIENT DETAILS ROW
-        =================================== */}
-
-        {(prescription.patientName || prescription.age || prescription.sex) && (
+        {(
+          prescription.patientName ||
+          prescription.age ||
+          prescription.sex
+        ) && (
           <div className="prescription-field prescription-patient-row">
+
             {prescription.patientName && (
               <div className="prescription-row-item prescription-patient-name">
-                <strong>Name:</strong> {prescription.patientName}
+                <strong>
+                  Name:
+                </strong>{" "}
+                {prescription.patientName}
               </div>
             )}
 
             {prescription.age && (
               <div className="prescription-row-item prescription-age">
-                <strong>Age:</strong> {prescription.age}
+                <strong>
+                  Age:
+                </strong>{" "}
+                {prescription.age}
               </div>
             )}
 
             {prescription.sex && (
               <div className="prescription-row-item prescription-sex">
-                <strong>Sex:</strong> {prescription.sex}
+                <strong>
+                  Sex:
+                </strong>{" "}
+                {prescription.sex}
               </div>
             )}
           </div>
         )}
 
-
-        {/* ===================================
+        {/* ================================
             CONSULTATION
-        =================================== */}
+        ================================= */}
 
         {prescription.consultationType && (
           <div className="prescription-field prescription-consultation">
-
             <span>
               Through
             </span>
@@ -97,58 +107,64 @@ export default function PrescriptionPreview({
             <strong>
               {prescription.consultationType}
             </strong>
-
           </div>
         )}
 
-
-        {/* ===================================
+        {/* ================================
             BP
-        =================================== */}
+        ================================= */}
 
         {prescription.bp && (
           <div className="prescription-field prescription-bp">
-            <strong>B.P:</strong> {prescription.bp}
+            <strong>
+              B.P:
+            </strong>{" "}
+            {prescription.bp}
           </div>
         )}
 
-
-        {/* ===================================
+        {/* ================================
             TEMPERATURE
-        =================================== */}
+        ================================= */}
 
         {prescription.temperature && (
           <div className="prescription-field prescription-temperature">
-            <strong>Temp:</strong> {prescription.temperature}
+            <strong>
+              Temp:
+            </strong>{" "}
+            {prescription.temperature}
           </div>
         )}
 
-
-        {/* ===================================
+        {/* ================================
             PULSE
-        =================================== */}
+        ================================= */}
 
         {prescription.pulse && (
           <div className="prescription-field prescription-pulse">
-            <strong>Pulse:</strong> {prescription.pulse}
+            <strong>
+              Pulse:
+            </strong>{" "}
+            {prescription.pulse}
           </div>
         )}
 
-
-        {/* ===================================
-            O2
-        =================================== */}
+        {/* ================================
+            OXYGEN
+        ================================= */}
 
         {prescription.oxygen && (
           <div className="prescription-field prescription-oxygen">
-            <strong>O2:</strong> {prescription.oxygen}
+            <strong>
+              O2:
+            </strong>{" "}
+            {prescription.oxygen}
           </div>
         )}
 
-
-        {/* ===================================
+        {/* ================================
             DOCTOR NOTES
-        =================================== */}
+        ================================= */}
 
         {prescription.doctorNotes && (
           <div className="prescription-field prescription-doctor-notes">
@@ -157,7 +173,6 @@ export default function PrescriptionPreview({
         )}
 
       </div>
-
     </div>
   );
 }

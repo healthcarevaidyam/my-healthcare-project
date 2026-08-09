@@ -14,7 +14,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Store from "./pages/Store";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
-import AdminDoctorPad from "./pages/AdminDoctorPad";
+// import AdminDoctorPad from "./pages/AdminDoctorPad";
 import AdminInquiries from "./pages/AdminInquiries";
 import AdminProducts from "./pages/AdminProducts";
 import AdminOrders from "@/pages/AdminOrders";
@@ -44,7 +44,7 @@ const App = () => (
           </Route>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route path="/admin/doctorpad" element={<AdminDoctorPad />} />
+          {/* <Route path="/admin/doctorpad" element={<AdminDoctorPad />} /> */}
           <Route path="/admin/inquiries" element={<AdminInquiries />} />
           <Route path="/admin/products" element={<AdminProducts />} />
           <Route path="/admin/orders" element={<AdminOrders />} />

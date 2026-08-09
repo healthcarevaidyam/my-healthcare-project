@@ -65,14 +65,14 @@ const AdminDashboard = () => {
                   <Package className="mr-2 h-4 w-4" />
                   Products
                 </Button> */}
-                <Button
+                {/* <Button
                   variant="ghost"
                   className="w-full justify-start"
                   onClick={() => navigate("/admin/doctorpad")}
                 >
                   <FileText className="mr-2 h-4 w-4" />
                   Prescription Pad
-                </Button>
+                </Button> */}
               </div>
 
               <div className="mt-8 rounded-lg border bg-background/70 p-3 text-sm text-muted-foreground">

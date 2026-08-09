@@ -1,0 +1,775 @@
+/* =====================================================
+   DOCTOR PAD MAIN LAYOUT
+===================================================== */
+
+.doctorpad-container {
+  display: grid;
+
+  grid-template-columns: 390px minmax(0, 1fr);
+
+  min-height: 100vh;
+
+  background: #f1f5f9;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.doctorpad-sidebar {
+  padding: 24px;
+
+  background: #f8fafc;
+
+  border-right: 1px solid #e2e8f0;
+
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.doctorpad-form {
+  width: 100%;
+}
+
+
+/* Header */
+
+.doctorpad-form-header {
+  margin-bottom: 24px;
+}
+
+.doctorpad-form-header h1 {
+  margin: 0;
+
+  font-size: 26px;
+
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.doctorpad-form-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.doctorpad-section {
+  margin-bottom: 22px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+}
+
+
+/* Section heading */
+
+.doctorpad-section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.doctorpad-section-title h2 {
+  margin: 0;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #1e293b;
+}
+
+.doctorpad-section-title p {
+  margin: 3px 0 0;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+
+/* Number */
+
+.section-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 28px;
+
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #0f766e;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   FORM FIELDS
+===================================================== */
+
+.doctorpad-field {
+  margin-bottom: 15px;
+}
+
+.doctorpad-field:last-child {
+  margin-bottom: 0;
+}
+
+.doctorpad-field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #334155;
+}
+
+
+/* Inputs */
+
+.doctorpad-field input,
+.doctorpad-field select,
+.doctorpad-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.doctorpad-field input,
+.doctorpad-field select {
+  height: 42px;
+
+  padding: 0 12px;
+}
+
+
+.doctorpad-field textarea {
+  min-height: 250px;
+
+  padding: 12px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* Focus */
+
+.doctorpad-field input:focus,
+.doctorpad-field select:focus,
+.doctorpad-field textarea:focus {
+  border-color: #0f766e;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(15, 118, 110, 0.1);
+}
+
+
+/* Grid */
+
+.doctorpad-grid-2 {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.doctorpad-grid-3 {
+  display: grid;
+  grid-template-columns: minmax(0, 160px) minmax(0, 70px) minmax(0, 70px) minmax(0, 80px);
+  gap: 10px;
+  align-items: end;
+  justify-items: stretch;
+}
+
+.doctorpad-grid-4 {
+  display: grid;
+  grid-template-columns: minmax(160px, 1.5fr) repeat(3, minmax(110px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.doctorpad-field {
+  min-width: 0;
+}
+
+.doctorpad-field input,
+.doctorpad-field select,
+.doctorpad-field textarea {
+  min-width: 0;
+}
+
+@media (max-width: 680px) {
+  .doctorpad-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctorpad-grid-3,
+  .doctorpad-grid-2,
+  .doctorpad-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 880px) {
+  .doctorpad-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Help text */
+
+.textarea-help {
+  margin-top: 6px;
+
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+===================================================== */
+
+.doctorpad-form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding-bottom: 30px;
+}
+
+
+.doctorpad-reset-button {
+  padding: 10px 18px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.doctorpad-reset-button:hover {
+  background: #f8fafc;
+
+  border-color: #94a3b8;
+}
+
+
+/* =====================================================
+   PREVIEW AREA
+===================================================== */
+
+.doctorpad-preview-area {
+  min-width: 0;
+
+  padding: 24px;
+
+  overflow: auto;
+}
+
+
+.doctorpad-preview-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+.doctorpad-preview-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+
+.doctorpad-preview-header p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+.doctorpad-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.doctorpad-preview-actions button {
+  padding: 10px 14px;
+  border: 1px solid #0f766e;
+  border-radius: 8px;
+  background: #0f766e;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.doctorpad-preview-actions button:hover {
+  background: #115e52;
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   PRESCRIPTION PREVIEW WRAPPER
+===================================================== */
+
+.prescription-preview-wrapper {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  width: 100%;
+
+  padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   A4 PAPER
+
+   210mm x 297mm
+===================================================== */
+
+.prescription-paper {
+  position: relative;
+
+  width: 210mm;
+
+  height: 297mm;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 35px
+    rgba(15, 23, 42, 0.18);
+}
+
+
+/* =====================================================
+   ORIGINAL STATIONERY
+===================================================== */
+
+.prescription-background {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: fill;
+
+  display: block;
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   DYNAMIC FIELDS
+===================================================== */
+
+.prescription-field {
+  position: absolute;
+
+  z-index: 5;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+/*
+  Date area is around:
+  "Date"
+  near the upper-right section.
+*/
+
+.prescription-date {
+  top: 16.65%;
+
+  right: 7.8%;
+
+  font-weight: 600;
+}
+.prescription-fee {
+  top: 13.8%;
+
+  right: 7.8%;
+
+  font-weight: 600;
+}
+
+/* =====================================================
+   PATIENT NAME
+===================================================== */
+
+.prescription-patient-row {
+  top: 22.5%;
+
+  left: 12.5%;
+
+  width: 76%;
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+
+.prescription-row-item {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  max-width: 100%;
+}
+
+
+.prescription-row-item strong {
+  font-weight: 700;
+}
+
+
+.prescription-patient-row .prescription-patient-name {
+  min-width: 25%;
+}
+
+
+.prescription-patient-row .prescription-age,
+.prescription-patient-row .prescription-sex {
+  min-width: 12%;
+}
+
+
+/* =====================================================
+   AGE
+===================================================== */
+
+.prescription-age {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 12%;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   SEX
+===================================================== */
+
+.prescription-sex {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 12%;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   CONSULTATION
+===================================================== */
+
+.prescription-consultation {
+  top: 36.5%;
+
+  left: 17%;
+
+  display: flex;
+
+  gap: 6px;
+
+  align-items: baseline;
+
+  font-size: 13px;
+}
+
+.prescription-consultation strong {
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   B.P
+===================================================== */
+
+.prescription-bp {
+  top: 46.8%;
+
+  left: 19%;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   TEMPERATURE
+===================================================== */
+
+.prescription-temperature {
+  top: 52.35%;
+
+  left: 19%;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   PULSE
+===================================================== */
+
+.prescription-pulse {
+  top: 57.9%;
+
+  left: 19%;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   O2
+===================================================== */
+
+.prescription-oxygen {
+  top: 63.45%;
+
+  left: 19%;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   DOCTOR NOTES / PRESCRIPTION
+===================================================== */
+
+.prescription-doctor-notes {
+  top: 46%;
+
+  left: 40%;
+
+  width: 48%;
+
+  max-height: 48%;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  white-space: pre-line;
+
+  overflow-wrap: break-word;
+
+  word-break: break-word;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .doctorpad-container {
+    grid-template-columns:
+      350px minmax(0, 1fr);
+  }
+
+  .doctorpad-sidebar {
+    padding: 18px;
+  }
+
+  .doctorpad-preview-area {
+    padding: 18px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .doctorpad-container {
+    display: block;
+  }
+
+  .doctorpad-sidebar {
+    border-right: none;
+
+    border-bottom:
+      1px solid #e2e8f0;
+  }
+
+  .doctorpad-preview-area {
+    overflow-x: auto;
+  }
+
+  .prescription-preview-wrapper {
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .doctorpad-sidebar {
+    padding: 12px;
+  }
+
+  .doctorpad-preview-area {
+    padding: 12px;
+  }
+
+  .doctorpad-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+}

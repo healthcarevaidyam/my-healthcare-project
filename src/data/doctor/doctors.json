@@ -33,37 +33,7 @@
     },
     "featured": true
   },
-  {
-    "id": 2,
-    "name": "Dr. Harshvardhan Sharma",
-    "qualification": [
-      "BAMS"
-    ],
-    "designation": "Ayurvedic Physician",
-    "specialization": [
-      "General Ayurveda",
-      "Holistic Wellness",
-      "Lifestyle Management"
-    ],
-    "image": "Harshvardhan.png",
-    "shortBio": "A compassionate Ayurvedic physician focused on personalized treatment and holistic well-being.",
-    "description": [
-      "Dr. Harshvardhan Sharma is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
-      "His approach combines traditional Ayurvedic principles with modern patient-centered care to support long-term health and well-being.",
-      "He believes in understanding the individual needs of every patient and creating practical wellness plans that can be incorporated into everyday life."
-    ],
-    "approach": [
-      "Personalized consultation",
-      "Holistic healthcare",
-      "Lifestyle guidance",
-      "Ayurvedic wellness planning"
-    ],
-    "consultation": {
-      "online": true,
-      "inClinic": false
-    },
-    "featured": false
-  },
+ 
   {
     "id": 3,
     "name": "Dr. Naman Jain",

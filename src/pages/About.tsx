@@ -7,6 +7,7 @@ import { Heart, Eye, Target, BookOpen, Baby, Activity } from "lucide-react";
 
 import doctors from "@/data/doctor/doctors.json";
 
+// FIXED: Same pattern as the Index page - create a proper map
 const imageModules = import.meta.glob(
   "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
   {
@@ -15,7 +16,14 @@ const imageModules = import.meta.glob(
   }
 );
 
-const images = Object.values(imageModules) as string[];
+// Create a map with lowercase filenames for consistent matching
+const doctorImageMap = Object.fromEntries(
+  Object.entries(imageModules).map(([path, src]) => {
+    const fullFileName = path.split("/").pop() || "";
+    const fileName = fullFileName.replace(/\.[^.]+$/, "").toLowerCase();
+    return [fileName, src];
+  })
+);
 
 const values = [
   {
@@ -146,9 +154,9 @@ const About = () => {
           <div className="relative overflow-hidden">
 
             {doctors.map((doctor, index) => {
-              const doctorImage = images.find((image) =>
-                image.toLowerCase().endsWith(doctor.image.toLowerCase())
-              );
+              // FIXED: Use the map instead of find with endsWith
+              const imageName = doctor.image.replace(/\.[^.]+$/, "").toLowerCase();
+              const doctorImage = doctorImageMap[imageName];
 
               return (
                 <motion.div
@@ -168,14 +176,30 @@ const About = () => {
                 >
                   {/* Doctor Image */}
                   <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
-                    {doctorImage && (
+                    {doctorImage ? (
                       <motion.img
                         src={doctorImage}
                         alt={doctor.name}
                         className="absolute inset-0 w-full h-full object-cover"
                         loading={index === 0 ? "eager" : "lazy"}
                         decoding="async"
+                        onError={(e) => {
+                          console.error(`Failed to load image for ${doctor.name}:`, doctorImage);
+                          // Show fallback if image fails
+                          e.currentTarget.style.display = 'none';
+                          const parent = e.currentTarget.parentElement;
+                          if (parent) {
+                            const fallback = document.createElement('div');
+                            fallback.className = 'absolute inset-0 bg-secondary/30 flex items-center justify-center';
+                            fallback.innerHTML = `<span class="text-muted-foreground">Image not available</span>`;
+                            parent.appendChild(fallback);
+                          }
+                        }}
                       />
+                    ) : (
+                      <div className="absolute inset-0 bg-secondary/30 flex items-center justify-center">
+                        <span className="text-muted-foreground">No image available</span>
+                      </div>
                     )}
                   </div>
 

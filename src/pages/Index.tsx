@@ -28,17 +28,7 @@ import {
 
 import doctors from "@/data/doctor/doctors.json";
 
-// const imageModules = import.meta.glob(
-//   "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
-//   {
-//     eager: true,
-//     import: "default",
-//   }
-// );
-
-// const images = Object.values(imageModules) as string[];
-
-
+// FIXED: Proper image loading with better mapping
 const imageModules = import.meta.glob(
   "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
   {
@@ -47,7 +37,14 @@ const imageModules = import.meta.glob(
   }
 );
 
-const images = Object.values(imageModules) as string[];
+// Create a map with normalized filenames for easier lookup
+const doctorImageMap = Object.fromEntries(
+  Object.entries(imageModules).map(([path, src]) => {
+    const fullFileName = path.split("/").pop() || "";
+    const fileName = fullFileName.replace(/\.[^.]+$/, "").toLowerCase();
+    return [fileName, src];
+  })
+);
 
 const bannerImages = Object.entries(
   import.meta.glob("@/assets/homebanners/fordesktop/*.{jpg,jpeg,png,webp}", {
@@ -456,9 +453,9 @@ const Index = () => {
     <div className="relative overflow-hidden">
 
       {doctors.map((doctor, index) => {
-        const doctorImage = images.find((image) =>
-          image.toLowerCase().endsWith(doctor.image.toLowerCase())
-        );
+        // FIXED: Use the normalized map to find the doctor image
+        const imageKey = doctor.image.replace(/\.[^.]+$/, "").toLowerCase();
+        const doctorImage = doctorImageMap[imageKey];
 
         return (
           <motion.div
@@ -482,14 +479,30 @@ const Index = () => {
             ================================================= */}
             <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
 
-              {doctorImage && (
+              {doctorImage ? (
                 <motion.img
                   src={doctorImage}
                   alt={doctor.name}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
+                  onError={(e) => {
+                    console.error(`Failed to load image for ${doctor.name}:`, doctor.image);
+                    e.currentTarget.style.display = 'none';
+                    // Show fallback if image fails
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'absolute inset-0 bg-secondary/30 flex items-center justify-center';
+                      fallback.innerHTML = `<span class="text-muted-foreground">Image not available</span>`;
+                      parent.appendChild(fallback);
+                    }
+                  }}
                 />
+              ) : (
+                <div className="absolute inset-0 bg-secondary/30 flex items-center justify-center">
+                  <span className="text-muted-foreground">No image available</span>
+                </div>
               )}
 
             </div>

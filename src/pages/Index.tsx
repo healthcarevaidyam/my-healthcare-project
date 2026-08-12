@@ -28,23 +28,71 @@ import {
 
 import doctors from "@/data/doctor/doctors.json";
 
-// FIXED: Proper image loading with better mapping
-const imageModules = import.meta.glob(
-  "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    import: "default",
-  }
-);
+// For Cloudflare Pages, we need to use a different approach
+// The issue is that import.meta.glob might not work properly in Cloudflare Workers
 
-// Create a map with normalized filenames for easier lookup
-const doctorImageMap = Object.fromEntries(
-  Object.entries(imageModules).map(([path, src]) => {
-    const fullFileName = path.split("/").pop() || "";
-    const fileName = fullFileName.replace(/\.[^.]+$/, "").toLowerCase();
-    return [fileName, src];
-  })
-);
+// Method 1: Try import.meta.glob (might work in Pages)
+let doctorImageMap: Record<string, string> = {};
+
+try {
+  const imageModules = import.meta.glob(
+    "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
+    {
+      eager: true,
+      import: "default",
+    }
+  );
+  
+  doctorImageMap = Object.fromEntries(
+    Object.entries(imageModules).map(([path, src]) => {
+      const fullFileName = path.split("/").pop() || "";
+      const fileName = fullFileName.replace(/\.[^.]+$/, "").toLowerCase();
+      return [fileName, src as string];
+    })
+  );
+} catch (error) {
+  console.warn("Error loading doctor images via glob:", error);
+}
+
+// Method 2: Fallback to public directory for Cloudflare Pages
+// This is the most reliable method for Cloudflare
+const getDoctorImagePath = (imageName: string): string => {
+  // Remove any path separators and get just the filename
+  const cleanName = imageName.split('/').pop() || imageName;
+  
+  // For Cloudflare Pages, we need to use absolute paths from the public directory
+  // The public directory is served from the root of the domain
+  return `/doctorimages/${cleanName}`;
+};
+
+// Method 3: Try to load from assets if available
+const getDoctorImageFromAssets = (imageName: string): string | null => {
+  const baseName = imageName.replace(/\.[^.]+$/, "").toLowerCase();
+  return doctorImageMap[baseName] || null;
+};
+
+// Combined image loader for Cloudflare
+const getDoctorImage = (imageName: string): string => {
+  // First try to get from assets (if glob worked)
+  const assetImage = getDoctorImageFromAssets(imageName);
+  if (assetImage) {
+    return assetImage;
+  }
+  
+  // Fallback to public directory
+  return getDoctorImagePath(imageName);
+};
+
+// Pre-load images for better performance
+const preloadDoctorImages = () => {
+  doctors.forEach(doctor => {
+    const imageUrl = getDoctorImage(doctor.image);
+    if (imageUrl) {
+      const img = new Image();
+      img.src = imageUrl;
+    }
+  });
+};
 
 const bannerImages = Object.entries(
   import.meta.glob("@/assets/homebanners/fordesktop/*.{jpg,jpeg,png,webp}", {
@@ -288,19 +336,22 @@ const Index = () => {
     };
   }, [selectedImage, nextHeroImage]);
 
-
   const [currentImage, setCurrentImage] = useState(0);
   
-    useEffect(() => {
-      if (doctors.length <= 1) return;
+  useEffect(() => {
+    if (doctors.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % doctors.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
   
-      const interval = setInterval(() => {
-        setCurrentImage((prev) => (prev + 1) % doctors.length);
-      }, 5000);
-  
-      return () => clearInterval(interval);
-    }, []);
-  
+  // Preload images on mount for Cloudflare
+  useEffect(() => {
+    preloadDoctorImages();
+  }, []);
   
   return (
     <>
@@ -453,9 +504,11 @@ const Index = () => {
     <div className="relative overflow-hidden">
 
       {doctors.map((doctor, index) => {
-        // FIXED: Use the normalized map to find the doctor image
-        const imageKey = doctor.image.replace(/\.[^.]+$/, "").toLowerCase();
-        const doctorImage = doctorImageMap[imageKey];
+        // FIXED: For Cloudflare, use the public directory path
+        const imageUrl = getDoctorImage(doctor.image);
+        
+        // Debug log for Cloudflare
+        console.log(`Doctor ${doctor.name}: image path = ${imageUrl}`);
 
         return (
           <motion.div
@@ -479,23 +532,28 @@ const Index = () => {
             ================================================= */}
             <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
 
-              {doctorImage ? (
+              {imageUrl ? (
                 <motion.img
-                  src={doctorImage}
+                  src={imageUrl}
                   alt={doctor.name}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
                   onError={(e) => {
-                    console.error(`Failed to load image for ${doctor.name}:`, doctor.image);
-                    e.currentTarget.style.display = 'none';
-                    // Show fallback if image fails
-                    const parent = e.currentTarget.parentElement;
-                    if (parent) {
-                      const fallback = document.createElement('div');
-                      fallback.className = 'absolute inset-0 bg-secondary/30 flex items-center justify-center';
-                      fallback.innerHTML = `<span class="text-muted-foreground">Image not available</span>`;
-                      parent.appendChild(fallback);
+                    console.error(`Failed to load image for ${doctor.name}:`, imageUrl);
+                    // Try alternative path if first fails
+                    const altPath = `/doctorimages/${doctor.image.split('/').pop() || doctor.image}`;
+                    if (e.currentTarget.src !== altPath) {
+                      e.currentTarget.src = altPath;
+                    } else {
+                      e.currentTarget.style.display = 'none';
+                      const parent = e.currentTarget.parentElement;
+                      if (parent) {
+                        const fallback = document.createElement('div');
+                        fallback.className = 'absolute inset-0 bg-secondary/30 flex items-center justify-center';
+                        fallback.innerHTML = `<span class="text-muted-foreground">Image not available</span>`;
+                        parent.appendChild(fallback);
+                      }
                     }
                   }}
                 />

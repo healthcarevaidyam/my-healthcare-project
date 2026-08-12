@@ -37,8 +37,10 @@ import doctors from "@/data/doctor/doctors.json";
 // );
 
 // const images = Object.values(imageModules) as string[];
+
+
 const imageModules = import.meta.glob(
-  "/src/assets/doctorimages/*.{png,jpg,jpeg,webp}",
+  "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
   {
     eager: true,
     import: "default",

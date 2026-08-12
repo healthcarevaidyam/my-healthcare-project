@@ -7,7 +7,6 @@ import SectionHeading from "@/components/SectionHeading";
 import { getAllServicePages } from "@/data/serviceLoader";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-import doctorImage from "@/assets/doctorimages/Doctor Portrait 1.png";
 import {
   Activity,
   Apple,
@@ -29,8 +28,17 @@ import {
 
 import doctors from "@/data/doctor/doctors.json";
 
+// const imageModules = import.meta.glob(
+//   "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
+//   {
+//     eager: true,
+//     import: "default",
+//   }
+// );
+
+// const images = Object.values(imageModules) as string[];
 const imageModules = import.meta.glob(
-  "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
+  "/src/assets/doctorimages/*.{png,jpg,jpeg,webp}",
   {
     eager: true,
     import: "default",
@@ -38,7 +46,6 @@ const imageModules = import.meta.glob(
 );
 
 const images = Object.values(imageModules) as string[];
-
 
 const bannerImages = Object.entries(
   import.meta.glob("@/assets/homebanners/fordesktop/*.{jpg,jpeg,png,webp}", {

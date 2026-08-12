@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Prafull Chandra Sharma",
+    "qualification": [
+      "BAMS",
+      "CCKS (ATAB)",
+      "C.Diab (London)"
+    ],
+    "designation": "Ayurvedic Physician",
+    "specialization": [
+      "Panchakarma",
+      "Ayurvedic Medicine",
+      "Diabetes Management",
+      "Lifestyle & Wellness"
+    ],
+    "image": "Prafull.png",
+    "shortBio": "An experienced Ayurvedic physician dedicated to providing personalized, holistic and root-cause-focused healthcare.",
+    "description": [
+      "Dr. Prafull Chandra Sharma is a dedicated Ayurvedic physician practicing from the heart of Uttarakhand, India. With a degree in Bachelor of Ayurvedic Medicine and Surgery (BAMS), he combines classical Ayurvedic wisdom with a compassionate, patient-centered approach.",
+      "His practice focuses on understanding each patient's unique constitution (Prakriti) and designing personalized treatment protocols that address the root cause of disease rather than merely suppressing symptoms.",
+      "He specializes in Panchakarma therapies, herbal medicine, diabetes management and lifestyle modifications that help patients take a proactive approach to their long-term health and well-being."
+    ],
+    "approach": [
+      "Personalized Ayurvedic consultation",
+      "Root-cause-focused treatment",
+      "Prakriti-based assessment",
+      "Lifestyle and dietary guidance"
+    ],
+    "consultation": {
+      "online": true,
+      "inClinic": false
+    },
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Dr. Harshvardhan Sharma",
+    "qualification": [
+      "BAMS"
+    ],
+    "designation": "Ayurvedic Physician",
+    "specialization": [
+      "General Ayurveda",
+      "Holistic Wellness",
+      "Lifestyle Management"
+    ],
+    "image": "Harshvardhan.png",
+    "shortBio": "A compassionate Ayurvedic physician focused on personalized treatment and holistic well-being.",
+    "description": [
+      "Dr. Harshvardhan Sharma is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
+      "His approach combines traditional Ayurvedic principles with modern patient-centered care to support long-term health and well-being.",
+      "He believes in understanding the individual needs of every patient and creating practical wellness plans that can be incorporated into everyday life."
+    ],
+    "approach": [
+      "Personalized consultation",
+      "Holistic healthcare",
+      "Lifestyle guidance",
+      "Ayurvedic wellness planning"
+    ],
+    "consultation": {
+      "online": true,
+      "inClinic": false
+    },
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "Dr. Naman Jain",
+    "qualification": [
+      "BAMS"
+    ],
+    "designation": "Ayurvedic Physician",
+    "specialization": [
+      "General Ayurveda",
+      "Preventive Healthcare",
+      "Holistic Wellness"
+    ],
+    "image": "Naman.png",
+    "shortBio": "A dedicated Ayurvedic physician committed to personalized care and sustainable wellness.",
+    "description": [
+      "Dr. Naman Jain is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
+      "His approach combines traditional Ayurvedic principles with a patient-centered approach to support long-term health and well-being.",
+      "He focuses on helping patients understand their health needs and adopt sustainable Ayurvedic lifestyle practices for better overall wellness."
+    ],
+    "approach": [
+      "Patient-centered consultation",
+      "Preventive healthcare",
+      "Ayurvedic lifestyle guidance",
+      "Holistic wellness"
+    ],
+    "consultation": {
+      "online": true,
+      "inClinic": false
+    },
+    "featured": false
+  },
+  {
+  "id": 4,
+  "name": "Dr.Pant",
+  "qualification": [
+    "BAMS"
+  ],
+  "designation": "Ayurvedic Physician",
+  "specialization": [
+    "General Ayurveda",
+    "Holistic Wellness",
+    "Lifestyle Management"
+  ],
+  "image": "Pant.png",
+  "shortBio": "A dedicated Ayurvedic physician focused on personalized and holistic patient care.",
+  "description": [
+    "Dr.Pant is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
+    "His approach combines traditional Ayurvedic principles with patient-centered care to support long-term health and well-being."
+  ],
+  "approach": [
+    "Personalized consultation",
+    "Holistic healthcare",
+    "Ayurvedic lifestyle guidance",
+    "Preventive wellness"
+  ],
+  "consultation": {
+    "online": true,
+    "inClinic": false
+  },
+  "featured": false
+}
+]

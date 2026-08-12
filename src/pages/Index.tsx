@@ -27,6 +27,17 @@ import {
 
 } from "lucide-react";
 
+import doctors from "@/data/doctor/doctors.json";
+
+const imageModules = import.meta.glob(
+  "@/assets/doctorimages/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    import: "default",
+  }
+);
+
+const images = Object.values(imageModules) as string[];
 
 
 const bannerImages = Object.entries(
@@ -271,6 +282,20 @@ const Index = () => {
     };
   }, [selectedImage, nextHeroImage]);
 
+
+  const [currentImage, setCurrentImage] = useState(0);
+  
+    useEffect(() => {
+      if (doctors.length <= 1) return;
+  
+      const interval = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % doctors.length);
+      }, 5000);
+  
+      return () => clearInterval(interval);
+    }, []);
+  
+  
   return (
     <>
       <section className="relative min-h-[85vh] overflow-hidden">
@@ -412,85 +437,237 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Doctor Profile */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-[220px_1fr] gap-10 items-center">
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex justify-center"
-            >
-              <img
-                src={doctorImage}
-                alt="Dr. Prafull Chandra Sharma"
-                className="w-44 h-44 rounded-full object-cover border-4 border-primary/10 shadow-xl"
-              />
-            </motion.div>
+  {/* =====================================================
+    DOCTOR PROFILE
+===================================================== */}
+<section className="py-20">
+  <div className="container mx-auto px-4">
 
-            {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-primary uppercase tracking-[0.2em] text-sm font-semibold">
-                Meet Your Doctor
-              </span>
+    {/* Doctor Slider */}
+    <div className="relative overflow-hidden">
 
-              <h2 className="mt-2 text-3xl font-bold">
-                Dr. Prafull Chandra Sharma
+      {doctors.map((doctor, index) => {
+        const doctorImage = images.find((image) =>
+          image.toLowerCase().endsWith(doctor.image.toLowerCase())
+        );
+
+        return (
+          <motion.div
+            key={doctor.id}
+            initial={false}
+            animate={{
+              x: `${(index - currentImage) * 100}%`,
+              opacity: currentImage === index ? 1 : 0,
+            }}
+            transition={{
+              duration: 0.9,
+              ease: "easeInOut",
+            }}
+            className={`w-full grid md:grid-cols-2 gap-12 items-center ${
+              index === 0 ? "relative" : "absolute inset-0"
+            }`}
+          >
+
+            {/* =================================================
+                DOCTOR IMAGE
+            ================================================= */}
+            <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden rounded-2xl shadow-elevated">
+
+              {doctorImage && (
+                <motion.img
+                  src={doctorImage}
+                  alt={doctor.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                />
+              )}
+
+            </div>
+
+            {/* =================================================
+                DOCTOR DETAILS
+            ================================================= */}
+            <motion.div
+              initial={false}
+              animate={{
+                opacity: currentImage === index ? 1 : 0,
+                x: currentImage === index ? 0 : 30,
+              }}
+              transition={{
+                duration: 0.7,
+                ease: "easeInOut",
+              }}
+            >
+
+              {/* Doctor Name */}
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                {doctor.name}
               </h2>
 
-              <p className="text-primary font-medium mt-1">
-                BAMS,CCKS(ATAB),C.Diab(London) — Ayurvedic Physician
-              </p>
+              {/* Designation + Qualifications */}
+              <div className="flex flex-wrap items-center gap-2 mt-3">
 
-              <p className="mt-4 text-muted-foreground max-w-2xl">
-                Helping patients achieve long-term wellness through authentic Ayurveda,
-                Panchakarma therapies, herbal medicine, and personalized treatment
-                plans.
-              </p>
+                <span className="text-accent font-medium">
+                  {doctor.designation}
+                </span>
 
-              <div className="flex flex-wrap gap-3 mt-5">
-              <span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
-  <Stethoscope className="w-4 h-4 text-green-600" />
-  Ayurveda
-</span>
+                <span className="text-muted-foreground">
+                  •
+                </span>
 
-<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
-  <HeartPulse className="w-4 h-4 text-red-500" />
-  Diabetes Care
-</span>
+                {doctor.qualification?.map(
+                  (qualification, qualificationIndex) => (
+                    <span
+                      key={qualificationIndex}
+                      className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium"
+                    >
+                      {qualification}
+                    </span>
+                  )
+                )}
 
-<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
-  <ShieldPlus className="w-4 h-4 text-blue-600" />
-  Ano-Rectal Care
-</span>
-
-<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
-  <Leaf className="w-4 h-4 text-teal-600" />
-  Panchakarma
-</span>
-
-<span className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm">
-  <Activity className="w-4 h-4 text-emerald-600" />
-  Holistic Care
-</span>
-                 
               </div>
 
-              <Button className="mt-6" asChild>
-                <Link to="/about">
-                  View Full Profile
-                </Link>
-              </Button>
+              {/* =================================================
+                  SHORT BIO
+              ================================================= */}
+              {doctor.shortBio && (
+                <p className="mt-5 text-foreground/80 text-lg leading-relaxed">
+                  {doctor.shortBio}
+                </p>
+              )}
+
+              {/* =================================================
+                  SPECIALIZATIONS
+              ================================================= */}
+              {doctor.specialization?.length > 0 && (
+                <div className="mt-6">
+
+                  <h3 className="text-sm font-semibold text-foreground mb-3">
+                    Specializations
+                  </h3>
+
+                  <div className="flex flex-wrap gap-2">
+
+                    {doctor.specialization.map(
+                      (specialty, specialtyIndex) => (
+                        <span
+                          key={specialtyIndex}
+                          className="px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm"
+                        >
+                          {specialty}
+                        </span>
+                      )
+                    )}
+
+                  </div>
+                </div>
+              )}
+
+              {/* =================================================
+                  DESCRIPTION
+              ================================================= */}
+              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+
+                {doctor.description.map(
+                  (paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex}>
+                      {paragraph}
+                    </p>
+                  )
+                )}
+
+              </div>
+
+              {/* =================================================
+                  TREATMENT APPROACH
+              ================================================= */}
+              {doctor.approach?.length > 0 && (
+                <div className="mt-7">
+
+                  <h3 className="text-sm font-semibold text-foreground mb-3">
+                    Treatment Approach
+                  </h3>
+
+                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
+
+                    {doctor.approach.map(
+                      (item, approachIndex) => (
+                        <div
+                          key={approachIndex}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+
+                          <span>
+                            {item}
+                          </span>
+
+                        </div>
+                      )
+                    )}
+
+                  </div>
+                </div>
+              )}
+
+              {/* =================================================
+                  CONSULTATION OPTIONS
+              ================================================= */}
+              {doctor.consultation && (
+                <div className="flex flex-wrap gap-3 mt-8">
+
+                  {doctor.consultation.online && (
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                      <span className="w-2 h-2 rounded-full bg-primary" />
+                      Online Consultation
+                    </span>
+                  )}
+
+                  {doctor.consultation.inClinic && (
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
+                      <span className="w-2 h-2 rounded-full bg-accent" />
+                      In-Clinic Consultation
+                    </span>
+                  )}
+
+                </div>
+              )}
+
             </motion.div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        );
+      })}
+
+    </div>
+
+    {/* =====================================================
+        DOCTOR INDICATORS
+    ===================================================== */}
+    {doctors.length > 1 && (
+      <div className="flex justify-center items-center gap-2 mt-10">
+
+        {doctors.map((doctor, index) => (
+          <button
+            key={doctor.id}
+            type="button"
+            onClick={() => setCurrentImage(index)}
+            aria-label={`Show ${doctor.name}`}
+            className={`h-2.5 rounded-full transition-all duration-300 ${
+              currentImage === index
+                ? "w-8 bg-primary"
+                : "w-2.5 bg-primary/30 hover:bg-primary/50"
+            }`}
+          />
+        ))}
+
+      </div>
+    )}
+
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-20 bg-white border-t border-gray-100">

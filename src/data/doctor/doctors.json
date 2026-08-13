@@ -1,38 +1,45 @@
 [
-  {
-    "id": 1,
-    "name": "Dr. Prafull Chandra Sharma",
-    "qualification": [
-      "BAMS",
-      "CCKS (ATAB)",
-      "C.Diab (London)"
-    ],
-    "designation": "Ayurvedic Physician",
-    "specialization": [
-      "Panchakarma",
-      "Ayurvedic Medicine",
-      "Diabetes Management",
-      "Lifestyle & Wellness"
-    ],
-    "image": "Prafull.png",
-    "shortBio": "An experienced Ayurvedic physician dedicated to providing personalized, holistic and root-cause-focused healthcare.",
-    "description": [
-      "Dr. Prafull Chandra Sharma is a dedicated Ayurvedic physician practicing from the heart of Uttarakhand, India. With a degree in Bachelor of Ayurvedic Medicine and Surgery (BAMS), he combines classical Ayurvedic wisdom with a compassionate, patient-centered approach.",
-      "His practice focuses on understanding each patient's unique constitution (Prakriti) and designing personalized treatment protocols that address the root cause of disease rather than merely suppressing symptoms.",
-      "He specializes in Panchakarma therapies, herbal medicine, diabetes management and lifestyle modifications that help patients take a proactive approach to their long-term health and well-being."
-    ],
-    "approach": [
-      "Personalized Ayurvedic consultation",
-      "Root-cause-focused treatment",
-      "Prakriti-based assessment",
-      "Lifestyle and dietary guidance"
-    ],
-    "consultation": {
-      "online": true,
-      "inClinic": false
-    },
-    "featured": true
+{
+  "id": 1,
+  "name": "Prafull Sharma",
+  "qualification": [
+    "MCA",
+    "BCA"
+  ],
+  "designation": "Managing Director",
+  "specialization": [
+    "Healthcare Management",
+    "Hospital Operations & Administration",
+    "Digital Healthcare Solutions",
+    "Technology & Digital Transformation",
+    "Custom CRM & ERP Solutions",
+    "Software & Business Automation",
+    "AI Integration & Automation",
+    "Strategic Business Development"
+  ],
+  "image": "Prafull.png",
+  "shortBio": "Managing Director with a strong technology background and 6 years of experience in software development, focused on driving efficient hospital operations, digital transformation and cost-effective technology solutions.",
+  "description": [
+    "Prafull Sharma is the Managing Director of the organization, responsible for strategic direction, business development, technology initiatives and the overall growth of the hospital.",
+    "With a strong background in software development and 5.8 years of professional experience, he brings a technology-driven approach to healthcare management, focusing on improving operational efficiency and creating better digital experiences for patients and staff.",
+    "His expertise includes developing customized CRM and ERP solutions, business automation, AI integration and end-to-end software solutions designed to address specific organizational requirements while keeping implementation practical and cost-effective.",
+    "As Managing Director, he focuses on combining healthcare operations with modern technology, supporting efficient processes, digital transformation, service improvement and the long-term growth of the organization."
+  ],
+  "approach": [
+    "Patient-focused healthcare management",
+    "Efficient hospital operations",
+    "Technology-driven digital transformation",
+    "Cost-effective business solutions",
+    "Process automation and optimization",
+    "Strategic growth and development",
+    "Continuous improvement and innovation"
+  ],
+  "consultation": {
+    "online": true,
+    "inClinic": false
   },
+  "featured": true
+},
  
  {
     "id": 3,

@@ -34,9 +34,9 @@
     "featured": true
   },
  
-  {
+ {
     "id": 3,
-    "name": "Dr. Naman Jain",
+    "name": "Dr. Naman Singhal",
     "qualification": [
       "BAMS"
     ],
@@ -44,32 +44,40 @@
     "specialization": [
       "General Ayurveda",
       "Preventive Healthcare",
-      "Holistic Wellness"
+      "Holistic Wellness",
+      "Hypertension",
+      "Fever",
+      "Infection",
+      "Diabetes",
+      "Vomiting & Loose Stools"
     ],
     "image": "Naman.png",
     "shortBio": "A dedicated Ayurvedic physician committed to personalized care and sustainable wellness.",
     "description": [
       "Dr. Naman Jain is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
       "His approach combines traditional Ayurvedic principles with a patient-centered approach to support long-term health and well-being.",
-      "He focuses on helping patients understand their health needs and adopt sustainable Ayurvedic lifestyle practices for better overall wellness."
+      "He focuses on helping patients understand their health needs and adopt sustainable Ayurvedic lifestyle practices for better overall wellness.",
+      "He provides authentic Ayurvedic treatments integrated with a modern scientific approach for effective and satisfactory outcomes."
     ],
     "approach": [
       "Patient-centered consultation",
       "Preventive healthcare",
       "Ayurvedic lifestyle guidance",
-      "Holistic wellness"
+      "Holistic wellness",
+      "Integrated Ayurvedic & modern approach"
     ],
     "consultation": {
       "online": true,
       "inClinic": false
     },
     "featured": false
-  },
+},
   {
   "id": 4,
-  "name": "Dr.Pant",
+  "name": "Dr Shivam Pant",
   "qualification": [
-    "BAMS"
+    "BAMS",
+    "MD (Ayurveda) - Pursuing"
   ],
   "designation": "Ayurvedic Physician",
   "specialization": [
@@ -78,16 +86,18 @@
     "Lifestyle Management"
   ],
   "image": "Pant.png",
-  "shortBio": "A dedicated Ayurvedic physician focused on personalized and holistic patient care.",
+  "shortBio": "An experienced Ayurvedic physician with expertise in personalized holistic care, currently pursuing MD in Ayurveda.",
   "description": [
-    "Dr.Pant is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
-    "His approach combines traditional Ayurvedic principles with patient-centered care to support long-term health and well-being."
+    "Dr Shivam Pant is an experienced Ayurvedic physician with a strong focus on personalized and holistic healthcare.",
+    "He combines traditional Ayurvedic principles with modern patient-centered approaches and is currently pursuing his MD in Ayurveda to further strengthen his clinical expertise and knowledge.",
+    "His areas of expertise include Ayurvedic lifestyle management, preventive wellness, and holistic healthcare."
   ],
   "approach": [
     "Personalized consultation",
     "Holistic healthcare",
     "Ayurvedic lifestyle guidance",
-    "Preventive wellness"
+    "Preventive wellness",
+    "Evidence-informed Ayurvedic care"
   ],
   "consultation": {
     "online": true,

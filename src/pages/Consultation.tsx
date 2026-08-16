@@ -9,14 +9,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, MessageCircle, Phone, Video, ShieldCheck, HeartPulse, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+
 const Consultation = () => {
   const isMobile = useIsMobile();
   const { toast } = useToast();
+
   const [form, setForm] = useState({
-    name: "", phone: "", email: "", problem: "", date: "",
+    name: "",
+    phone: "",
+    email: "",
+    problem: "",
+    date: "",
   });
 
-const handleSubmit = (e: React.FormEvent) => {
+  const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwDLFHZhuP3CMWlsTRru2IfZI3DhUJHMR-rXw4rQScoFgNsjBqHlym85LOl6UhgLQps/exec";
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   if (!form.name || !form.phone || !form.email) {
@@ -28,41 +38,53 @@ const handleSubmit = (e: React.FormEvent) => {
     return;
   }
 
-  // Save current form data
-  const formData = { ...form };
-
-  // Start the request (don't await it)
-  const request = fetch(
-    "https://vaidyamhealthcare.app.n8n.cloud/webhook/consultation",
-    {
+  try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-      keepalive: true,
+      body: JSON.stringify({
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        problem: form.problem,
+        date: form.date
+          ? new Date(form.date).toISOString()
+          : new Date().toISOString(),
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      throw new Error(
+        result.message || "Failed to save consultation"
+      );
     }
-  );
 
-  // Clear the form immediately
-  setForm({
-    name: "",
-    phone: "",
-    email: "",
-    problem: "",
-    date: "",
-  });
+    console.log("Consultation ID:", result.id);
 
-  // Show success immediately
-  toast({
-    title: "Appointment Request Sent!",
-    description: "Thank you! Our healthcare team will contact you shortly.",
-  });
+    setForm({
+      name: "",
+      phone: "",
+      email: "",
+      problem: "",
+      date: "",
+    });
 
-  // Handle errors in the background
-  request.catch((error) => {
-    console.error("Background submission failed:", error);
-  });
+    toast({
+      title: "Appointment Request Sent!",
+      description: `Your consultation request ${result.id} has been submitted successfully.`,
+    });
+
+  } catch (error) {
+    console.error("Inquiry submission failed:", error);
+
+    toast({
+      title: "Submission Failed",
+      description:
+        "Unable to send your appointment request. Please try again.",
+      variant: "destructive",
+    });
+  }
 };
 
   const update = (field: string, value: string) =>
@@ -214,7 +236,7 @@ const handleSubmit = (e: React.FormEvent) => {
                       <Textarea id="problem" value={form.problem} onChange={(e) => update("problem", e.target.value)} placeholder="Tell us about your symptoms or health concern..." rows={4} className="mt-1" />
                     </div>
                     <Button type="submit" size="lg" className="w-full sm:w-auto">
-                      Request a Video Call
+                      Submit Request
                     </Button>
                   </form>
                 </CardContent>

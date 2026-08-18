@@ -20,15 +20,52 @@ import AdminProducts from "./pages/AdminProducts";
 import AdminOrders from "@/pages/AdminOrders";
 import NotFound from "./pages/NotFound";
 import AiDoctor from "./pages/ai/AiDoctor";
+import VisitorTracker from "./components/VisitorTracker";
 
 const queryClient = new QueryClient();
+
+// const App = () => (
+//   <QueryClientProvider client={queryClient}>
+//     <TooltipProvider>
+//       <Toaster />
+//       <Sonner />
+//       <BrowserRouter>
+//         <Routes>
+//           <Route element={<Layout />}>
+//             <Route path="/" element={<Index />} />
+//             <Route path="/about" element={<About />} />
+//             <Route path="/services" element={<Services />} />
+//             <Route path="/services/:slug" element={<ServiceDetail />} />
+//             <Route path="/consultation" element={<Consultation />} />
+//             <Route path="/blog" element={<Blog />} />
+//             <Route path="/store" element={<Store />} />
+//             <Route path="/contact" element={<Contact />} />
+//             <Route path="/ai-doctor" element={<AiDoctor />} />
+//             <Route path="/aidoctor" element={<Index />} />
+//           </Route>
+//           <Route path="/admin/login" element={<AdminLogin />} />
+//           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+//           <Route path="/admin/doctorpad" element={<AdminDoctorPad />} />
+//           <Route path="/admin/inquiries" element={<AdminInquiries />} />
+//           <Route path="/admin/products" element={<AdminProducts />} />
+//           <Route path="/admin/orders" element={<AdminOrders />} />
+//           <Route path="*" element={<NotFound />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </TooltipProvider>
+//   </QueryClientProvider>
+// );
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
+
       <BrowserRouter>
+        <VisitorTracker />
+
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
@@ -42,12 +79,14 @@ const App = () => (
             <Route path="/ai-doctor" element={<AiDoctor />} />
             <Route path="/aidoctor" element={<Index />} />
           </Route>
+
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/doctorpad" element={<AdminDoctorPad />} />
           <Route path="/admin/inquiries" element={<AdminInquiries />} />
           <Route path="/admin/products" element={<AdminProducts />} />
           <Route path="/admin/orders" element={<AdminOrders />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

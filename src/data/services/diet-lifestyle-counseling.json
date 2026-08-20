@@ -1,28 +1,164 @@
 {
   "slug": "diet-lifestyle-counseling",
-  "title": "Diet & Lifestyle Counseling",
-  "subtitle": "Nutrition for Your Dosha",
-  "metaTitle": "Ayurvedic Diet & Lifestyle Counseling in India | Vaidyam Healthcare",
-  "metaDescription": "Receive Ayurvedic diet and lifestyle counseling for digestion, dosha balance, healthy routines, and long-term wellness in India.",
-  "summary": "Ayurveda emphasizes food, routine, sleep, and environment to support lasting wellness and prevention.",
+
+  "title": "Ayurvedic Diet & Lifestyle Counseling",
+
+  "subtitle": "Personalized Ayurvedic Nutrition, Daily Routine & Wellness Guidance",
+
+  "metaTitle": "Ayurvedic Diet & Lifestyle Counseling in India | Personalized Nutrition & Wellness | Vaidyam Healthcare",
+
+  "metaDescription": "Get personalized Ayurvedic diet and lifestyle counseling in India for digestion, daily routines, seasonal eating, Prakriti-based nutrition and long-term wellness.",
+
+  "summary": "Ayurvedic diet and lifestyle counseling focuses on understanding your individual constitution, eating habits, daily routine, sleep and lifestyle patterns. Based on your assessment, personalized guidance can help you develop healthier food choices, daily routines and sustainable wellness habits.",
+
   "highlights": [
-    "Dosha-specific advice",
+    "Personalized Ayurvedic diet guidance",
+    "Prakriti-based nutrition recommendations",
     "Seasonal eating guidance",
-    "Daily routine support",
-    "Holistic lifestyle planning"
+    "Daily routine planning",
+    "Sleep and lifestyle guidance",
+    "Long-term wellness planning"
   ],
+
+  "problems": [
+    {
+      "slug": "digestive-health",
+      "title": "Digestive Health",
+      "description": "Personalized dietary and lifestyle guidance for people looking to support healthy digestion and better eating habits."
+    },
+    {
+      "slug": "irregular-routine",
+      "title": "Irregular Daily Routine",
+      "description": "Ayurvedic guidance for developing more consistent routines around meals, sleep, activity and daily self-care."
+    },
+    {
+      "slug": "unhealthy-eating-habits",
+      "title": "Unhealthy Eating Habits",
+      "description": "Personalized nutrition guidance to help develop balanced and sustainable eating habits."
+    },
+    {
+      "slug": "stress-and-lifestyle",
+      "title": "Stress & Lifestyle Imbalance",
+      "description": "Lifestyle recommendations focused on creating healthier routines, relaxation practices and better work-life balance."
+    },
+    {
+      "slug": "low-energy",
+      "title": "Low Energy",
+      "description": "Diet and lifestyle guidance designed to support healthy energy levels through appropriate nutrition, rest and daily routines."
+    },
+    {
+      "slug": "preventive-wellness",
+      "title": "Preventive Wellness",
+      "description": "Personalized Ayurvedic guidance for people who want to build healthier habits and support long-term wellbeing."
+    }
+  ],
+
+  "symptoms": [
+    "Digestive discomfort",
+    "Irregular eating patterns",
+    "Low energy",
+    "Poor sleep routine",
+    "Feeling stressed",
+    "Irregular daily routine",
+    "Difficulty maintaining healthy habits",
+    "Unbalanced food choices"
+  ],
+
+  "possibleCauses": [
+    "Irregular meal timings",
+    "Unbalanced diet",
+    "Poor sleep habits",
+    "Sedentary lifestyle",
+    "Work-related stress",
+    "Inconsistent daily routine",
+    "Lack of physical activity",
+    "Poor hydration habits"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Diet & Lifestyle Approach",
+
+    "description": "Ayurveda considers food, daily routine, sleep, activity, environment and individual constitution when developing lifestyle recommendations. Your Prakriti, current concerns and personal goals can be considered when creating a practical and sustainable wellness plan.",
+
+    "therapies": [
+      "Prakriti assessment",
+      "Personalized Ayurvedic diet planning",
+      "Dosha-based food guidance",
+      "Seasonal eating recommendations",
+      "Dinacharya guidance",
+      "Sleep routine guidance",
+      "Lifestyle and activity recommendations",
+      "Healthy habit planning"
+    ]
+  },
+
   "benefits": [
-    "Improved digestion",
-    "Better energy balance",
-    "Long-term wellness habits",
-    "More disciplined daily routine"
+    "Personalized nutrition guidance",
+    "Support for healthy digestion",
+    "More consistent daily routines",
+    "Better understanding of Ayurvedic food principles",
+    "Support for healthy energy levels",
+    "Improved lifestyle habits",
+    "Seasonal wellness guidance",
+    "Long-term healthy routine planning"
   ],
+
   "treatmentSteps": [
-    "Constitution analysis",
-    "Meal and routine planning",
-    "Habit support",
-    "Follow-up refinement"
+    "Initial Ayurvedic consultation",
+    "Prakriti and lifestyle assessment",
+    "Review of current diet and daily routine",
+    "Personalized meal and nutrition planning",
+    "Daily routine and lifestyle recommendations",
+    "Habit-building guidance",
+    "Follow-up and plan refinement"
   ],
+
+  "whoCanBenefit": [
+    "People interested in Ayurvedic nutrition",
+    "People looking for personalized diet guidance",
+    "People wanting to improve their daily routine",
+    "People looking for support with healthy eating habits",
+    "People interested in Prakriti-based wellness",
+    "People looking for seasonal diet guidance",
+    "People wanting long-term lifestyle support"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic diet and lifestyle counseling?",
+      "answer": "Ayurvedic diet and lifestyle counseling provides personalized guidance based on factors such as individual constitution, food habits, daily routine, sleep, activity and wellness goals."
+    },
+    {
+      "question": "What is a Dosha-based diet?",
+      "answer": "A Dosha-based diet is an Ayurvedic approach to food selection that considers an individual's constitution and current state when providing dietary recommendations."
+    },
+    {
+      "question": "What happens during an Ayurvedic diet consultation?",
+      "answer": "The consultation may include a discussion of your health history, food habits, lifestyle, sleep, daily routine and wellness goals, followed by personalized dietary and lifestyle recommendations."
+    },
+    {
+      "question": "Can Ayurvedic diet counseling help with digestion?",
+      "answer": "Personalized food choices, meal timing and lifestyle recommendations may support healthy digestion. Recommendations depend on the individual's needs and overall health."
+    },
+    {
+      "question": "What is Dinacharya in Ayurveda?",
+      "answer": "Dinacharya refers to the Ayurvedic concept of a daily routine. It includes practices related to activities such as waking, eating, personal care, activity and sleep."
+    },
+    {
+      "question": "Can Ayurvedic diet counseling help with weight management?",
+      "answer": "Personalized nutrition and lifestyle guidance can support healthy eating habits and sustainable lifestyle changes. Weight management recommendations should be tailored to the individual's health and nutritional needs."
+    },
+    {
+      "question": "Is Ayurvedic diet counseling suitable for everyone?",
+      "answer": "Dietary recommendations should be personalized according to an individual's health, nutritional needs, lifestyle and any existing medical conditions. People with medical conditions should also discuss significant dietary changes with their healthcare professional."
+    },
+    {
+      "question": "How much does Ayurvedic diet and lifestyle counseling cost?",
+      "answer": "The listed price for this Ayurvedic diet and lifestyle counseling service is ₹2,000."
+    }
+  ],
+
   "isCore": true,
-  "price": "2000"
+
+  "price": "500"
 }

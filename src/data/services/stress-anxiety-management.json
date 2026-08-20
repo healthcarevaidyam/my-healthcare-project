@@ -1,28 +1,211 @@
 {
   "slug": "stress-anxiety-management",
-  "title": "Stress & Anxiety Management",
-  "subtitle": "Mental Wellness Program",
-  "metaTitle": "Ayurvedic Stress & Anxiety Treatment in India | Vaidyam Healthcare",
-  "metaDescription": "Discover Ayurvedic stress and anxiety support through calming therapies, meditation, herbal care, and balanced lifestyle guidance in India.",
-  "summary": "We help calm the nervous system through a blend of therapeutic practices, mindful routines, and herbal support.",
+
+  "title": "Ayurvedic Stress & Anxiety Management",
+
+  "subtitle": "Natural Stress Relief, Mental Relaxation & Emotional Wellness Support",
+
+  "metaTitle": "Ayurvedic Stress & Anxiety Management in India | Natural Stress Relief & Wellness | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic stress and anxiety management in India with personalized lifestyle guidance, meditation, breathing practices, relaxation therapies and herbal wellness support.",
+
+  "summary": "Our Ayurvedic stress and anxiety management program focuses on supporting relaxation, healthy routines and emotional wellbeing through personalized lifestyle guidance, meditation, breathing practices, traditional Ayurvedic therapies and herbal support when appropriate.",
+
   "highlights": [
-    "Mind-body wellness support",
+    "Personalized stress assessment",
+    "Ayurvedic stress management",
     "Meditation and breathing practices",
-    "Herbal support for stress",
-    "Personalized calm-building plan"
+    "Relaxation therapies",
+    "Healthy sleep routine guidance",
+    "Lifestyle and diet recommendations",
+    "Herbal wellness support",
+    "Personalized mental wellness plan"
   ],
+
+  "problems": [
+    {
+      "slug": "chronic-stress",
+      "title": "Chronic Stress",
+      "description": "Personalized lifestyle and relaxation support for people experiencing ongoing physical or mental stress."
+    },
+    {
+      "slug": "anxiety",
+      "title": "Anxiety Support",
+      "description": "Complementary Ayurvedic wellness support focused on relaxation, healthy routines and stress management for people experiencing anxiety."
+    },
+    {
+      "slug": "mental-fatigue",
+      "title": "Mental Fatigue",
+      "description": "Lifestyle, relaxation and wellness guidance for people experiencing mental tiredness and difficulty maintaining focus."
+    },
+    {
+      "slug": "stress-related-sleep-problems",
+      "title": "Stress-Related Sleep Problems",
+      "description": "Relaxation and sleep-routine guidance for people whose stress may be affecting their sleep quality."
+    },
+    {
+      "slug": "restlessness",
+      "title": "Restlessness",
+      "description": "Calming lifestyle practices and relaxation support for people experiencing persistent restlessness."
+    },
+    {
+      "slug": "work-stress",
+      "title": "Work & Lifestyle Stress",
+      "description": "Personalized wellness strategies to help manage stress associated with work, routines and everyday responsibilities."
+    }
+  ],
+
+  "symptoms": [
+    "Persistent stress",
+    "Excessive worrying",
+    "Restlessness",
+    "Mental fatigue",
+    "Difficulty concentrating",
+    "Irritability",
+    "Poor sleep",
+    "Difficulty relaxing",
+    "Low energy",
+    "Headaches associated with stress",
+    "Muscle tension",
+    "Feeling overwhelmed"
+  ],
+
+  "possibleCauses": [
+    "Work-related stress",
+    "Relationship or family stress",
+    "Poor sleep",
+    "Irregular daily routine",
+    "Excessive screen exposure",
+    "Lack of physical activity",
+    "Poor dietary habits",
+    "Chronic workload",
+    "Major lifestyle changes",
+    "Ongoing emotional pressure"
+  ],
+
+  "wellnessAreas": [
+    {
+      "title": "Stress Management",
+      "description": "Personalized strategies to identify lifestyle factors contributing to stress and develop healthier daily routines."
+    },
+    {
+      "title": "Anxiety Support",
+      "description": "Calming practices and lifestyle guidance designed to support relaxation and emotional wellbeing."
+    },
+    {
+      "title": "Meditation & Breathing",
+      "description": "Guided meditation, breathing and mindfulness practices that may help promote relaxation."
+    },
+    {
+      "title": "Sleep & Relaxation",
+      "description": "Support for healthier sleep routines and relaxation practices that complement overall stress management."
+    },
+    {
+      "title": "Diet & Lifestyle",
+      "description": "Personalized guidance on nutrition, daily routines, physical activity and other lifestyle habits."
+    },
+    {
+      "title": "Mental Wellness",
+      "description": "A holistic approach combining healthy routines, relaxation practices and supportive Ayurvedic wellness care."
+    }
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Stress & Anxiety Management",
+
+    "description": "Ayurvedic stress management takes an individualized approach to daily routine, sleep, diet, relaxation and overall wellbeing. Depending on the assessment, recommendations may include meditation, breathing practices, traditional Ayurvedic therapies, lifestyle changes and herbal support when appropriate.",
+
+    "therapies": [
+      "Personalized Ayurvedic consultation",
+      "Stress and lifestyle assessment",
+      "Meditation practices",
+      "Breathing exercises",
+      "Relaxation techniques",
+      "Ayurvedic massage therapies when appropriate",
+      "Daily routine guidance",
+      "Sleep routine guidance",
+      "Dietary recommendations",
+      "Ayurvedic herbal support when appropriate"
+    ]
+  },
+
   "benefits": [
-    "Improved sleep",
-    "Better emotional balance",
+    "Improved relaxation",
+    "Better sleep support",
+    "Improved emotional wellbeing",
     "Reduced mental fatigue",
-    "Greater resilience"
+    "Better stress management",
+    "Improved daily routine",
+    "Greater sense of calm",
+    "Overall mental wellness support"
   ],
+
   "treatmentSteps": [
-    "Stress assessment",
-    "Therapy selection",
-    "Daily calming practices",
-    "Progress tracking"
+    "Detailed stress and lifestyle assessment",
+    "Review of sleep, diet and daily routine",
+    "Identification of lifestyle factors affecting wellbeing",
+    "Personalized Ayurvedic wellness planning",
+    "Meditation and breathing guidance",
+    "Lifestyle and relaxation recommendations",
+    "Ayurvedic therapies or herbal support when appropriate",
+    "Regular progress monitoring and follow-up"
   ],
+
+  "whoCanBenefit": [
+    "People experiencing everyday stress",
+    "People experiencing work-related stress",
+    "People with difficulty relaxing",
+    "People experiencing mental fatigue",
+    "People experiencing stress-related sleep problems",
+    "People looking for natural stress management support",
+    "People interested in meditation and mindfulness",
+    "People seeking Ayurvedic mental wellness support"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic stress management?",
+      "answer": "Ayurvedic stress management is an individualized wellness approach that may include lifestyle changes, meditation, breathing practices, relaxation techniques, traditional Ayurvedic therapies and herbal support when appropriate."
+    },
+    {
+      "question": "Can Ayurveda help with stress?",
+      "answer": "Ayurvedic lifestyle and relaxation practices may provide complementary support for managing everyday stress and promoting relaxation."
+    },
+    {
+      "question": "Can Ayurveda help with anxiety?",
+      "answer": "Ayurvedic wellness practices may provide complementary support for relaxation and overall wellbeing. Persistent, severe or worsening anxiety should be evaluated by an appropriate mental health or medical professional."
+    },
+    {
+      "question": "What are natural ways to manage stress?",
+      "answer": "Regular physical activity, adequate sleep, meditation, breathing exercises, balanced nutrition, social connection and a consistent daily routine can support healthy stress management."
+    },
+    {
+      "question": "Can stress affect sleep?",
+      "answer": "Yes. Ongoing stress can make it difficult to fall asleep, cause nighttime waking and contribute to poor sleep quality."
+    },
+    {
+      "question": "Does Ayurveda use herbs for stress?",
+      "answer": "Some Ayurvedic practitioners may recommend herbal formulations as part of an individualized wellness plan. Herbal products should be used under appropriate professional guidance, particularly when taking other medicines."
+    },
+    {
+      "question": "What Ayurvedic therapies may help with relaxation?",
+      "answer": "Depending on an individual's assessment, Ayurvedic care may include massage therapies, relaxation practices, meditation, breathing exercises and lifestyle guidance."
+    },
+    {
+      "question": "How long does Ayurvedic stress management take?",
+      "answer": "The duration depends on the individual's symptoms, lifestyle, stressors and progress. Stress management is generally most effective when healthy routines are maintained consistently over time."
+    },
+    {
+      "question": "When should I seek professional help for anxiety?",
+      "answer": "If anxiety is persistent, severe, worsening or interfering with sleep, work, relationships or daily activities, it is important to seek assessment from an appropriate healthcare or mental health professional."
+    },
+    {
+      "question": "How much does Ayurvedic stress and anxiety management cost?",
+      "answer": "The listed price for this Ayurvedic stress and anxiety management service is ₹2,000. The final cost may depend on the consultation and personalized care plan."
+    }
+  ],
+
   "isCore": true,
-  "price": "2000"
+
+  "price": "200 - 2000"
 }

@@ -1,28 +1,130 @@
 {
   "slug": "arthritis-treatment",
-  "title": "Joint & Arthritis Treatment",
-  "subtitle": "Pain Management & Mobility",
-  "metaTitle": "Ayurvedic Arthritis & Joint Pain Treatment in India | Vaidyam Healthcare",
-  "metaDescription": "Natural Ayurvedic treatment for arthritis, joint pain, and stiffness with personalized care for mobility, pain relief, and long-term wellness in India.",
-  "summary": "Our Ayurvedic approach helps reduce joint pain, improve mobility, and support healing without relying on harsh treatments.",
+  "title": "Ayurvedic Arthritis & Joint Pain Treatment",
+  "subtitle": "Natural Pain Management & Joint Mobility Support",
+
+  "metaTitle": "Ayurvedic Arthritis Treatment in India | Joint Pain & Stiffness | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic arthritis treatment in India for joint pain, stiffness and mobility concerns with personalized therapies, herbal care, lifestyle guidance and holistic support.",
+
+  "summary": "Our Ayurvedic approach to arthritis and joint pain focuses on personalized assessment, supportive therapies and lifestyle guidance to help manage pain, stiffness and mobility concerns while promoting overall joint wellness.",
+
   "highlights": [
+    "Personalized Ayurvedic assessment",
     "Herbal oil therapies",
-    "Mobility and pain relief",
-    "Personalized care plan",
-    "Gentle long-term support"
+    "Support for joint mobility",
+    "Pain and stiffness management",
+    "Individualized care plan"
   ],
+
+  "problems": [
+    {
+      "slug": "osteoarthritis",
+      "title": "Osteoarthritis",
+      "description": "Joint pain, stiffness and reduced mobility commonly associated with age-related changes and joint wear."
+    },
+    {
+      "slug": "rheumatoid-arthritis",
+      "title": "Rheumatoid Arthritis",
+      "description": "An inflammatory condition that may cause joint pain, stiffness, swelling and difficulty with movement."
+    },
+    {
+      "slug": "joint-pain",
+      "title": "Joint Pain",
+      "description": "Pain or discomfort affecting the knees, hips, shoulders, hands or other joints."
+    },
+    {
+      "slug": "joint-stiffness",
+      "title": "Joint Stiffness",
+      "description": "Reduced flexibility or difficulty moving a joint comfortably, particularly after periods of inactivity."
+    }
+  ],
+
+  "symptoms": [
+    "Joint pain",
+    "Joint stiffness",
+    "Swelling around the joints",
+    "Reduced joint mobility",
+    "Difficulty with movement",
+    "Reduced flexibility",
+    "Morning stiffness",
+    "Discomfort during physical activity"
+  ],
+
+  "possibleCauses": [
+    "Age-related changes in the joints",
+    "Previous joint injuries",
+    "Inflammatory conditions",
+    "Excessive physical strain",
+    "Sedentary lifestyle",
+    "Weight-related stress on the joints",
+    "Lifestyle and dietary factors"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Arthritis & Joint Pain",
+    "description": "Ayurveda takes an individualized approach to joint health by considering symptoms, lifestyle, constitution and overall health before developing a personalized care plan.",
+    "therapies": [
+      "Abhyanga",
+      "Herbal oil therapies",
+      "Swedana",
+      "Personalized Ayurvedic medicines",
+      "Dietary guidance",
+      "Lifestyle recommendations"
+    ]
+  },
+
   "benefits": [
-    "Pain relief",
-    "Improved mobility",
-    "Reduced inflammation",
-    "Strengthened joints"
+    "Support for arthritis-related pain management",
+    "Support for improved joint mobility",
+    "Help with joint stiffness",
+    "Support for flexibility and comfortable movement",
+    "Personalized guidance for joint wellness",
+    "Holistic lifestyle support"
   ],
+
   "treatmentSteps": [
-    "Pain and movement assessment",
-    "Therapy planning",
-    "Herbal and oil-based care",
-    "Follow-up recovery guidance"
+    "Initial consultation and health assessment",
+    "Assessment of joint pain, stiffness and mobility",
+    "Personalized Ayurvedic treatment planning",
+    "Herbal and oil-based therapies",
+    "Diet and lifestyle recommendations",
+    "Follow-up and treatment adjustment"
   ],
+
+  "whoCanBenefit": [
+    "People experiencing joint pain",
+    "People experiencing joint stiffness",
+    "People with reduced mobility",
+    "People experiencing discomfort during movement",
+    "People looking for personalized Ayurvedic joint care",
+    "People seeking holistic support for joint wellness"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic treatment for arthritis?",
+      "answer": "Ayurvedic arthritis care takes an individualized approach that may include therapies such as herbal oil treatments, Abhyanga, Swedana, dietary guidance and lifestyle recommendations based on the person's condition."
+    },
+    {
+      "question": "Can Ayurveda help with joint pain and stiffness?",
+      "answer": "Ayurvedic care may support the management of joint pain and stiffness and promote comfortable movement. The appropriate approach depends on the individual's symptoms, health history and assessment."
+    },
+    {
+      "question": "What Ayurvedic therapies are used for arthritis?",
+      "answer": "Depending on the individual assessment, therapies may include Abhyanga, herbal oil therapies, Swedana, personalized Ayurvedic medicines and lifestyle guidance."
+    },
+    {
+      "question": "How long does Ayurvedic arthritis treatment take?",
+      "answer": "Treatment duration varies depending on the person's condition, symptoms, health history and response to the recommended care plan."
+    },
+    {
+      "question": "Is Ayurvedic arthritis treatment personalized?",
+      "answer": "Yes. Ayurvedic care generally considers the individual's symptoms, lifestyle, overall health and other relevant factors when developing a treatment approach."
+    }
+  ],
+
   "isCore": false,
-  "price": "2000"
+
+  "price": "200 - 2000"
 }

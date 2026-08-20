@@ -1,28 +1,223 @@
 {
   "slug": "panchakarma-treatment",
-  "title": "Panchakarma Therapy",
-  "subtitle": "Ultimate Detox & Rejuvenation",
-  "metaTitle": "Panchakarma Therapy in India | Vaidyam Healthcare",
-  "metaDescription": "Discover Ayurvedic Panchakarma therapy in India for deep detoxification, rejuvenation, and restoration of balance with expert care.",
-  "summary": "Panchakarma is a complete purification process designed to remove toxins, improve vitality, and restore doshic balance.",
+
+  "title": "Panchakarma Treatment",
+
+  "subtitle": "Traditional Ayurvedic Detoxification, Cleansing & Rejuvenation Therapy",
+
+  "metaTitle": "Panchakarma Treatment in India | Ayurvedic Detox & Rejuvenation Therapy | Vaidyam Healthcare",
+
+  "metaDescription": "Experience personalized Ayurvedic Panchakarma treatment in India with traditional cleansing therapies, diet guidance, preparation, recovery care and rejuvenation support.",
+
+  "summary": "Panchakarma is a traditional Ayurvedic therapeutic approach involving individualized preparation, cleansing procedures, dietary care and post-treatment recovery. Our Panchakarma program is planned according to individual health, constitution, symptoms and wellness goals under qualified Ayurvedic supervision.",
+
   "highlights": [
-    "Five therapeutic procedures",
-    "Deep internal cleansing",
-    "Supportive dietary guidance",
-    "Restorative recovery care"
+    "Personalized Panchakarma assessment",
+    "Traditional Ayurvedic cleansing therapies",
+    "Individualized treatment planning",
+    "Pre-Panchakarma preparation",
+    "Supportive diet and nutrition guidance",
+    "Post-treatment recovery and rejuvenation care",
+    "Qualified Ayurvedic supervision"
   ],
+
+  "problems": [
+    {
+      "slug": "stress-and-fatigue",
+      "title": "Stress & Fatigue",
+      "description": "Personalized Ayurvedic wellness support for people experiencing stress, fatigue or reduced vitality."
+    },
+    {
+      "slug": "digestive-wellness",
+      "title": "Digestive Wellness",
+      "description": "Ayurvedic dietary and therapeutic support focused on digestive health and healthy daily routines."
+    },
+    {
+      "slug": "lifestyle-imbalance",
+      "title": "Lifestyle Imbalance",
+      "description": "Traditional Ayurvedic care for people looking to improve diet, daily routines, rest and overall wellness."
+    },
+    {
+      "slug": "general-rejuvenation",
+      "title": "Rejuvenation & Wellness",
+      "description": "Personalized Ayurvedic rejuvenation support focused on relaxation, recovery and healthy lifestyle habits."
+    },
+    {
+      "slug": "body-stiffness",
+      "title": "Body Stiffness & Discomfort",
+      "description": "Ayurvedic therapies may provide supportive care for relaxation, mobility and general physical comfort."
+    },
+    {
+      "slug": "wellness-reset",
+      "title": "Ayurvedic Wellness Reset",
+      "description": "A structured Ayurvedic program combining traditional therapies, dietary care and lifestyle guidance."
+    }
+  ],
+
+  "symptoms": [
+    "Fatigue",
+    "Stress",
+    "Poor sleep",
+    "Digestive discomfort",
+    "Bloating",
+    "Feeling of heaviness",
+    "Body stiffness",
+    "Low energy",
+    "Poor daily routine",
+    "Difficulty relaxing"
+  ],
+
+  "possibleCauses": [
+    "Irregular lifestyle",
+    "Poor dietary habits",
+    "Chronic stress",
+    "Insufficient sleep",
+    "Sedentary lifestyle",
+    "Irregular meal timings",
+    "Poor hydration",
+    "Excessive workload",
+    "Inadequate rest",
+    "Unbalanced daily routine"
+  ],
+
+  "panchakarmaProcedures": [
+    {
+      "name": "Vamana",
+      "description": "A traditional Ayurvedic therapeutic procedure that may be recommended for selected individuals under qualified supervision."
+    },
+    {
+      "name": "Virechana",
+      "description": "A traditional Ayurvedic therapeutic cleansing procedure selected according to individual assessment."
+    },
+    {
+      "name": "Basti",
+      "description": "A traditional Ayurvedic therapy involving specially prepared herbal formulations and administered according to an individualized treatment plan."
+    },
+    {
+      "name": "Nasya",
+      "description": "A traditional Ayurvedic nasal therapy using appropriate herbal preparations under professional guidance."
+    },
+    {
+      "name": "Raktamokshana",
+      "description": "A traditional Ayurvedic procedure that may be considered in specific cases by appropriately qualified practitioners."
+    }
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Panchakarma Approach",
+
+    "description": "Panchakarma is not a single treatment but a structured Ayurvedic therapeutic process. Depending on individual assessment, the program may include preparatory therapies, selected Panchakarma procedures, dietary care and post-treatment recovery. Not every procedure is appropriate for every person.",
+
+    "therapies": [
+      "Abhyanga Ayurvedic oil massage",
+      "Swedana herbal steam therapy",
+      "Snehana preparation",
+      "Traditional Panchakarma procedures when appropriate",
+      "Shirodhara when clinically appropriate",
+      "Herbal therapies",
+      "Personalized Ayurvedic diet",
+      "Rest and recovery guidance",
+      "Lifestyle recommendations"
+    ]
+  },
+
+  "preparation": [
+    "Initial Ayurvedic health assessment",
+    "Prakriti and Vikriti assessment",
+    "Review of current health conditions and medicines",
+    "Personalized diet preparation",
+    "Internal and external oleation when appropriate",
+    "Swedana or therapeutic sweating when appropriate",
+    "Preparation according to the selected Panchakarma procedure"
+  ],
+
   "benefits": [
-    "Deep detoxification",
-    "Immune system boost",
-    "Mental clarity",
-    "Rejuvenation"
+    "Support for digestive wellness",
+    "Support for relaxation and stress management",
+    "Improved sense of wellbeing",
+    "Support for healthy daily routines",
+    "Rejuvenation and wellness support",
+    "Personalized Ayurvedic care",
+    "Structured diet and recovery guidance",
+    "Support for overall vitality"
   ],
+
   "treatmentSteps": [
-    "Pre-purification preparation",
-    "Main Panchakarma procedures",
-    "Post-therapy diet and rest",
-    "Lifestyle guidance"
+    "Detailed Ayurvedic health assessment",
+    "Prakriti and individual health evaluation",
+    "Panchakarma suitability assessment",
+    "Pre-treatment preparation",
+    "Personalized Panchakarma procedures",
+    "Post-treatment dietary care",
+    "Rest and recovery period",
+    "Follow-up and lifestyle guidance"
   ],
+
+  "whoCanBenefit": [
+    "People interested in traditional Ayurvedic Panchakarma",
+    "People looking for structured Ayurvedic wellness care",
+    "People seeking personalized rejuvenation support",
+    "People interested in Ayurvedic lifestyle programs",
+    "People looking for digestive wellness support",
+    "People seeking relaxation and restorative Ayurvedic therapies"
+  ],
+
+  "whoShouldAvoid": [
+    "People with serious acute illnesses without appropriate medical evaluation",
+    "Pregnant women unless specifically cleared by qualified professionals",
+    "People who are significantly weak or medically unstable",
+    "People recovering from major surgery without medical clearance",
+    "People with conditions requiring urgent medical treatment"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Panchakarma treatment?",
+      "answer": "Panchakarma is a traditional Ayurvedic therapeutic system involving individualized preparation, selected cleansing procedures, dietary care and post-treatment recovery. The specific procedures depend on the individual's health and Ayurvedic assessment."
+    },
+    {
+      "question": "What are the five Panchakarma procedures?",
+      "answer": "The classical Panchakarma procedures are traditionally described as Vamana, Virechana, Basti, Nasya and Raktamokshana. Not every procedure is appropriate for every person."
+    },
+    {
+      "question": "What is Panchakarma detox?",
+      "answer": "Panchakarma is often described as an Ayurvedic cleansing or purification approach. A Panchakarma program involves individualized preparation, selected therapies, dietary care and recovery rather than a single detox procedure."
+    },
+    {
+      "question": "What happens before Panchakarma?",
+      "answer": "Panchakarma usually begins with an assessment followed by appropriate preparatory therapies and dietary guidance. Preparation depends on the individual's health and the Panchakarma procedures selected."
+    },
+    {
+      "question": "How long does Panchakarma treatment take?",
+      "answer": "The duration varies according to the individual's health, the therapies selected and the treatment plan. A qualified Ayurvedic practitioner can recommend an appropriate duration after assessment."
+    },
+    {
+      "question": "Is Panchakarma suitable for everyone?",
+      "answer": "No. Panchakarma procedures are not suitable for everyone. Age, health condition, medications, pregnancy status, strength and other individual factors should be considered before treatment."
+    },
+    {
+      "question": "Can I do Panchakarma at home?",
+      "answer": "Some Ayurvedic wellness practices can be performed at home, but Panchakarma procedures should be undertaken under appropriate supervision because some therapies require professional assessment and administration."
+    },
+    {
+      "question": "What should I eat after Panchakarma?",
+      "answer": "Post-treatment food recommendations vary according to the therapies performed and individual health. A qualified Ayurvedic practitioner may recommend a gradual, easily digestible diet during recovery."
+    },
+    {
+      "question": "Is Panchakarma safe during pregnancy?",
+      "answer": "Panchakarma procedures are generally not something to undertake during pregnancy without specialized professional guidance. Pregnant women should consult their obstetrician and a qualified Ayurvedic practitioner before considering any Ayurvedic therapy."
+    },
+    {
+      "question": "Can Panchakarma cure diseases?",
+      "answer": "Panchakarma should not be presented as a guaranteed cure for diseases. It is a traditional Ayurvedic therapeutic approach that may provide supportive care for selected individuals."
+    },
+    {
+      "question": "How much does Panchakarma treatment cost?",
+      "answer": "The listed starting price for this Panchakarma service is ₹2,000. The final cost depends on the assessment, procedures selected, duration and personalized treatment plan."
+    }
+  ],
+
   "isCore": true,
-  "price": "2000"
+
+  "price": "500 - 3000"
 }

@@ -1,28 +1,133 @@
 {
-  "slug": "online-consultation",
+  "slug": "ayurvedic-consultation",
   "title": "Ayurvedic Consultation",
-  "subtitle": "Personalized Health Assessment",
-  "metaTitle": "Ayurvedic Consultation in India | Vaidyam Healthcare",
-  "metaDescription": "Book a personalized Ayurvedic consultation with Vaidyam Healthcare for dosha assessment, lifestyle guidance, and treatment plans in India.",
-  "summary": "Our Ayurvedic consultation helps you understand your body constitution, current imbalances, and the natural path toward better health.",
+  "subtitle": "Personalized Ayurvedic Health Assessment & Wellness Guidance",
+
+  "metaTitle": "Ayurvedic Consultation in India | Personalized Ayurvedic Health Assessment | Vaidyam Healthcare",
+
+  "metaDescription": "Book a personalized Ayurvedic consultation in India for health assessment, Prakriti and Vikriti evaluation, lifestyle guidance, diet recommendations and individualized Ayurvedic care.",
+
+  "summary": "Our Ayurvedic consultation provides a personalized assessment of your health, body constitution, lifestyle and current concerns. Based on the consultation, our Ayurvedic practitioners can recommend appropriate lifestyle, dietary and wellness guidance tailored to your individual needs.",
+
   "highlights": [
-    "Full health history review",
-    "Dosha and imbalance assessment",
-    "Personalized treatment roadmap",
+    "Detailed health history review",
+    "Prakriti and Vikriti assessment",
+    "Personalized Ayurvedic guidance",
+    "Diet and lifestyle recommendations",
+    "Individualized care planning",
     "Follow-up guidance"
   ],
+
+  "problems": [
+    {
+      "slug": "digestive-health",
+      "title": "Digestive Health Concerns",
+      "description": "Personalized Ayurvedic guidance for common digestive and dietary concerns based on your individual health assessment."
+    },
+    {
+      "slug": "stress-and-wellness",
+      "title": "Stress & Wellness",
+      "description": "Ayurvedic lifestyle guidance designed to support relaxation, balance and overall wellbeing."
+    },
+    {
+      "slug": "sleep-concerns",
+      "title": "Sleep Concerns",
+      "description": "Personalized lifestyle and daily-routine recommendations to support healthy sleep and overall wellbeing."
+    },
+    {
+      "slug": "lifestyle-management",
+      "title": "Lifestyle Management",
+      "description": "Guidance on daily routines, diet and healthy habits based on your individual Ayurvedic assessment."
+    }
+  ],
+
+  "symptoms": [
+    "Digestive discomfort",
+    "Irregular daily routines",
+    "Sleep difficulties",
+    "Stress and fatigue",
+    "Low energy",
+    "Lifestyle-related health concerns",
+    "Desire for preventive wellness guidance"
+  ],
+
+  "possibleCauses": [
+    "Irregular lifestyle habits",
+    "Unbalanced diet",
+    "Poor sleep routine",
+    "Chronic stress",
+    "Lack of physical activity",
+    "Individual dietary and lifestyle patterns"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Our Ayurvedic Consultation Approach",
+    "description": "Ayurvedic consultation looks at the individual as a whole. Your health history, Prakriti, Vikriti, lifestyle, diet and current concerns are considered when developing personalized recommendations.",
+    "therapies": [
+      "Prakriti assessment",
+      "Vikriti assessment",
+      "Dietary guidance",
+      "Lifestyle recommendations",
+      "Daily routine guidance",
+      "Personalized Ayurvedic care planning"
+    ]
+  },
+
   "benefits": [
-    "Clear understanding of your body type",
-    "Natural healing recommendations",
-    "Preventive wellness planning",
-    "Focused long-term care"
+    "Better understanding of your Ayurvedic constitution",
+    "Personalized health and wellness recommendations",
+    "Guidance on diet and daily routines",
+    "Support for preventive wellness",
+    "Individualized long-term wellness planning",
+    "Clearer understanding of your health priorities"
   ],
+
   "treatmentSteps": [
-    "Initial health assessment",
-    "Prakriti and Vikriti review",
-    "Lifestyle and diet planning",
-    "Ongoing follow-up care"
+    "Initial consultation and health history review",
+    "Prakriti and Vikriti assessment",
+    "Discussion of lifestyle, diet and current health concerns",
+    "Personalized Ayurvedic recommendations",
+    "Diet and daily-routine guidance",
+    "Follow-up consultation when appropriate"
   ],
+
+  "whoCanBenefit": [
+    "People interested in Ayurvedic wellness",
+    "People looking for personalized lifestyle guidance",
+    "People seeking dietary recommendations",
+    "People interested in understanding their Prakriti",
+    "People looking for preventive wellness support",
+    "People with ongoing health and lifestyle concerns"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is an Ayurvedic consultation?",
+      "answer": "An Ayurvedic consultation is a personalized health and wellness assessment that considers your health history, Prakriti, Vikriti, lifestyle, diet and current concerns to provide individualized Ayurvedic guidance."
+    },
+    {
+      "question": "What happens during an Ayurvedic consultation?",
+      "answer": "The consultation generally includes a discussion of your health history, lifestyle, diet and current concerns, along with an assessment of Prakriti and Vikriti. Personalized recommendations may then be provided."
+    },
+    {
+      "question": "What is Prakriti in Ayurveda?",
+      "answer": "Prakriti refers to an individual's natural constitution in Ayurveda. Understanding Prakriti is one part of developing personalized Ayurvedic lifestyle and wellness recommendations."
+    },
+    {
+      "question": "What is Vikriti in Ayurveda?",
+      "answer": "Vikriti refers to the current state of imbalance or variation from an individual's natural constitution. An Ayurvedic practitioner may consider Vikriti when developing personalized recommendations."
+    },
+    {
+      "question": "Can I have an Ayurvedic consultation for preventive wellness?",
+      "answer": "Yes. Ayurvedic consultations can be used to discuss lifestyle, diet, daily routines and general wellness goals, including preventive health and healthy living."
+    },
+    {
+      "question": "How much does an Ayurvedic consultation cost?",
+      "answer": "The consultation price at Vaidyam Healthcare starts from ₹100, with the final cost depending on the consultation and services selected."
+    }
+  ],
+
   "isCore": true,
-  "price": "2000"
+
+  "price": "100 - 500"
 }

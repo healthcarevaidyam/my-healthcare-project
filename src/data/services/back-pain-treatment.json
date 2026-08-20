@@ -1,27 +1,165 @@
 {
   "slug": "back-pain-treatment",
-  "title": "Back Pain Treatment",
-  "subtitle": "Pain Relief & Mobility Support",
-  "metaTitle": "Ayurvedic Back Pain Treatment in India | Vaidyam Healthcare",
-  "metaDescription": "Effective Ayurvedic back pain treatment for chronic pain, posture issues, and stiffness with natural therapies and personalized recovery plans.",
-  "summary": "Our Ayurvedic approach supports back pain management through therapies designed for relaxation and improved mobility.",
+
+  "title": "Ayurvedic Back Pain Treatment",
+
+  "subtitle": "Natural Back Pain Management, Mobility & Stiffness Support",
+
+  "metaTitle": "Ayurvedic Back Pain Treatment in India | Lower Back Pain & Stiffness | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic back pain treatment in India for lower back pain, stiffness and mobility concerns with personalized herbal therapies, oil treatments, lifestyle guidance and supportive care.",
+
+  "summary": "Our Ayurvedic approach to back pain focuses on understanding the individual's pain, mobility, lifestyle and contributing factors before creating a personalized care plan. Treatment may include herbal oil therapies, Ayurvedic massage, supportive therapies, exercise guidance and lifestyle recommendations.",
+
   "highlights": [
-    "Pain assessment",
+    "Personalized back pain assessment",
     "Herbal oil therapies",
     "Ayurvedic massage",
-    "Mobility support"
+    "Support for lower back pain",
+    "Mobility and flexibility support",
+    "Personalized recovery guidance"
   ],
+
+  "problems": [
+    {
+      "slug": "lower-back-pain",
+      "title": "Lower Back Pain",
+      "description": "Pain or discomfort in the lower back that may be associated with posture, physical strain, lifestyle or other underlying factors."
+    },
+    {
+      "slug": "chronic-back-pain",
+      "title": "Chronic Back Pain",
+      "description": "Persistent or recurring back discomfort that may affect daily activities, movement and overall quality of life."
+    },
+    {
+      "slug": "back-stiffness",
+      "title": "Back Stiffness",
+      "description": "Tightness or reduced flexibility in the back that may make bending, sitting or moving uncomfortable."
+    },
+    {
+      "slug": "muscle-tension",
+      "title": "Back Muscle Tension",
+      "description": "Muscle tightness and discomfort that may develop due to prolonged sitting, physical activity, posture or lifestyle factors."
+    },
+    {
+      "slug": "posture-related-back-pain",
+      "title": "Posture-Related Back Pain",
+      "description": "Back discomfort that may be associated with prolonged sitting, poor posture or repetitive daily activities."
+    },
+    {
+      "slug": "sciatica-related-pain",
+      "title": "Sciatica-Related Pain",
+      "description": "Pain that may extend from the lower back toward the hip or leg and requires appropriate clinical assessment."
+    }
+  ],
+
+  "symptoms": [
+    "Lower back pain",
+    "Back stiffness",
+    "Muscle tightness",
+    "Difficulty bending",
+    "Reduced flexibility",
+    "Discomfort after prolonged sitting",
+    "Pain during movement",
+    "Back muscle fatigue",
+    "Discomfort after physical activity",
+    "Pain that may extend toward the hip or leg"
+  ],
+
+  "possibleCauses": [
+    "Poor posture",
+    "Prolonged sitting",
+    "Muscle strain",
+    "Overuse or physical exertion",
+    "Sedentary lifestyle",
+    "Lack of regular movement",
+    "Improper lifting techniques",
+    "Lifestyle-related factors",
+    "Previous injuries",
+    "Age-related changes"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Back Pain",
+
+    "description": "Ayurvedic back pain care takes an individualized approach by considering the person's symptoms, lifestyle, physical activity, overall health and other relevant factors. Based on the assessment, appropriate therapies and lifestyle recommendations may be suggested.",
+
+    "therapies": [
+      "Abhyanga Ayurvedic massage",
+      "Herbal oil therapies",
+      "Localized oil application",
+      "Swedana therapy",
+      "Gentle movement guidance",
+      "Dietary and lifestyle recommendations"
+    ]
+  },
+
   "benefits": [
-    "Pain relief support",
-    "Improved flexibility",
-    "Better movement",
-    "Muscle relaxation"
+    "Support for back pain management",
+    "Support for lower back comfort",
+    "Improved flexibility and mobility",
+    "Reduced muscle tension",
+    "Support for comfortable movement",
+    "Personalized lifestyle guidance",
+    "Long-term back wellness support"
   ],
+
   "treatmentSteps": [
-    "Pain evaluation",
-    "Therapy selection",
-    "Ayurvedic sessions",
-    "Recovery guidance"
-  ],"isCore": false,
-  "price": "2000"
+    "Detailed back pain and mobility assessment",
+    "Health history and lifestyle evaluation",
+    "Identification of possible contributing factors",
+    "Personalized Ayurvedic treatment planning",
+    "Herbal oil and Ayurvedic therapy sessions",
+    "Movement, posture and lifestyle guidance",
+    "Progress monitoring and follow-up"
+  ],
+
+  "whoCanBenefit": [
+    "People experiencing lower back pain",
+    "People with recurring back stiffness",
+    "People experiencing muscle tension",
+    "People with posture-related back discomfort",
+    "People experiencing discomfort after prolonged sitting",
+    "People looking for personalized Ayurvedic back care",
+    "People seeking supportive natural approaches for back wellness"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic back pain treatment?",
+      "answer": "Ayurvedic back pain treatment is a personalized approach that may include herbal oil therapies, Ayurvedic massage, supportive therapies, movement guidance and lifestyle recommendations based on an individual's symptoms and assessment."
+    },
+    {
+      "question": "Can Ayurveda help with lower back pain?",
+      "answer": "Ayurvedic care may provide supportive management for lower back pain through personalized therapies, herbal oil applications, massage, lifestyle guidance and mobility-focused recommendations."
+    },
+    {
+      "question": "What Ayurvedic therapies are used for back pain?",
+      "answer": "Depending on the individual's assessment, therapies may include Abhyanga massage, herbal oil applications, localized therapies, Swedana and lifestyle or movement guidance."
+    },
+    {
+      "question": "Can Ayurvedic treatment help with back stiffness?",
+      "answer": "Ayurvedic therapies may support comfortable movement and help manage stiffness through personalized oil therapies, massage, movement guidance and lifestyle recommendations."
+    },
+    {
+      "question": "How long does Ayurvedic back pain treatment take?",
+      "answer": "Treatment duration varies depending on the cause and duration of the pain, individual health factors, symptoms and response to the recommended care plan."
+    },
+    {
+      "question": "Is Ayurvedic back pain treatment personalized?",
+      "answer": "Yes. The recommended approach can be personalized according to the individual's symptoms, lifestyle, physical activity, health history and assessment."
+    },
+    {
+      "question": "When should I seek medical attention for back pain?",
+      "answer": "Severe or sudden back pain, pain following a significant injury, weakness or numbness, loss of bladder or bowel control, fever or other concerning symptoms require prompt medical evaluation."
+    },
+    {
+      "question": "How much does Ayurvedic back pain treatment cost?",
+      "answer": "The listed price for this Ayurvedic back pain treatment service is ₹2,000. The final cost may depend on the consultation and treatment plan recommended for the individual."
+    }
+  ],
+
+  "isCore": false,
+
+  "price": "700 - 5000"
 }

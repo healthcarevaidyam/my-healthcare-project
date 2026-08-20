@@ -1,28 +1,171 @@
 {
   "slug": "digestive-disorders-treatment",
-  "title": "Digestive Disorders Treatment",
-  "subtitle": "Gut Health Restoration",
-  "metaTitle": "Ayurvedic Digestive Disorders Treatment in India | Vaidyam Healthcare",
-  "metaDescription": "Explore Ayurvedic care for acidity, constipation, bloating, and digestive discomfort with natural, personalized treatment plans in India.",
-  "summary": "Ayurveda places great importance on digestive health and addresses chronic digestive issues at their root.",
+
+  "title": "Ayurvedic Digestive Disorders Treatment",
+
+  "subtitle": "Natural Digestive Health, Gut Wellness & Personalized Care",
+
+  "metaTitle": "Ayurvedic Digestive Disorders Treatment in India | Acidity, Constipation & Bloating | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic digestive disorders treatment in India for acidity, constipation, gas, bloating and indigestion with personalized diet, lifestyle and Ayurvedic wellness support.",
+
+  "summary": "Ayurveda places strong importance on healthy digestion and individualized dietary and lifestyle habits. Our Ayurvedic digestive care focuses on understanding your symptoms, eating patterns, daily routine and overall health before creating a personalized plan for digestive wellness.",
+
   "highlights": [
-    "Digestive wellness support",
-    "Natural herbal care",
-    "Personalized diet guidance",
-    "Long-term gut balance"
+    "Personalized digestive health assessment",
+    "Ayurvedic digestive wellness support",
+    "Diet and nutrition guidance",
+    "Herbal Ayurvedic support",
+    "Lifestyle and daily routine guidance",
+    "Long-term digestive wellness planning"
   ],
+
+  "problems": [
+    {
+      "slug": "acidity",
+      "title": "Acidity & Heartburn",
+      "description": "Supportive Ayurvedic care for people experiencing recurring acidity, burning sensations or digestive discomfort."
+    },
+    {
+      "slug": "constipation",
+      "title": "Constipation",
+      "description": "Personalized diet, hydration, routine and Ayurvedic wellness guidance for people experiencing constipation."
+    },
+    {
+      "slug": "bloating",
+      "title": "Bloating",
+      "description": "Ayurvedic dietary and lifestyle guidance for people experiencing abdominal fullness, bloating or digestive discomfort."
+    },
+    {
+      "slug": "gas",
+      "title": "Gas & Flatulence",
+      "description": "Personalized digestive wellness support for recurring gas and abdominal discomfort."
+    },
+    {
+      "slug": "indigestion",
+      "title": "Indigestion",
+      "description": "Dietary and lifestyle recommendations to support comfortable digestion and healthier eating habits."
+    },
+    {
+      "slug": "irregular-bowel-movements",
+      "title": "Irregular Bowel Movements",
+      "description": "Personalized guidance focused on diet, hydration, daily routine and digestive wellness."
+    }
+  ],
+
+  "symptoms": [
+    "Acidity",
+    "Heartburn",
+    "Bloating",
+    "Gas",
+    "Constipation",
+    "Indigestion",
+    "Abdominal discomfort",
+    "Irregular bowel movements",
+    "Feeling of fullness",
+    "Changes in appetite"
+  ],
+
+  "possibleCauses": [
+    "Irregular meal timings",
+    "Unbalanced diet",
+    "Low dietary fiber intake",
+    "Insufficient hydration",
+    "Sedentary lifestyle",
+    "Stress",
+    "Poor sleep routine",
+    "Overeating",
+    "Eating too quickly",
+    "Food intolerance or sensitivity"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Digestive Health",
+
+    "description": "Ayurvedic digestive care takes an individualized approach to diet, lifestyle, daily routine and digestive symptoms. Recommendations may include dietary changes, herbal support, traditional Ayurvedic therapies and lifestyle guidance depending on the individual's assessment.",
+
+    "therapies": [
+      "Ayurvedic digestive consultation",
+      "Personalized diet planning",
+      "Herbal Ayurvedic support",
+      "Abhyanga Ayurvedic massage",
+      "Traditional Ayurvedic therapies when appropriate",
+      "Daily routine guidance",
+      "Hydration and nutrition guidance",
+      "Stress management recommendations"
+    ]
+  },
+
   "benefits": [
-    "Improved digestion",
-    "Gut health restoration",
-    "Appetite regulation",
-    "Better nutrient absorption"
+    "Support for healthy digestion",
+    "Support for comfortable bowel movements",
+    "Personalized dietary guidance",
+    "Better understanding of digestive triggers",
+    "Healthy eating routine support",
+    "Lifestyle and wellness guidance",
+    "Long-term digestive health support"
   ],
+
   "treatmentSteps": [
-    "Digestive assessment",
-    "Diet and routine planning",
-    "Therapy support",
-    "Follow-up monitoring"
+    "Detailed digestive health assessment",
+    "Review of symptoms, diet and lifestyle",
+    "Assessment of eating and daily routines",
+    "Personalized Ayurvedic care planning",
+    "Diet and nutrition recommendations",
+    "Ayurvedic therapies or herbal support when appropriate",
+    "Follow-up and progress monitoring"
   ],
+
+  "whoCanBenefit": [
+    "People experiencing recurring acidity",
+    "People experiencing constipation",
+    "People with frequent bloating or gas",
+    "People experiencing indigestion",
+    "People looking for personalized digestive diet guidance",
+    "People interested in Ayurvedic digestive wellness",
+    "People looking for long-term digestive lifestyle support"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic digestive disorders treatment?",
+      "answer": "Ayurvedic digestive care is an individualized approach that may combine dietary guidance, lifestyle recommendations, herbal support and traditional Ayurvedic therapies based on the person's symptoms and overall health."
+    },
+    {
+      "question": "Can Ayurveda help with acidity?",
+      "answer": "Personalized Ayurvedic dietary and lifestyle recommendations may support people experiencing acidity and digestive discomfort. Persistent or severe symptoms should be medically evaluated."
+    },
+    {
+      "question": "Can Ayurveda help with constipation?",
+      "answer": "Ayurvedic care may include personalized dietary, hydration, daily routine and lifestyle recommendations to support healthy bowel habits."
+    },
+    {
+      "question": "Can Ayurvedic treatment help with bloating and gas?",
+      "answer": "Dietary changes, lifestyle guidance and appropriate Ayurvedic wellness therapies may support digestive comfort for some people experiencing bloating and gas."
+    },
+    {
+      "question": "What foods are recommended for better digestion in Ayurveda?",
+      "answer": "Dietary recommendations vary from person to person. An Ayurvedic practitioner may consider digestion, constitution, lifestyle, food habits and individual health needs when providing dietary guidance."
+    },
+    {
+      "question": "How long does Ayurvedic digestive treatment take?",
+      "answer": "The duration depends on the nature and duration of symptoms, individual health factors and the personalized care plan recommended after assessment."
+    },
+    {
+      "question": "Is Ayurvedic digestive treatment suitable for everyone?",
+      "answer": "The appropriate approach depends on the individual's symptoms and health. People with persistent, severe or unexplained digestive symptoms should receive appropriate medical evaluation before beginning treatment."
+    },
+    {
+      "question": "When should I see a doctor for digestive problems?",
+      "answer": "Seek medical evaluation for severe or persistent abdominal pain, blood in the stool or vomit, unexplained weight loss, persistent vomiting, difficulty swallowing, black stools, fever or other concerning symptoms."
+    },
+    {
+      "question": "How much does Ayurvedic digestive disorders treatment cost?",
+      "answer": "The listed price for this Ayurvedic digestive care service is ₹2,000. The final cost may vary depending on the consultation and therapies included in the personalized care plan."
+    }
+  ],
+
   "isCore": false,
-  "price": "2000"
+
+  "price": "600 - 2000"
 }

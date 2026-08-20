@@ -1,28 +1,215 @@
 {
   "slug": "pcos-treatment",
-  "title": "PCOS Treatment",
-  "subtitle": "Hormonal Balance & Women's Wellness",
-  "metaTitle": "Ayurvedic PCOS Treatment in India | Vaidyam Healthcare",
-  "metaDescription": "Ayurvedic PCOS treatment with personalized diet, lifestyle changes, and natural therapies for hormonal balance and wellness in India.",
-  "summary": "Our Ayurvedic PCOS management approach focuses on supporting hormonal balance, metabolism, and overall women's health.",
+
+  "title": "Ayurvedic PCOS & PCOD Treatment",
+
+  "subtitle": "Personalized PCOS Management, Women's Wellness & Lifestyle Support",
+
+  "metaTitle": "Ayurvedic PCOS & PCOD Treatment in India | Polycystic Ovary Syndrome Care | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic PCOS and PCOD treatment in India with personalized diet, lifestyle, menstrual health and wellness support for women with polycystic ovary syndrome.",
+
+  "summary": "Our Ayurvedic PCOS and PCOD care focuses on individualized support for menstrual health, metabolic wellness, lifestyle habits and overall women's health. Personalized care may include diet and nutrition guidance, lifestyle recommendations, Ayurvedic therapies and herbal support based on individual needs.",
+
   "highlights": [
-    "Hormonal balance support",
-    "Lifestyle correction",
-    "Ayurvedic diet guidance",
-    "Personalized treatment plan"
-  ],
-  "benefits": [
-    "Better hormonal support",
-    "Improved metabolism",
-    "Healthy lifestyle habits",
-    "Enhanced wellness"
-  ],
-  "treatmentSteps": [
-    "Health assessment",
-    "Lifestyle and diet analysis",
-    "Ayurvedic treatment planning",
+    "Personalized PCOS and PCOD assessment",
+    "Ayurvedic diet and nutrition guidance",
+    "Lifestyle and healthy weight management support",
+    "Menstrual health support",
+    "Ayurvedic herbal support when appropriate",
+    "Personalized PCOS care plan",
     "Regular progress monitoring"
   ],
- "isCore": false,
-  "price": "2000"
+
+  "problems": [
+    {
+      "slug": "irregular-periods",
+      "title": "Irregular Periods",
+      "description": "Personalized Ayurvedic lifestyle and wellness support for women experiencing irregular or unpredictable menstrual cycles."
+    },
+    {
+      "slug": "pcos-weight-management",
+      "title": "PCOS & PCOD Weight Management",
+      "description": "Diet, activity and lifestyle guidance designed to support healthy and sustainable weight management as part of comprehensive PCOS care."
+    },
+    {
+      "slug": "pcos-acne",
+      "title": "PCOS-Related Acne",
+      "description": "Personalized diet, lifestyle and Ayurvedic wellness guidance for women experiencing acne associated with PCOS."
+    },
+    {
+      "slug": "excess-hair-growth",
+      "title": "Excess Hair Growth",
+      "description": "Supportive women's health care for symptoms such as unwanted facial or body hair that may occur with PCOS."
+    },
+    {
+      "slug": "pcos-fertility",
+      "title": "PCOS & Fertility Support",
+      "description": "Personalized reproductive wellness support for women with PCOS who are planning pregnancy, alongside appropriate fertility evaluation."
+    },
+    {
+      "slug": "pcos-metabolic-health",
+      "title": "PCOS & Metabolic Wellness",
+      "description": "Lifestyle, nutrition and wellness guidance focused on supporting healthy metabolic habits in women with PCOS."
+    }
+  ],
+
+  "symptoms": [
+    "Irregular periods",
+    "Missed periods",
+    "Heavy or prolonged periods",
+    "Acne",
+    "Oily skin",
+    "Unwanted facial or body hair",
+    "Hair thinning",
+    "Weight gain",
+    "Difficulty managing weight",
+    "Difficulty conceiving"
+  ],
+
+  "possibleCauses": [
+    "Insulin resistance",
+    "Hormonal changes",
+    "Genetic factors",
+    "Weight-related factors",
+    "Sedentary lifestyle",
+    "Poor dietary habits",
+    "Chronic stress",
+    "Poor sleep",
+    "Other metabolic or hormonal factors"
+  ],
+
+  "pcosAreas": [
+    {
+      "title": "Menstrual Health",
+      "description": "Support for healthier lifestyle habits that may contribute to improved menstrual wellness."
+    },
+    {
+      "title": "PCOS & PCOD Diet",
+      "description": "Personalized dietary guidance focused on balanced nutrition, sustainable eating habits and metabolic wellness."
+    },
+    {
+      "title": "Healthy Weight Management",
+      "description": "Lifestyle and nutrition strategies to support healthy and sustainable weight management."
+    },
+    {
+      "title": "Physical Activity",
+      "description": "Guidance on incorporating appropriate physical activity into a sustainable daily routine."
+    },
+    {
+      "title": "Stress & Sleep",
+      "description": "Support for healthy sleep patterns, stress management and daily routines that contribute to overall wellbeing."
+    },
+    {
+      "title": "Reproductive Wellness",
+      "description": "Personalized reproductive health support for women with PCOS, including guidance for those planning pregnancy."
+    }
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to PCOS & PCOD Management",
+
+    "description": "Ayurvedic PCOS and PCOD care takes an individualized approach to diet, lifestyle, menstrual health and overall wellbeing. Depending on the assessment, recommendations may include dietary changes, exercise and routine guidance, herbal support and traditional Ayurvedic therapies.",
+
+    "therapies": [
+      "Personalized Ayurvedic consultation",
+      "Prakriti and health assessment",
+      "PCOS and PCOD diet planning",
+      "Lifestyle and daily routine guidance",
+      "Ayurvedic herbal support when appropriate",
+      "Ayurvedic body therapies when appropriate",
+      "Stress management guidance",
+      "Sleep routine guidance",
+      "Healthy weight management support"
+    ]
+  },
+
+  "benefits": [
+    "Support for menstrual wellness",
+    "Healthy lifestyle management",
+    "Personalized nutrition guidance",
+    "Support for healthy weight management",
+    "Improved daily routine",
+    "Metabolic wellness support",
+    "Stress and sleep management support",
+    "Reproductive wellness support"
+  ],
+
+  "treatmentSteps": [
+    "Detailed health assessment",
+    "Review of menstrual and reproductive history",
+    "Diet, activity, sleep and lifestyle assessment",
+    "Assessment of weight and metabolic health factors",
+    "Personalized Ayurvedic care planning",
+    "Diet and lifestyle recommendations",
+    "Ayurvedic therapies or herbal support when appropriate",
+    "Regular progress monitoring and follow-up"
+  ],
+
+  "whoCanBenefit": [
+    "Women diagnosed with PCOS",
+    "Women commonly referring to their condition as PCOD",
+    "Women experiencing irregular periods",
+    "Women looking for PCOS or PCOD diet guidance",
+    "Women seeking healthy weight management support",
+    "Women experiencing PCOS-related acne",
+    "Women experiencing unwanted hair growth",
+    "Women with PCOS planning pregnancy",
+    "Women looking for Ayurvedic lifestyle support for PCOS"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is PCOS?",
+      "answer": "PCOS stands for Polycystic Ovary Syndrome. It is a common hormonal and metabolic condition that can affect menstrual cycles, ovulation, androgen levels and metabolic health."
+    },
+    {
+      "question": "What is PCOD?",
+      "answer": "PCOD is commonly used in India to refer to Polycystic Ovary Disorder. PCOS is the more widely recognized medical term and is the preferred term for the condition."
+    },
+    {
+      "question": "Are PCOS and PCOD the same?",
+      "answer": "The terms PCOS and PCOD are often used interchangeably in everyday conversation, particularly in India, but they are not strictly identical medical terms. PCOS is the standard medical term used for Polycystic Ovary Syndrome."
+    },
+    {
+      "question": "Can Ayurveda cure PCOS or PCOD?",
+      "answer": "PCOS is a complex long-term condition and should not be presented as something that can be guaranteed to be cured by a particular treatment. Ayurvedic care may provide complementary support for lifestyle, menstrual and overall wellness."
+    },
+    {
+      "question": "Can Ayurveda help with irregular periods caused by PCOS?",
+      "answer": "Personalized diet and lifestyle changes may support menstrual health in women with PCOS. Persistent or significant menstrual irregularities should be evaluated by an appropriate healthcare professional."
+    },
+    {
+      "question": "What is the best diet for PCOS and PCOD?",
+      "answer": "There is no single diet suitable for every woman with PCOS. A balanced eating pattern with appropriate portions, adequate protein, fiber-rich foods and sustainable habits may support overall metabolic health."
+    },
+    {
+      "question": "Can PCOS affect fertility?",
+      "answer": "PCOS can affect ovulation and may contribute to difficulty conceiving for some women. Women experiencing fertility difficulties should receive appropriate medical fertility assessment."
+    },
+    {
+      "question": "Can Ayurvedic treatment support fertility in women with PCOS?",
+      "answer": "Ayurvedic diet and lifestyle care may provide complementary reproductive wellness support. Women planning pregnancy should also receive appropriate medical evaluation and fertility guidance."
+    },
+    {
+      "question": "Can PCOS cause hair fall and acne?",
+      "answer": "Hormonal changes associated with PCOS can contribute to symptoms such as acne, excess hair growth and scalp hair thinning in some women."
+    },
+    {
+      "question": "How long does Ayurvedic PCOS treatment take?",
+      "answer": "PCOS management is generally a long-term process. The duration of personalized Ayurvedic care depends on individual symptoms, lifestyle factors, health status and progress."
+    },
+    {
+      "question": "Is Ayurvedic PCOS treatment safe?",
+      "answer": "The safety of any herbal or Ayurvedic treatment depends on the specific formulation and the individual's health and medicines. Herbal products should be used under appropriate professional guidance."
+    },
+    {
+      "question": "How much does Ayurvedic PCOS treatment cost?",
+      "answer": "The listed price for this Ayurvedic PCOS and PCOD treatment service is ₹2,000. The final cost may depend on the consultation and personalized care plan."
+    }
+  ],
+
+  "isCore": false,
+
+  "price": "500 - 8000"
 }

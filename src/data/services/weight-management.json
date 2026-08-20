@@ -1,28 +1,210 @@
 {
   "slug": "weight-management",
-  "title": "Weight Management Program",
-  "subtitle": "Holistic Weight Balance",
-  "metaTitle": "Ayurvedic Weight Management in India | Vaidyam Healthcare",
-  "metaDescription": "Explore an Ayurvedic weight management program focused on sustainable habits, metabolism support, and long-term wellness in India.",
-  "summary": "Our weight management program supports healthy body balance without extreme dieting or unhealthy shortcuts.",
+
+  "title": "Ayurvedic Weight Management Program",
+
+  "subtitle": "Natural Weight Management, Nutrition & Healthy Lifestyle Support",
+
+  "metaTitle": "Ayurvedic Weight Management & Weight Loss in India | Diet & Lifestyle Support | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic weight management in India with personalized diet plans, lifestyle guidance, digestion and metabolic wellness support for sustainable healthy weight management.",
+
+  "summary": "Our Ayurvedic weight management program focuses on sustainable nutrition, healthy lifestyle habits, digestion, physical activity and overall metabolic wellness. Personalized care may include diet planning, Ayurvedic therapies and herbal support when appropriate, without extreme dieting or unhealthy shortcuts.",
+
   "highlights": [
-    "Metabolism and digestion support",
-    "Personalized diet plans",
-    "Lifestyle counseling",
-    "Holistic health focus"
+    "Personalized weight assessment",
+    "Ayurvedic weight management",
+    "Customized diet planning",
+    "Digestion and metabolic wellness support",
+    "Lifestyle and exercise guidance",
+    "Healthy weight loss support",
+    "Ayurvedic therapies when appropriate",
+    "Regular progress monitoring"
   ],
+
+  "problems": [
+    {
+      "slug": "overweight",
+      "title": "Overweight Management",
+      "description": "Personalized nutrition and lifestyle support for people looking to achieve and maintain a healthier body weight."
+    },
+    {
+      "slug": "obesity-management",
+      "title": "Obesity Management",
+      "description": "Holistic lifestyle and nutrition support for people managing obesity as part of a long-term healthy weight plan."
+    },
+    {
+      "slug": "belly-fat",
+      "title": "Belly Fat & Abdominal Weight",
+      "description": "Personalized diet, physical activity and lifestyle guidance to support healthy body composition and abdominal weight management."
+    },
+    {
+      "slug": "slow-metabolism",
+      "title": "Metabolic Wellness",
+      "description": "Nutrition and lifestyle guidance focused on supporting healthy metabolic function and sustainable weight management."
+    },
+    {
+      "slug": "weight-gain",
+      "title": "Unhealthy Weight Gain",
+      "description": "Assessment of diet, lifestyle and health factors that may contribute to unwanted weight gain."
+    },
+    {
+      "slug": "post-pregnancy-weight",
+      "title": "Post-Pregnancy Weight Management",
+      "description": "Personalized nutrition and lifestyle support for healthy weight management after pregnancy, based on individual needs."
+    }
+  ],
+
+  "symptoms": [
+    "Unwanted weight gain",
+    "Difficulty losing weight",
+    "Abdominal weight gain",
+    "Low energy",
+    "Poor digestion",
+    "Bloating",
+    "Irregular eating habits",
+    "Sedentary lifestyle",
+    "Frequent cravings",
+    "Poor sleep",
+    "Low physical activity"
+  ],
+
+  "possibleCauses": [
+    "Excess calorie intake",
+    "Sedentary lifestyle",
+    "Poor dietary habits",
+    "Irregular meal timing",
+    "Poor sleep",
+    "Chronic stress",
+    "Hormonal changes",
+    "Certain medications",
+    "Underlying medical conditions",
+    "Genetic and metabolic factors"
+  ],
+
+  "weightManagementAreas": [
+    {
+      "title": "Personalized Diet Plan",
+      "description": "Individualized nutrition guidance based on health status, lifestyle, food preferences and weight management goals."
+    },
+    {
+      "title": "Healthy Weight Loss",
+      "description": "Sustainable nutrition and lifestyle strategies designed to support gradual and healthy weight management."
+    },
+    {
+      "title": "Belly Fat Management",
+      "description": "Diet, physical activity and lifestyle guidance supporting healthy body composition and abdominal weight management."
+    },
+    {
+      "title": "Digestion & Metabolic Wellness",
+      "description": "Personalized support for healthy digestion, eating patterns and metabolic wellness."
+    },
+    {
+      "title": "Exercise & Physical Activity",
+      "description": "Guidance for incorporating suitable physical activity into a sustainable daily routine."
+    },
+    {
+      "title": "Lifestyle & Sleep",
+      "description": "Support for healthier sleep, stress management and daily habits that contribute to sustainable weight management."
+    }
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Weight Management",
+
+    "description": "Ayurvedic weight management takes an individualized approach to nutrition, digestion, daily routine, physical activity and overall wellbeing. Depending on the assessment, recommendations may include personalized diet planning, lifestyle changes, traditional Ayurvedic therapies and herbal support when appropriate.",
+
+    "therapies": [
+      "Personalized Ayurvedic consultation",
+      "Body and lifestyle assessment",
+      "Personalized diet planning",
+      "Digestive wellness guidance",
+      "Daily routine planning",
+      "Physical activity guidance",
+      "Ayurvedic massage therapies when appropriate",
+      "Traditional Ayurvedic therapies when appropriate",
+      "Herbal wellness support when appropriate",
+      "Regular progress monitoring"
+    ]
+  },
+
   "benefits": [
-    "Sustainable weight balance",
-    "Better metabolic health",
+    "Sustainable weight management",
+    "Healthy weight loss support",
+    "Better eating habits",
+    "Improved digestion",
+    "Metabolic wellness support",
     "Improved energy",
-    "Long-term habit changes"
+    "Better daily routine",
+    "Long-term healthy lifestyle habits"
   ],
+
   "treatmentSteps": [
-    "Body assessment",
-    "Nutrition and routine planning",
-    "Therapy and herbal support",
-    "Steady follow-up"
+    "Detailed health and lifestyle assessment",
+    "Weight, diet and routine evaluation",
+    "Review of sleep, stress and physical activity",
+    "Assessment of digestive and metabolic factors",
+    "Personalized Ayurvedic weight management plan",
+    "Customized diet and lifestyle guidance",
+    "Therapies or herbal support when appropriate",
+    "Regular progress tracking and plan adjustment"
   ],
+
+  "whoCanBenefit": [
+    "People looking for healthy weight management",
+    "People who have difficulty losing weight",
+    "People experiencing unwanted weight gain",
+    "People looking for Ayurvedic weight loss support",
+    "People wanting a personalized diet plan",
+    "People looking to improve digestion and lifestyle habits",
+    "People with sedentary lifestyles",
+    "People looking for sustainable long-term weight management"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic weight management?",
+      "answer": "Ayurvedic weight management is an individualized approach that may combine nutrition, lifestyle changes, physical activity, traditional Ayurvedic therapies and herbal support when appropriate to support healthy weight management."
+    },
+    {
+      "question": "Can Ayurveda help with weight loss?",
+      "answer": "Ayurvedic diet and lifestyle guidance may provide complementary support for healthy and sustainable weight management. Results vary depending on individual health, diet, activity and lifestyle factors."
+    },
+    {
+      "question": "What is the best Ayurvedic diet for weight loss?",
+      "answer": "There is no single diet suitable for everyone. An appropriate diet should be personalized according to health status, nutritional needs, lifestyle, food preferences and weight management goals."
+    },
+    {
+      "question": "Can Ayurveda reduce belly fat?",
+      "answer": "No treatment can guarantee fat loss from only one specific area of the body. Overall healthy weight management through nutrition, physical activity and lifestyle changes can help improve body composition."
+    },
+    {
+      "question": "How can I lose weight naturally?",
+      "answer": "Healthy weight management generally involves balanced nutrition, appropriate calorie intake, regular physical activity, adequate sleep, stress management and sustainable daily habits."
+    },
+    {
+      "question": "Can Ayurveda improve metabolism?",
+      "answer": "Healthy nutrition, physical activity, sleep and lifestyle habits can support normal metabolic health. Ayurvedic care may provide complementary lifestyle guidance based on individual needs."
+    },
+    {
+      "question": "Can Ayurveda help with obesity?",
+      "answer": "Ayurvedic diet and lifestyle guidance may provide complementary support for obesity management. People with obesity should receive appropriate health assessment and professional guidance, particularly when other medical conditions are present."
+    },
+    {
+      "question": "How long does Ayurvedic weight management take?",
+      "answer": "Healthy weight management is generally a gradual process. The duration depends on starting weight, health status, lifestyle, nutrition, activity level and individual progress."
+    },
+    {
+      "question": "Is Ayurvedic weight loss safe?",
+      "answer": "A healthy weight management program should avoid extreme dieting and unsafe weight-loss practices. Herbal products should be used only with appropriate professional guidance, especially when taking other medicines."
+    },
+    {
+      "question": "How much does Ayurvedic weight management cost?",
+      "answer": "The listed price for this Ayurvedic weight management service is ₹2,000. The final cost may depend on the consultation and personalized care plan."
+    }
+  ],
+
   "isCore": true,
-  "price": "2000"
+
+  "price": "200 - 4000"
 }

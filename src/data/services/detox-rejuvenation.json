@@ -1,28 +1,153 @@
 {
   "slug": "detox-rejuvenation",
-  "title": "Detox & Rejuvenation Therapy",
-  "subtitle": "Energy Renewal & Wellness",
-  "metaTitle": "Ayurvedic Detox & Rejuvenation Therapy in India | Vaidyam Healthcare",
-  "metaDescription": "Experience Ayurvedic detox and rejuvenation therapy for cleansing, energy, stress relief, and holistic wellness with guided care in India.",
-  "summary": "Traditional Ayurvedic rejuvenation therapies help restore balance, relaxation, and natural vitality.",
+
+  "title": "Ayurvedic Detox & Rejuvenation Therapy",
+
+  "subtitle": "Traditional Ayurvedic Detox, Relaxation & Wellness Support",
+
+  "metaTitle": "Ayurvedic Detox & Rejuvenation Therapy in India | Panchakarma & Wellness | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic detox and rejuvenation therapy in India with personalized wellness care, herbal therapies, Ayurvedic massage, relaxation practices and lifestyle guidance.",
+
+  "summary": "Ayurvedic detox and rejuvenation therapies are designed to support relaxation, vitality and overall wellness through personalized Ayurvedic care. Depending on individual needs, the approach may include traditional therapies, herbal oil treatments, massage, dietary guidance and lifestyle recommendations.",
+
   "highlights": [
-    "Body cleansing therapies",
-    "Ayurvedic massage",
-    "Energy restoration",
-    "Wellness guidance"
+    "Personalized Ayurvedic wellness assessment",
+    "Traditional Ayurvedic detox therapies",
+    "Ayurvedic massage and oil therapies",
+    "Rejuvenation and relaxation support",
+    "Dietary and lifestyle guidance",
+    "Individualized wellness plan"
   ],
+
+  "problems": [
+    {
+      "slug": "stress-and-fatigue",
+      "title": "Stress & Fatigue",
+      "description": "Ayurvedic wellness support for people experiencing everyday stress, tiredness and reduced energy."
+    },
+    {
+      "slug": "poor-relaxation",
+      "title": "Difficulty Relaxing",
+      "description": "Traditional Ayurvedic therapies may support relaxation and help create a more balanced wellness routine."
+    },
+    {
+      "slug": "low-energy",
+      "title": "Low Energy",
+      "description": "Personalized Ayurvedic lifestyle and wellness guidance for people looking to support natural vitality and energy."
+    },
+    {
+      "slug": "lifestyle-imbalance",
+      "title": "Lifestyle Imbalance",
+      "description": "Guidance on diet, daily routines, rest and healthy habits to support a more balanced lifestyle."
+    }
+  ],
+
+  "symptoms": [
+    "Everyday tiredness",
+    "Low energy",
+    "Stress",
+    "Difficulty relaxing",
+    "Poor lifestyle routine",
+    "Feeling physically or mentally exhausted",
+    "Reduced sense of wellbeing",
+    "Need for relaxation and self-care"
+  ],
+
+  "possibleCauses": [
+    "Irregular daily routine",
+    "Chronic lifestyle stress",
+    "Poor sleep habits",
+    "Unbalanced diet",
+    "Lack of physical activity",
+    "Insufficient rest",
+    "Work-related stress",
+    "Poor self-care habits"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Detox & Rejuvenation Approach",
+
+    "description": "Ayurvedic detox and rejuvenation care is personalized according to an individual's health, lifestyle and wellness goals. Depending on the assessment, traditional Ayurvedic therapies, massage, herbal oil treatments, dietary guidance and lifestyle recommendations may be included.",
+
+    "therapies": [
+      "Abhyanga Ayurvedic massage",
+      "Herbal oil therapies",
+      "Swedana therapy",
+      "Panchakarma therapies when clinically appropriate",
+      "Herbal wellness support",
+      "Dietary guidance",
+      "Daily routine recommendations",
+      "Relaxation and wellness practices"
+    ]
+  },
+
   "benefits": [
-    "Improved vitality",
-    "Better relaxation",
-    "Enhanced wellness",
-    "Balanced lifestyle"
+    "Support for relaxation and stress management",
+    "Support for natural vitality",
+    "Improved sense of wellbeing",
+    "Support for healthy daily routines",
+    "Personalized wellness guidance",
+    "Relaxation through traditional Ayurvedic therapies",
+    "Diet and lifestyle support"
   ],
+
   "treatmentSteps": [
-    "Wellness consultation",
-    "Therapy selection",
-    "Rejuvenation sessions",
-    "Lifestyle recommendations"
+    "Initial Ayurvedic wellness consultation",
+    "Assessment of lifestyle, health and wellness goals",
+    "Personalized therapy planning",
+    "Ayurvedic massage and selected therapies",
+    "Dietary and lifestyle recommendations",
+    "Rejuvenation and relaxation sessions",
+    "Follow-up wellness guidance"
   ],
+
+  "whoCanBenefit": [
+    "People looking for Ayurvedic wellness care",
+    "People experiencing everyday stress and tiredness",
+    "People looking for relaxation and rejuvenation",
+    "People interested in traditional Ayurvedic therapies",
+    "People wanting support for healthier lifestyle routines",
+    "People interested in personalized wellness programs",
+    "People looking for holistic self-care"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic detox therapy?",
+      "answer": "Ayurvedic detox therapy refers to traditional Ayurvedic approaches intended to support overall wellbeing through individualized therapies, dietary guidance and lifestyle practices. The appropriate approach depends on an individual's health and assessment."
+    },
+    {
+      "question": "What is Ayurvedic rejuvenation therapy?",
+      "answer": "Ayurvedic rejuvenation therapy focuses on relaxation, vitality and overall wellness. Depending on individual needs, it may include Ayurvedic massage, herbal oil therapies, dietary guidance and lifestyle recommendations."
+    },
+    {
+      "question": "What therapies are included in Ayurvedic detox and rejuvenation?",
+      "answer": "Depending on the individual's assessment, therapies may include Abhyanga massage, herbal oil therapies, Swedana and, when clinically appropriate, traditional Panchakarma therapies along with dietary and lifestyle guidance."
+    },
+    {
+      "question": "Is Panchakarma included in detox therapy?",
+      "answer": "Panchakarma is a traditional Ayurvedic therapeutic approach. Whether it is appropriate depends on the individual's health, constitution and clinical assessment. It should be undertaken under the guidance of a qualified Ayurvedic practitioner."
+    },
+    {
+      "question": "Can Ayurvedic rejuvenation therapy help with stress?",
+      "answer": "Ayurvedic massage, relaxation-focused therapies and lifestyle guidance may support relaxation and overall wellbeing for people experiencing everyday stress."
+    },
+    {
+      "question": "How long does Ayurvedic detox therapy take?",
+      "answer": "The duration varies depending on the type of therapy, individual health, wellness goals and the treatment plan recommended after assessment."
+    },
+    {
+      "question": "Is Ayurvedic detox suitable for everyone?",
+      "answer": "Not necessarily. The suitability of Ayurvedic detox therapies depends on an individual's health and circumstances. A qualified practitioner should assess the person before recommending intensive therapies."
+    },
+    {
+      "question": "How much does Ayurvedic detox and rejuvenation therapy cost?",
+      "answer": "The listed price for this detox and rejuvenation service is ₹2,000. The final cost may depend on the consultation and therapies included in the recommended wellness plan."
+    }
+  ],
+
   "isCore": false,
-  "price": "2000"
+
+  "price": "500 - 2000"
 }

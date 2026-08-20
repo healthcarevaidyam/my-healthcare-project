@@ -1,28 +1,155 @@
 {
   "slug": "ayurvedic-skin-treatment",
   "title": "Ayurvedic Skin Treatment",
-  "subtitle": "Natural Skin Care & Healing",
-  "metaTitle": "Ayurvedic Skin Treatment in India | Vaidyam Healthcare",
-  "metaDescription": "Get natural Ayurvedic skin treatment in India for healthy, radiant skin. Explore personalized Ayurvedic care for skin problems, nourishment, and long-term skin wellness.",
-  "summary": "Ayurvedic skin treatment focuses on identifying the root cause of skin problems and restoring balance naturally through herbal therapies, personalized care, proper nourishment, and lifestyle guidance.",
+
+  "subtitle": "Natural Skin Care & Personalized Ayurvedic Treatment",
+
+  "metaTitle": "Ayurvedic Skin Treatment in India | Skin Problems & Natural Care | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic skin treatment in India for acne, pigmentation, eczema, psoriasis and other common skin concerns with personalized herbal care, diet and lifestyle guidance.",
+
+  "summary": "Ayurvedic skin treatment focuses on understanding individual skin concerns, lifestyle and overall health before creating a personalized care plan. Treatment may include Ayurvedic herbal therapies, external applications, dietary guidance and lifestyle recommendations to support healthier skin and long-term skin wellness.",
+
   "highlights": [
-    "Ayurvedic skin treatment",
-    "Natural treatment for skin problems",
-    "Herbal skin care",
-    "Root-cause focused treatment"
+    "Personalized Ayurvedic skin assessment",
+    "Natural herbal skin care",
+    "Support for common skin concerns",
+    "Individualized treatment planning",
+    "Diet and lifestyle guidance",
+    "Long-term skin wellness support"
   ],
+
+  "problems": [
+    {
+      "slug": "acne",
+      "title": "Acne & Pimples",
+      "description": "Personalized Ayurvedic care for acne, pimples and recurring skin breakouts with attention to lifestyle, diet and individual skin characteristics."
+    },
+    {
+      "slug": "eczema",
+      "title": "Eczema",
+      "description": "Ayurvedic supportive care for dry, itchy and irritated skin associated with eczema and other recurring skin concerns."
+    },
+    {
+      "slug": "psoriasis",
+      "title": "Psoriasis",
+      "description": "Personalized Ayurvedic management focused on supporting skin health and addressing lifestyle and dietary factors."
+    },
+    {
+      "slug": "skin-pigmentation",
+      "title": "Skin Pigmentation",
+      "description": "Ayurvedic skin care and lifestyle guidance for concerns related to uneven skin tone and pigmentation."
+    },
+    {
+      "slug": "dry-skin",
+      "title": "Dry Skin",
+      "description": "Personalized guidance for dry, rough and dehydrated skin through appropriate skin care, nourishment and lifestyle recommendations."
+    },
+    {
+      "slug": "itchy-skin",
+      "title": "Itchy Skin",
+      "description": "Supportive Ayurvedic care for recurring skin irritation and itching based on individual assessment."
+    }
+  ],
+
+  "symptoms": [
+    "Acne and pimples",
+    "Skin redness",
+    "Itching",
+    "Dry or rough skin",
+    "Skin irritation",
+    "Uneven skin tone",
+    "Skin pigmentation",
+    "Recurring skin breakouts",
+    "Flaking or scaling",
+    "Skin sensitivity"
+  ],
+
+  "possibleCauses": [
+    "Dietary and nutritional factors",
+    "Lifestyle habits",
+    "Stress",
+    "Irregular sleep patterns",
+    "Environmental factors",
+    "Skin care practices",
+    "Individual constitution and health factors",
+    "Digestive and metabolic factors"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Skin Treatment",
+
+    "description": "Ayurvedic skin care takes a personalized approach by considering the individual's skin condition, constitution, lifestyle, diet and overall health. Based on the assessment, appropriate Ayurvedic therapies and lifestyle recommendations may be suggested.",
+
+    "therapies": [
+      "Ayurvedic herbal preparations",
+      "Herbal oil applications",
+      "External herbal therapies",
+      "Personalized dietary guidance",
+      "Lifestyle recommendations",
+      "Ayurvedic skin care guidance"
+    ]
+  },
+
   "benefits": [
-    "Healthy and natural skin glow",
+    "Support for healthier-looking skin",
     "Natural skin nourishment",
-    "Support for common skin problems",
-    "Long-term skin wellness"
+    "Support for managing common skin concerns",
+    "Improved skin care routine",
+    "Personalized dietary and lifestyle guidance",
+    "Long-term skin wellness support"
   ],
+
   "treatmentSteps": [
-    "Skin condition evaluation",
+    "Detailed skin condition evaluation",
+    "Health history and lifestyle assessment",
     "Personalized Ayurvedic treatment planning",
-    "Regular treatment and monitoring",
-    "Diet and lifestyle recommendations"
+    "Recommended herbal and external therapies",
+    "Diet and lifestyle guidance",
+    "Regular progress monitoring and follow-up"
   ],
+
+  "whoCanBenefit": [
+    "People experiencing recurring acne or pimples",
+    "People with dry or irritated skin",
+    "People concerned about skin pigmentation",
+    "People experiencing recurring itching or skin irritation",
+    "People looking for personalized Ayurvedic skin care",
+    "People interested in natural skin wellness"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic skin treatment?",
+      "answer": "Ayurvedic skin treatment is a personalized approach to skin care that considers the individual's skin concerns, constitution, lifestyle, diet and overall health. Depending on the assessment, herbal therapies, external applications and lifestyle guidance may be recommended."
+    },
+    {
+      "question": "Can Ayurveda help with acne and pimples?",
+      "answer": "Ayurvedic care may provide supportive management for acne and recurring pimples through personalized skin care, dietary guidance, lifestyle recommendations and appropriate herbal therapies."
+    },
+    {
+      "question": "Can Ayurveda help with skin pigmentation?",
+      "answer": "Ayurvedic skin care may support overall skin health and address factors associated with uneven skin tone and pigmentation. The recommended approach depends on the individual's skin condition and assessment."
+    },
+    {
+      "question": "What Ayurvedic treatments are used for skin problems?",
+      "answer": "Depending on the individual's assessment, Ayurvedic skin care may include herbal preparations, herbal oil applications, external therapies, dietary guidance and lifestyle recommendations."
+    },
+    {
+      "question": "How long does Ayurvedic skin treatment take?",
+      "answer": "The duration varies depending on the type of skin concern, its duration, individual health factors and response to the recommended care plan."
+    },
+    {
+      "question": "Is Ayurvedic skin treatment personalized?",
+      "answer": "Yes. Ayurvedic skin care is generally personalized according to the individual's skin condition, constitution, lifestyle, diet and overall health."
+    },
+    {
+      "question": "How much does Ayurvedic skin treatment cost?",
+      "answer": "The listed price for this Ayurvedic skin treatment service is ₹2,000. The final cost may depend on the consultation and treatment plan recommended for the individual."
+    }
+  ],
+
   "isCore": false,
-  "price": "2000"
+
+  "price": "500 - 2000"
 }

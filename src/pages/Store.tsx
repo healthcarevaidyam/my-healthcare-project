@@ -48,8 +48,8 @@ const Store = () => {
 
   const dummyProducts: ProductRecord[] = [
     {
-      slug: "inInfertility-management-kit",
-      name: "InInfertility Management Kit",
+      slug: "infertility-management-kit",
+      name: "Infertility Management Kit",
       price: "₹1499-₹3100",
       image: isMobile
         ? InfertilityManagementKitMobile

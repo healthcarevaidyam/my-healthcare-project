@@ -139,7 +139,7 @@ const seoConfigByPath: Record<string, SeoConfig> = {
       "Explore Ayurvedic treatments, wellness therapies, Panchakarma, and herbal medicine services offered by Vaidyam Healthcare for natural healing across India.",
     canonical: "https://vaidyamhealthcare.in/services",
     keywords:
-      "Ayurvedic treatment India, Panchakarma therapy, herbal medicine, digestive care, inInfertility treatment Ayurveda, holistic wellness, Ayurvedic clinic Uttarakhand",
+      "Ayurvedic treatment India, Panchakarma therapy, herbal medicine, digestive care, Infertility treatment Ayurveda, holistic wellness, Ayurvedic clinic Uttarakhand",
   },
   "/consultation": {
     title: "Book Ayurvedic Consultation | Vaidyam Healthcare",

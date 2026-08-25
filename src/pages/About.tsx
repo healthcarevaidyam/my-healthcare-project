@@ -48,7 +48,7 @@ const values = [
   },
   {
     icon: Baby,
-    title: "InInfertility Management",
+    title: "Infertility Management",
     desc: "Personalized Ayurvedic care focused on improving reproductive health and supporting natural Infertility.",
   },
   {

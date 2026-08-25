@@ -78,10 +78,10 @@ const Store = () => {
     },
     {
       slug: "piles-fistula-care-kit",
-      name: "Piles/Fistula Care Kit",
+      name: "Piles/Fissure Care Kit",
       price: "₹999-₹1,499",
       image: isMobile ? pilesFistulaCareKitMobile : pilesFistulaCareKitDesktop,
-      category: "Digestive Wellness",
+      category: "Ano-Rectal Wellness",
       shortDescription:
         "A curated herbal wellness kit designed to complement a healthy digestive and lifestyle routine.",
     },

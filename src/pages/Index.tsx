@@ -616,7 +616,7 @@ const Index = () => {
                 <div className="mt-7">
 
                   <h3 className="text-sm font-semibold text-foreground mb-3">
-                    Treatment Approach
+                    {doctor.id === 1 ? "Leadership Approach" : "Treatment Approach"}
                   </h3>
 
                   <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3">

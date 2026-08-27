@@ -65,7 +65,7 @@ const App = () => (
       <Toaster />
       <Sonner />
 
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <VisitorTracker />
 
         <Suspense fallback={<div className="min-h-[50vh]" aria-label="Loading page" />}>

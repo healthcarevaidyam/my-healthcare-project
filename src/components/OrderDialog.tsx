@@ -31,6 +31,9 @@ import { State, City } from "country-state-city";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useToast } from "@/components/ui/use-toast";
 
+const GOOGLE_ORDERS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbz1SR7HtnGLGMdYPcavxn2m_zWimtDhs8BqEFRebPI78MMGfWjTV1In8JZR5Qc6ac_q/exec";
+
 interface ProductRecord {
   slug: string;
   name: string;
@@ -107,9 +110,9 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
   }, [selectedProduct]);
 
   const loadIndianStates = () => {
-    const indiaStates = State.getStatesOfCountry("IN") || [];
+    const countryStates = State.getStatesOfCountry("IN") || [];
     setAvailableStates(
-      indiaStates.map((state) => ({
+      countryStates.map((state) => ({
         name: state.name,
         isoCode: state.isoCode,
       })),
@@ -184,18 +187,11 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
     }));
 
     if (value.length === 0) {
-      setSelectedStateCode("");
-      setAvailableCities([]);
       setLastPincodeLookup("");
-      setFormData((prev) => ({
-        ...prev,
-        state: "",
-        city: "",
-      }));
       return;
     }
 
-    if (value.length === 6 && value !== lastPincodeLookup) {
+    if (/^\d{6}$/.test(value) && value !== lastPincodeLookup) {
       setLastPincodeLookup(value);
       setIsPincodeLoading(true);
 
@@ -268,24 +264,23 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
         createdAt: new Date().toISOString(),
       };
 
-      const response = await fetch(
-        "https://vaidyamhealthcare.app.n8n.cloud/webhook/save-order",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(orderPayload),
-        },
-      );
+      const response = await fetch(GOOGLE_ORDERS_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(orderPayload),
+      });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         toast({
           title: "Order Placed Successfully!",
-          description: "We will contact you shortly to confirm your order.",
+          description: `Order ${result.id || ""} was saved. We will contact you shortly to confirm it.`,
           variant: "default",
         });
         onOpenChange(false);
+        setSelectedStateCode("");
+        setAvailableCities([]);
+        loadIndianStates();
         setFormData({
           productName: "",
           productPrice: "",
@@ -303,7 +298,7 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
           notes: "",
         });
       } else {
-        throw new Error("Failed to place order");
+        throw new Error(result.message || "Failed to place order");
       }
     } catch (error) {
       toast({
@@ -407,6 +402,7 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
                       inputMode="numeric"
                       pattern="[6-9][0-9]{9}"
                       maxLength={10}
+                      title="Enter a valid 10-digit Indian mobile number"
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -571,7 +567,7 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
                       inputMode="numeric"
                       pattern="[0-9]{6}"
                       className="h-11"
-                      placeholder="Pincode"
+                      placeholder={isPincodeLoading ? "Looking up..." : "Pincode"}
                     />
                   </div>
                 </div>

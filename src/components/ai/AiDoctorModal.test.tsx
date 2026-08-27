@@ -1,18 +1,24 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { AiDoctorModal } from "./AiDoctorModal";
 
 describe("AiDoctorModal", () => {
+  const cancelSpeech = vi.fn();
+  const abortRecognition = vi.fn();
+
   beforeEach(() => {
     window.localStorage.clear();
     vi.stubGlobal("speechSynthesis", {
       speak: vi.fn(),
-      cancel: vi.fn(),
+      cancel: cancelSpeech,
+      getVoices: vi.fn(() => []),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
     });
     vi.stubGlobal("webkitSpeechRecognition", class {
       start = vi.fn();
       stop = vi.fn();
-      abort = vi.fn();
+      abort = abortRecognition;
       onresult = null;
       onerror = null;
       onend = null;
@@ -31,5 +37,16 @@ describe("AiDoctorModal", () => {
   it("does not render when modal is closed", () => {
     const { container } = render(<AiDoctorModal isOpen={false} onClose={vi.fn()} />);
     expect(container.querySelector("[role='button']")).not.toBeInTheDocument();
+  });
+
+  it("terminates active browser resources when closed", () => {
+    const onClose = vi.fn();
+    render(<AiDoctorModal isOpen={true} onClose={onClose} />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Close AI Doctor" }));
+
+    expect(abortRecognition).toHaveBeenCalled();
+    expect(cancelSpeech).toHaveBeenCalled();
+    expect(onClose).toHaveBeenCalledOnce();
   });
 });

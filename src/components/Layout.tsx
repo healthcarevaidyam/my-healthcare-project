@@ -1,25 +1,28 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import SEO from "./SEO";
 import { DoctorLaunchButton } from "./ai/DoctorLaunchButton";
-import { AiDoctorModal } from "./ai/AiDoctorModal";
+
+const AiDoctorModal = lazy(() =>
+  import("./ai/AiDoctorModal").then((module) => ({ default: module.AiDoctorModal }))
+);
 
 // Desktop Banners
-import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.png";
-import servicesBanner from "@/assets/pagebanners/fordesktop/Services Banner.png";
-import consultationBanner from "@/assets/pagebanners/fordesktop/Book Consultation Banner.png";
-import blogBanner from "@/assets/pagebanners/fordesktop/Blog Banner.png";
-import contactBanner from "@/assets/pagebanners/fordesktop/Contact Banner.png";
+import aboutBanner from "@/assets/pagebanners/fordesktop/About Banner.webp";
+import servicesBanner from "@/assets/pagebanners/fordesktop/Services Banner.webp";
+import consultationBanner from "@/assets/pagebanners/fordesktop/Book Consultation Banner.webp";
+import blogBanner from "@/assets/pagebanners/fordesktop/Blog Banner.webp";
+import contactBanner from "@/assets/pagebanners/fordesktop/Contact Banner.webp";
 
 // Mobile Banners
-import aboutBannerMobile from "@/assets/pagebanners/formobile/About Banner.png";
-import servicesBannerMobile from "@/assets/pagebanners/formobile/Services Banner.png";
-import consultationBannerMobile from "@/assets/pagebanners/formobile/Book Consultation Banner.png";
-import blogBannerMobile from "@/assets/pagebanners/formobile/Blog Banner.png";
-import contactBannerMobile from "@/assets/pagebanners/formobile/Contact Banner.png";
+import aboutBannerMobile from "@/assets/pagebanners/formobile/About Banner.webp";
+import servicesBannerMobile from "@/assets/pagebanners/formobile/Services Banner.webp";
+import consultationBannerMobile from "@/assets/pagebanners/formobile/Book Consultation Banner.webp";
+import blogBannerMobile from "@/assets/pagebanners/formobile/Blog Banner.webp";
+import contactBannerMobile from "@/assets/pagebanners/formobile/Contact Banner.webp";
 
 const pageTitles: Record<string, string> = {
   "/": "Welcome to Vaidyam Hospital & HealthCare",
@@ -104,14 +107,11 @@ const Layout = () => {
       <Footer />
       <WhatsAppButton />
       <DoctorLaunchButton onClick={() => navigate("/aidoctor")} />
-      <AiDoctorModal isOpen={isAiDoctorOpen} onClose={() => {
-        // Prefer going back in history; fallback to home
-        try {
-          navigate(-1);
-        } catch {
-          navigate("/");
-        }
-      }} />
+      {isAiDoctorOpen && (
+        <Suspense fallback={null}>
+          <AiDoctorModal isOpen onClose={() => navigate(-1)} />
+        </Suspense>
+      )}
     </div>
   );
 };

@@ -14,9 +14,11 @@ describe("Store", () => {
   it("renders the curated wellness products with their details", () => {
     render(<Store />);
 
-    expect(screen.getByText("Our wellness products")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Ayurveda Store" })).toBeInTheDocument();
+    expect(screen.getByText("Medical products")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Ayurvedic medical products" })).toBeInTheDocument();
     expect(screen.getByText("Infertility Management Kit")).toBeInTheDocument();
-    expect(screen.getByText("₹1499-₹3100")).toBeInTheDocument();
+    expect(screen.getByText("₹1,499–₹3,100")).toBeInTheDocument();
   });
 
   it("renders product images from the local store assets", () => {

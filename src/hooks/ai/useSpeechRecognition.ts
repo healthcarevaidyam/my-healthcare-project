@@ -60,5 +60,10 @@ export const useSpeechRecognition = (onTranscript: (value: string) => void) => {
     setIsListening(false);
   };
 
-  return { isListening, error, startListening, stopListening };
+  const abortListening = () => {
+    recognition?.abort();
+    setIsListening(false);
+  };
+
+  return { isListening, error, startListening, stopListening, abortListening };
 };

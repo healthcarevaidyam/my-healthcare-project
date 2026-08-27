@@ -26,7 +26,6 @@ import {
   MapPin,
   Mail,
   Phone,
-  X,
 } from "lucide-react";
 import { State, City } from "country-state-city";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -247,7 +246,6 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    debugger;
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -327,14 +325,6 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
             : "max-w-[95vw] w-[1400px] h-[95vh] max-h-[95vh] rounded-2xl p-0 overflow-hidden shadow-2xl"
         }
       >
-        {/* Close button */}
-        <button
-          onClick={() => onOpenChange(false)}
-          className="absolute right-4 top-4 z-50 rounded-full bg-black/10 p-2 hover:bg-black/20 transition-colors"
-        >
-          <X className="h-5 w-5" />
-        </button>
-
         {/* Header */}
         <div
           className={
@@ -414,6 +404,9 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
                       id="phone"
                       name="phone"
                       type="tel"
+                      inputMode="numeric"
+                      pattern="[6-9][0-9]{9}"
+                      maxLength={10}
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -575,6 +568,8 @@ const OrderDialog = ({ isOpen, onOpenChange, selectedProduct }: OrderDialogProps
                       onChange={handleInputChange}
                       required
                       maxLength={6}
+                      inputMode="numeric"
+                      pattern="[0-9]{6}"
                       className="h-11"
                       placeholder="Pincode"
                     />

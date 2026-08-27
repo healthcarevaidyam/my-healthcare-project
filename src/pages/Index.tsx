@@ -47,7 +47,7 @@ const doctorImageMap = Object.fromEntries(
 ) as Record<string, string>;
 
 const bannerImages = Object.entries(
-  import.meta.glob("@/assets/homebanners/fordesktop/*.{jpg,jpeg,png,webp}", {
+  import.meta.glob("@/assets/homebanners/fordesktop/*.webp", {
     eager: true,
     import: "default",
   })
@@ -55,7 +55,7 @@ const bannerImages = Object.entries(
 
 const mobileBannerMap = Object.fromEntries(
   Object.entries(
-    import.meta.glob("@/assets/homebanners/formobile/*.{jpg,jpeg,png,webp}", {
+    import.meta.glob("@/assets/homebanners/formobile/*.webp", {
       eager: true,
       import: "default",
     })
@@ -316,6 +316,7 @@ const Index = () => {
               src={currentHeroImage}
               alt="Ayurvedic herbs and healing oils"
               loading="eager"
+              fetchPriority="high"
               decoding="async"
               className={`w-full h-full object-cover object-left md:object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
               key={currentHeroImage}

@@ -4,6 +4,7 @@ import type { DoctorMessage, Patient } from "../../types/ai/doctor";
 interface OpenRouterRequest {
   messages: DoctorMessage[];
   patient: Patient;
+  signal?: AbortSignal;
 }
 
 const OPENROUTER_ENDPOINT =
@@ -27,6 +28,7 @@ const sanitizeResponse = (text: string): string => {
 export const analyzePatient = async ({
   messages,
   patient,
+  signal,
 }: OpenRouterRequest): Promise<string> => {
   const apiKey = "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";
 
@@ -48,6 +50,7 @@ ${JSON.stringify(patient, null, 2)}
 `;
 
     const response = await fetch(OPENROUTER_ENDPOINT, {
+      signal,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,6 +83,9 @@ ${JSON.stringify(patient, null, 2)}
 
     return sanitizeResponse(rawText);
   } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") {
+      throw error;
+    }
     console.error("OpenRouter request failed:", error);
     return FALLBACK_RESPONSE;
   }

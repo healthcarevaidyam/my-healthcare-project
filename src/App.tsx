@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,22 +6,23 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Consultation from "./pages/Consultation";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import ServiceDetail from "./pages/ServiceDetail";
-import Store from "./pages/Store";
-import AdminLogin from "./pages/AdminLogin";
-import AdminDashboard from "./pages/AdminDashboard";
-import AdminDoctorPad from "./pages/AdminDoctorPad";
-import AdminInquiries from "./pages/AdminInquiries";
-import AdminProducts from "./pages/AdminProducts";
-import AdminOrders from "@/pages/AdminOrders";
-import NotFound from "./pages/NotFound";
-import AiDoctor from "./pages/ai/AiDoctor";
 import VisitorTracker from "./components/VisitorTracker";
+
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const Consultation = lazy(() => import("./pages/Consultation"));
+const Blog = lazy(() => import("./pages/Blog"));
+const Contact = lazy(() => import("./pages/Contact"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const Store = lazy(() => import("./pages/Store"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
+const AdminDoctorPad = lazy(() => import("./pages/AdminDoctorPad"));
+const AdminInquiries = lazy(() => import("./pages/AdminInquiries"));
+const AdminProducts = lazy(() => import("./pages/AdminProducts"));
+const AdminOrders = lazy(() => import("@/pages/AdminOrders"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const AiDoctor = lazy(() => import("./pages/ai/AiDoctor"));
 
 const queryClient = new QueryClient();
 
@@ -66,6 +68,7 @@ const App = () => (
       <BrowserRouter>
         <VisitorTracker />
 
+        <Suspense fallback={<div className="min-h-[50vh]" aria-label="Loading page" />}>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
@@ -89,6 +92,7 @@ const App = () => (
 
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -7,8 +7,7 @@ import { TypingIndicator } from "./TypingIndicator";
 import { useConsultation } from "../../hooks/ai/useConsultation";
 import { usePatient } from "../../hooks/ai/usePatient";
 import { useSpeechRecognition } from "../../hooks/ai/useSpeechRecognition";
-import { getDoctorVoiceState, speakText } from "../../services/ai/speech";
-import { consultationSteps } from "../../data/ai/consultationSteps";
+import { speakText, stopSpeaking } from "../../services/ai/speech";
 import { consultationQuestions } from "../../data/ai/questions";
 
 interface AiDoctorModalProps {
@@ -18,9 +17,10 @@ interface AiDoctorModalProps {
 
 export const AiDoctorModal = ({ isOpen, onClose }: AiDoctorModalProps) => {
   const { patient, updatePatient, isLoaded, resetPatient } = usePatient();
-  const { consultation, currentQuestion, doctorState, progress, isProcessing, nextQuestion, answerCurrentQuestion, resetConsultation, setDoctorState } = useConsultation(patient);
+  const { consultation, currentQuestion, doctorState, isProcessing, answerCurrentQuestion, resetConsultation, cancelPendingConsultation, setDoctorState } = useConsultation(patient);
   const [draftAnswer, setDraftAnswer] = useState("");
   const [showWelcome, setShowWelcome] = useState(true);
+  const processingTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -56,29 +56,46 @@ export const AiDoctorModal = ({ isOpen, onClose }: AiDoctorModalProps) => {
     };
   }, [isOpen]);
 
-  const handleClose = () => {
-    resetConsultation();
-    resetPatient();
-    setShowWelcome(true);
-    setDoctorState("idle");
-    onClose();
-  };
-
   const handleSubmitAnswer = async () => {
     if (!draftAnswer.trim()) return;
     updatePatient(currentQuestion.field, draftAnswer.trim());
     setDoctorState("listening");
-    setTimeout(() => {
+    if (processingTimerRef.current !== null) window.clearTimeout(processingTimerRef.current);
+    processingTimerRef.current = window.setTimeout(() => {
       setDoctorState("thinking");
+      processingTimerRef.current = null;
     }, 800);
     await answerCurrentQuestion(draftAnswer.trim());
     setDraftAnswer("");
   };
 
-  const { isListening, error, startListening, stopListening } = useSpeechRecognition((transcript: string) => {
+  const { isListening, error, startListening, stopListening, abortListening } = useSpeechRecognition((transcript: string) => {
     setDraftAnswer(transcript);
     updatePatient(currentQuestion.field, transcript);
   });
+
+  const handleClose = () => {
+    if (processingTimerRef.current !== null) {
+      window.clearTimeout(processingTimerRef.current);
+      processingTimerRef.current = null;
+    }
+    abortListening();
+    stopSpeaking();
+    cancelPendingConsultation();
+    resetConsultation();
+    resetPatient();
+    setDraftAnswer("");
+    setShowWelcome(true);
+    setDoctorState("idle");
+    onClose();
+  };
+
+  useEffect(() => () => {
+    if (processingTimerRef.current !== null) {
+      window.clearTimeout(processingTimerRef.current);
+    }
+    stopSpeaking();
+  }, []);
 
   const isCompleted = consultation.completed && doctorState === "completed";
   const currentQuestionIndex = consultationQuestions.findIndex((q) => q.id === consultation.currentQuestionId);
@@ -128,6 +145,7 @@ export const AiDoctorModal = ({ isOpen, onClose }: AiDoctorModalProps) => {
               <button
                 type="button"
                 onClick={handleClose}
+                aria-label="Close AI Doctor"
                 className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
               >
                 <X size={18} className="text-gray-600" />

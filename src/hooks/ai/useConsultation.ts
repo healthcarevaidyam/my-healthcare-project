@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { consultationQuestions, getQuestionById } from "../../data/ai/questions";
 import { consultationSteps } from "../../data/ai/consultationSteps";
 import type { Consultation, DoctorMessage, DoctorState, Patient, Question } from "../../types/ai/doctor";
@@ -26,6 +26,17 @@ export const useConsultation = (patient: Patient) => {
   const [doctorState, setDoctorState] = useState<DoctorState>("idle");
   const [currentQuestion, setCurrentQuestion] = useState<Question>(() => getQuestionById(consultation.currentQuestionId) ?? consultationQuestions[0]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const requestControllerRef = useRef<AbortController | null>(null);
+
+  const cancelPendingConsultation = useCallback(() => {
+    requestControllerRef.current?.abort();
+    requestControllerRef.current = null;
+    setIsProcessing(false);
+  }, []);
+
+  useEffect(() => () => {
+    requestControllerRef.current?.abort();
+  }, []);
 
   useEffect(() => {
     saveConsultation(consultation);
@@ -68,12 +79,13 @@ export const useConsultation = (patient: Patient) => {
   }, [consultation.currentQuestionId, goToQuestion]);
 
   const resetConsultation = useCallback(() => {
+    cancelPendingConsultation();
     const firstQuestion = consultationQuestions[0];
     setConsultation(initialConsultation(firstQuestion.id));
     setCurrentQuestion(firstQuestion);
     setDoctorState("idle");
     setIsProcessing(false);
-  }, []);
+  }, [cancelPendingConsultation]);
 
   const completeConsultation = useCallback(async (finalMessages?: DoctorMessage[], finalPatient?: Patient) => {
     const messagesToSend = finalMessages ?? consultation.messages;
@@ -82,7 +94,23 @@ export const useConsultation = (patient: Patient) => {
     setDoctorState("thinking");
     setIsProcessing(true);
 
-    const response = await analyzePatient({ messages: messagesToSend, patient: patientToSend });
+    requestControllerRef.current?.abort();
+    const controller = new AbortController();
+    requestControllerRef.current = controller;
+
+    let response: string;
+    try {
+      response = await analyzePatient({ messages: messagesToSend, patient: patientToSend, signal: controller.signal });
+    } catch (error) {
+      if (controller.signal.aborted) return;
+      throw error;
+    } finally {
+      if (requestControllerRef.current === controller) {
+        requestControllerRef.current = null;
+      }
+    }
+
+    if (controller.signal.aborted) return;
     const assistantMessage: DoctorMessage = {
       id: `assistant-${Date.now()}`,
       role: "assistant",
@@ -153,6 +181,7 @@ export const useConsultation = (patient: Patient) => {
     answerCurrentQuestion,
     completeConsultation,
     resetConsultation,
+    cancelPendingConsultation,
     setDoctorState,
   };
 };

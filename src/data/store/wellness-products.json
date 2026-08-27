@@ -1,0 +1,95 @@
+[
+  {
+    "slug": "chyawanprash",
+    "name": "Ayurvedic Chyawanprash",
+    "price": "₹499",
+    "startingPrice": 499,
+    "desktopImage": "chyawanprash.png",
+    "mobileImage": "chyawanprash.png",
+    "category": "Food & Nutrition",
+    "tags": ["food", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "In stock",
+    "featured": true,
+    "shortDescription": "A traditional herbal wellness blend for everyday nourishment, strength, and seasonal immunity support."
+  },
+  {
+  "slug": "giloy-powder",
+  "name": "Giloy Powder",
+  "price": "₹349",
+  "startingPrice": 349,
+  "desktopImage": "giloy-powder.png",
+  "mobileImage": "giloy-powder.png",
+  "category": "Ayurvedic Powders",
+  "tags": ["giloy", "powder", "herbal"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "Pure herbal Giloy powder, traditionally used in Ayurveda as part of a natural daily wellness routine."
+},
+  {
+    "slug": "ayurvedic-massage-oil",
+    "name": "Ayurvedic Massage Oil",
+    "price": "₹349",
+    "startingPrice": 349,
+    "desktopImage": "ayurvedic-massage-oil.png",
+    "mobileImage": "ayurvedic-massage-oil.png",
+    "category": "Ayurvedic Oils",
+    "tags": ["oil", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "In stock",
+    "shortDescription": "A nourishing herbal oil for a relaxing daily body-care and massage ritual."
+  },
+  {
+    "slug": "herbal-achar",
+    "name": "Traditional Herbal Achar",
+    "price": "₹249",
+    "startingPrice": 249,
+    "desktopImage": "herbal-achar.png",
+    "mobileImage": "herbal-achar.png",
+    "category": "Food & Nutrition",
+    "tags": ["food", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "Limited stock",
+    "shortDescription": "A flavourful traditional preparation made to complement everyday meals and mindful eating."
+  },
+  {
+    "slug": "natural-honey",
+    "name": "Natural Wellness Honey",
+    "price": "₹299",
+    "startingPrice": 299,
+    "desktopImage": "natural-honey.png",
+    "mobileImage": "natural-honey.png",
+    "category": "Food & Nutrition",
+    "tags": ["food", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "In stock",
+    "shortDescription": "Naturally sweet honey for warm drinks, herbal preparations, and everyday wellness use."
+  },
+  {
+  "slug": "triphala-powder",
+  "name": "Triphala Powder",
+  "price": "₹349",
+  "startingPrice": 349,
+  "desktopImage": "triphala-powder.png",
+  "mobileImage": "triphala-powder.png",
+  "category": "Ayurvedic Powders",
+  "tags": ["triphala", "powder", "herbal", "ayurvedic"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "A traditional Ayurvedic herbal powder made from Triphala, commonly used as part of a natural daily wellness routine."
+},
+{
+  "slug": "kesh-vardhak",
+  "name": "Kesh Vardhak",
+  "price": "₹349",
+  "startingPrice": 349,
+  "desktopImage": "kesh-vardhak.png",
+  "mobileImage": "kesh-vardhak.png",
+  "category": "Ayurvedic Hair Care",
+  "tags": ["kesh-vardhak", "hair-wash", "hair-care", "powder", "herbal", "ayurvedic"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "A traditional Ayurvedic herbal hair wash powder for gentle cleansing and natural hair care."
+}
+  
+]

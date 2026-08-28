@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight, Leaf, PackageCheck, Search, Pill, SlidersHorizontal, Stethoscope, X,
 } from "lucide-react";
@@ -30,6 +31,8 @@ interface ProductRecord {
   stockStatus: "In stock" | "Limited stock";
   doctorRecommended?: boolean;
   featured?: boolean;
+  variants?: Array<{ label: string; mrp: number; price: number }>;
+  seo?: { title: string; description: string; imageAlt: string };
 }
 
 interface ProductCatalogRecord extends Omit<ProductRecord, "image"> {
@@ -60,8 +63,10 @@ const Store = () => {
   const [selectedProduct, setSelectedProduct] = useState<ProductRecord | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [activeProductType, setActiveProductType] = useState<"medical" | "wellness">("medical");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("recommended");
+  const [selectedPackSizes, setSelectedPackSizes] = useState<Record<string, string>>({});
 
   const products = useMemo<ProductRecord[]>(() => (
     (productCatalog as ProductCatalogRecord[]).map(({ desktopImage, mobileImage, ...product }) => ({
@@ -70,13 +75,22 @@ const Store = () => {
     }))
   ), [isMobile]);
 
+  const availableCategories = useMemo(() => (
+    [...new Set(
+      products
+        .filter((product) => product.productType === activeProductType)
+        .map((product) => product.category),
+    )].sort((first, second) => first.localeCompare(second))
+  ), [activeProductType, products]);
+
   const filteredProducts = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
     const matches = products.filter((product) => {
       const matchesProductType = product.productType === activeProductType;
+      const matchesCategory = activeCategory === "all" || product.category === activeCategory;
       const matchesSearch = !query || [product.name, product.category, product.shortDescription]
         .some((value) => value.toLowerCase().includes(query));
-      return matchesProductType && matchesSearch;
+      return matchesProductType && matchesCategory && matchesSearch;
     });
 
     return [...matches].sort((first, second) => {
@@ -85,32 +99,50 @@ const Store = () => {
       if (sortOrder === "name") return first.name.localeCompare(second.name);
       return Number(Boolean(second.featured)) - Number(Boolean(first.featured));
     });
-  }, [activeProductType, products, searchQuery, sortOrder]);
+  }, [activeCategory, activeProductType, products, searchQuery, sortOrder]);
 
   const medicalProducts = filteredProducts.filter((product) => product.productType === "medical");
   const wellnessProducts = filteredProducts.filter((product) => product.productType === "wellness");
 
   const clearFilters = () => {
     setSearchQuery("");
+    setActiveCategory("all");
     setSortOrder("recommended");
   };
 
+  const selectedVariantFor = (product: ProductRecord) => {
+    if (!product.variants?.length) return undefined;
+    const selectedLabel = selectedPackSizes[product.slug] ?? product.variants[0].label;
+    return product.variants.find((variant) => variant.label === selectedLabel) ?? product.variants[0];
+  };
+
   const orderProduct = (product: ProductRecord) => {
-    setSelectedProduct(product);
+    const variant = selectedVariantFor(product);
+    setSelectedProduct(variant ? {
+      ...product,
+      name: `${product.name} (${variant.label})`,
+      price: `₹${variant.price.toLocaleString("en-IN")}`,
+      startingPrice: variant.price,
+    } : product);
     setIsDialogOpen(true);
   };
 
   const renderProductGrid = (items: ProductRecord[]) => (
     <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-      {items.map((product) => (
+      {items.map((product) => {
+        const selectedVariant = selectedVariantFor(product);
+        const discountPercentage = selectedVariant
+          ? Math.round(((selectedVariant.mrp - selectedVariant.price) / selectedVariant.mrp) * 100)
+          : 0;
+        return (
         <article key={product.slug}
           className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-background shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-elevated">
-          <div className="relative aspect-[4/3] overflow-hidden bg-secondary/50">
-            <img src={product.image} alt={product.name} loading="lazy" decoding="async"
+          <Link to={`/store/${product.slug}`} className="relative block aspect-[4/3] overflow-hidden bg-secondary/50" aria-label={`View ${product.name}`}>
+            <img src={product.image} alt={product.seo?.imageAlt ?? product.name} loading="lazy" decoding="async"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
             <Badge className="absolute left-4 top-4 bg-background/95 text-foreground shadow-sm hover:bg-background">{product.category}</Badge>
             {product.featured && <Badge className="absolute right-4 top-4 bg-primary">Popular</Badge>}
-          </div>
+          </Link>
           <div className="flex flex-1 flex-col p-6">
             <div className="mb-3 flex flex-wrap items-center gap-2">
               <Badge variant={product.productType === "medical" ? "default" : "secondary"}>
@@ -119,18 +151,46 @@ const Store = () => {
               </Badge>
               <span className="text-xs font-medium text-emerald-700">{product.stockStatus}</span>
             </div>
-            <h3 className="text-xl font-bold leading-snug">{product.name}</h3>
+            <h3 className="text-xl font-bold leading-snug"><Link to={`/store/${product.slug}`} className="hover:text-primary">{product.name}</Link></h3>
             <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{product.shortDescription}</p>
             {product.doctorRecommended && <p className="mt-4 flex items-center gap-2 rounded-xl bg-amber-50 px-3 py-2 text-xs font-medium text-amber-900">
               <Stethoscope className="h-4 w-4 shrink-0" /> Practitioner guidance recommended
             </p>}
+            {product.variants?.length && <div className="mt-4">
+              <label htmlFor={`pack-size-${product.slug}`} className="mb-2 block text-xs font-semibold uppercase tracking-wide text-muted-foreground">Pack size</label>
+              <Select
+                value={selectedVariant?.label}
+                onValueChange={(label) => setSelectedPackSizes((current) => ({ ...current, [product.slug]: label }))}
+              >
+                <SelectTrigger id={`pack-size-${product.slug}`} className="h-11 rounded-xl bg-background">
+                  <SelectValue placeholder="Select pack size" />
+                </SelectTrigger>
+                <SelectContent>
+                  {product.variants.map((variant) => (
+                    <SelectItem key={variant.label} value={variant.label}>
+                      {variant.label} — ₹{variant.price.toLocaleString("en-IN")} (MRP ₹{variant.mrp.toLocaleString("en-IN")})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>}
             <div className="mt-6 flex items-end justify-between gap-4 border-t pt-5">
-              <div><p className="text-xs text-muted-foreground">Starting price</p><p className="mt-1 text-xl font-bold text-primary">{product.price}</p></div>
+              <div>
+                <p className="text-xs text-muted-foreground">{selectedVariant ? selectedVariant.label : "Starting price"}</p>
+                <div className="mt-1 flex flex-wrap items-center gap-2">
+                  <p className="text-xl font-bold text-primary">{selectedVariant ? `₹${selectedVariant.price.toLocaleString("en-IN")}` : product.price}</p>
+                  {selectedVariant && <>
+                    <span className="text-sm text-muted-foreground line-through">₹{selectedVariant.mrp.toLocaleString("en-IN")}</span>
+                    <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100">{discountPercentage}% OFF</Badge>
+                  </>}
+                </div>
+              </div>
               <Button onClick={() => orderProduct(product)} className="rounded-xl px-5">Order now <ArrowRight className="ml-2 h-4 w-4" /></Button>
             </div>
           </div>
         </article>
-      ))}
+        );
+      })}
     </div>
   );
 
@@ -161,7 +221,10 @@ const Store = () => {
           <div className="grid grid-cols-2 gap-2 lg:flex lg:shrink-0">
             <div className="min-w-0 lg:w-52">
               <label htmlFor="store-product-type" className="sr-only">Product type</label>
-              <Select value={activeProductType} onValueChange={(value: "medical" | "wellness") => setActiveProductType(value)}>
+              <Select value={activeProductType} onValueChange={(value: "medical" | "wellness") => {
+                setActiveProductType(value);
+                setActiveCategory("all");
+              }}>
                 <SelectTrigger id="store-product-type" className="h-10 rounded-xl bg-background">
                   <SelectValue placeholder="Select product type" />
                 </SelectTrigger>
@@ -171,7 +234,21 @@ const Store = () => {
                 </SelectContent>
               </Select>
             </div>
-            <div className="min-w-0 lg:w-48">
+            <div className="min-w-0 lg:w-56">
+              <label htmlFor="store-category" className="sr-only">Product category</label>
+              <Select value={activeCategory} onValueChange={setActiveCategory}>
+                <SelectTrigger id="store-category" className="h-10 rounded-xl bg-background">
+                  <SelectValue placeholder="Select category" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All categories</SelectItem>
+                  {availableCategories.map((category) => (
+                    <SelectItem key={category} value={category}>{category}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="col-span-2 min-w-0 lg:col-span-1 lg:w-48">
               <label htmlFor="store-sort" className="sr-only">Sort by</label>
               <Select value={sortOrder} onValueChange={setSortOrder}>
                 <SelectTrigger id="store-sort" className="h-10 rounded-xl bg-background">
@@ -185,7 +262,7 @@ const Store = () => {
                 </SelectContent>
               </Select>
             </div>
-            {(searchQuery || sortOrder !== "recommended") && <Button variant="ghost" size="sm" onClick={clearFilters} className="col-span-2 h-10 lg:col-span-1">Reset</Button>}
+            {(searchQuery || activeCategory !== "all" || sortOrder !== "recommended") && <Button variant="ghost" size="sm" onClick={clearFilters} className="col-span-2 h-10 lg:col-span-1">Reset</Button>}
           </div>
         </div>
         </div>
@@ -210,7 +287,9 @@ const Store = () => {
               <span className="rounded-2xl bg-emerald-700 p-3 text-white"><Leaf className="h-6 w-6" /></span>
               <div>
                 <h2 id="wellness-products-heading" className="text-2xl font-bold">Daily wellness products</h2>
-                <p className="mt-1 text-sm text-muted-foreground">{wellnessProducts.length} everyday herbal food, tea, oil, and personal wellness products.</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {wellnessProducts.length} carefully selected foods, beverages, grains, pulses, spices, herbal preparations, and personal care products.
+                </p>
               </div>
             </div>
             {renderProductGrid(wellnessProducts)}

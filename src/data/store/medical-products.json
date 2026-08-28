@@ -12,7 +12,8 @@
     "stockStatus": "In stock",
     "doctorRecommended": true,
     "featured": true,
-    "shortDescription": "A thoughtfully curated Ayurvedic kit supporting reproductive wellness and a balanced daily routine."
+    "shortDescription": "A thoughtfully curated Ayurvedic kit supporting reproductive wellness and a balanced daily routine.",
+    "seo": { "title": "Infertility Management Kit | Vaidyam Healthcare", "description": "Explore the Vaidyam Infertility Management Kit, available online with practitioner guidance, transparent pricing and delivery across India.", "imageAlt": "Vaidyam Infertility Management Kit product pack" }
   },
   {
     "slug": "pcos-pcos-care-kit",
@@ -27,7 +28,8 @@
     "stockStatus": "In stock",
     "doctorRecommended": true,
     "featured": true,
-    "shortDescription": "A coordinated wellness kit created to complement healthy routines for women managing PCOS or PCOD."
+    "shortDescription": "A coordinated wellness kit created to complement healthy routines for women managing PCOS or PCOD.",
+    "seo": { "title": "PCOS and PCOD Care Kit | Vaidyam Healthcare", "description": "Explore the Vaidyam PCOS and PCOD Care Kit with practitioner guidance, transparent pricing and online ordering across India.", "imageAlt": "Vaidyam PCOS and PCOD Care Kit product pack" }
   },
   {
     "slug": "diabetes-care-kit",
@@ -41,7 +43,8 @@
     "productType": "medical",
     "stockStatus": "In stock",
     "doctorRecommended": true,
-    "shortDescription": "A carefully selected Ayurvedic wellness kit designed to complement healthy diet and lifestyle habits."
+    "shortDescription": "A carefully selected Ayurvedic wellness kit designed to complement healthy diet and lifestyle habits.",
+    "seo": { "title": "Ayurvedic Diabetes Care Kit | Vaidyam Healthcare", "description": "Explore the Vaidyam Ayurvedic Diabetes Care Kit, designed to complement healthy routines with practitioner guidance and India-wide ordering.", "imageAlt": "Vaidyam Ayurvedic Diabetes Care Kit product pack" }
   },
   {
     "slug": "piles-fistula-care-kit",
@@ -55,7 +58,8 @@
     "productType": "medical",
     "stockStatus": "Limited stock",
     "doctorRecommended": true,
-    "shortDescription": "A curated herbal wellness kit designed to support a comfortable digestive and lifestyle routine."
+    "shortDescription": "A curated herbal wellness kit designed to support a comfortable digestive and lifestyle routine.",
+    "seo": { "title": "Piles and Fissure Care Kit | Vaidyam Healthcare", "description": "Explore the Vaidyam Piles and Fissure Care Kit with practitioner guidance, transparent pricing and online ordering across India.", "imageAlt": "Vaidyam Piles and Fissure Care Kit product pack" }
   },
   {
     "slug": "skin-care-kit",
@@ -69,6 +73,7 @@
     "productType": "medical",
     "stockStatus": "In stock",
     "doctorRecommended": true,
-    "shortDescription": "A natural care collection with thoughtfully selected products for a simple everyday skincare ritual."
+    "shortDescription": "A natural care collection with thoughtfully selected products for a simple everyday skincare ritual.",
+    "seo": { "title": "Ayurvedic Skin Care Kit | Vaidyam Healthcare", "description": "Explore the Vaidyam Ayurvedic Skin Care Kit for an everyday skincare routine, with transparent pricing and online ordering across India.", "imageAlt": "Vaidyam Ayurvedic Skin Care Kit product collection" }
   }
 ]

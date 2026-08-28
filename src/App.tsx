@@ -24,6 +24,7 @@ const AdminOrders = lazy(() => import("@/pages/AdminOrders"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AiDoctor = lazy(() => import("./pages/ai/AiDoctor"));
 const Policies = lazy(() => import("./pages/Policies"));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 
 const queryClient = new QueryClient();
 
@@ -79,6 +80,7 @@ const App = () => (
             <Route path="/consultation" element={<Consultation />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/store/:slug" element={<ProductDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/ai-doctor" element={<AiDoctor />} />
             <Route path="/aidoctor" element={<Index />} />

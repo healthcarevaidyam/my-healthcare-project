@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getServicePageBySlug } from "@/data/serviceLoader";
+import { getProductBySlug, type StoreProduct } from "@/data/productLoader";
 
 type SeoConfig = {
   title: string;
@@ -22,7 +23,8 @@ const orgAddress = {
 
 const createStructuredData = (
   seo: SeoConfig,
-  service?: { title: string; metaDescription: string; slug: string }
+  service?: { title: string; metaDescription: string; slug: string },
+  product?: StoreProduct,
 ): Array<Record<string, any>> => {
   const organization = {
     "@type": "Organization",
@@ -113,6 +115,30 @@ const createStructuredData = (
     });
   }
 
+  if (product) {
+    const variantPrices = product.variants?.map((variant) => variant.price) ?? [product.startingPrice];
+    schema.push({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description: product.shortDescription,
+      sku: product.slug,
+      category: product.category,
+      brand: { "@type": "Brand", name: siteName },
+      url: `${baseUrl}/store/${product.slug}`,
+      image: defaultImage,
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "INR",
+        lowPrice: Math.min(...variantPrices),
+        highPrice: Math.max(...variantPrices),
+        offerCount: variantPrices.length,
+        availability: "https://schema.org/InStock",
+        url: `${baseUrl}/store/${product.slug}`,
+      },
+    });
+  }
+
   return schema;
 };
 
@@ -176,6 +202,8 @@ const SEO = () => {
   const currentPath = location.pathname;
   const serviceMatch = currentPath.match(/^\/services\/([^\/]+)$/);
   const service = serviceMatch ? getServicePageBySlug(serviceMatch[1]) : undefined;
+  const productMatch = currentPath.match(/^\/store\/([^\/]+)$/);
+  const product = productMatch ? getProductBySlug(productMatch[1]) : undefined;
 
   const defaultServiceSeo: SeoConfig = {
   title: "Ayurvedic Service | Vaidyam Healthcare",
@@ -186,7 +214,14 @@ const SEO = () => {
     "Ayurvedic treatment India, Panchakarma therapy, herbal medicine, Ayurvedic consultation, holistic wellness",
 };
 
-const seo: SeoConfig = service
+const seo: SeoConfig = product
+  ? {
+      title: product.seo?.title ?? `${product.name} | Buy Online | Vaidyam Healthcare`,
+      description: product.seo?.description ?? `${product.shortDescription} View available pack sizes and order ${product.name} online from Vaidyam Healthcare.`,
+      canonical: `${baseUrl}/store/${product.slug}`,
+      keywords: `${product.name}, buy ${product.name} online, ${product.category}, Ayurvedic products India, Vaidyam Healthcare`,
+    }
+  : service
   ? {
       title: service.metaTitle,
       description: service.metaDescription,
@@ -226,7 +261,7 @@ const seo: SeoConfig = service
     setMetaTag('meta[property="og:title"]', "content", seo.title);
     setMetaTag('meta[property="og:description"]', "content", seo.description);
     setMetaTag('meta[property="og:url"]', "content", seo.canonical);
-    setMetaTag('meta[property="og:type"]', "content", service ? "service" : "website");
+    setMetaTag('meta[property="og:type"]', "content", product ? "product" : service ? "service" : "website");
     setMetaTag('meta[property="og:site_name"]', "content", siteName);
     setMetaTag('meta[property="og:locale"]', "content", "en_IN");
     setMetaTag('meta[property="og:image"]', "content", defaultImage);
@@ -244,7 +279,7 @@ const seo: SeoConfig = service
     }
     canonicalLink.setAttribute("href", seo.canonical);
 
-    const schemaJson = JSON.stringify(createStructuredData(seo, service));
+    const schemaJson = JSON.stringify(createStructuredData(seo, service, product));
     let jsonLdScript = document.querySelector('script[type="application/ld+json"]');
     if (!jsonLdScript) {
       jsonLdScript = document.createElement("script");
@@ -266,7 +301,7 @@ const seo: SeoConfig = service
       alternateLink.setAttribute("hreflang", hreflang);
       document.head.appendChild(alternateLink);
     });
-  }, [seo, service]);
+  }, [seo, service, product]);
 
   return null;
 };

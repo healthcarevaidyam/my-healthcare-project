@@ -23,6 +23,7 @@ const AdminProducts = lazy(() => import("./pages/AdminProducts"));
 const AdminOrders = lazy(() => import("@/pages/AdminOrders"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AiDoctor = lazy(() => import("./pages/ai/AiDoctor"));
+const Policies = lazy(() => import("./pages/Policies"));
 
 const queryClient = new QueryClient();
 
@@ -81,6 +82,10 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/ai-doctor" element={<AiDoctor />} />
             <Route path="/aidoctor" element={<Index />} />
+            <Route path="/privacy-policy" element={<Policies type="privacy" />} />
+            <Route path="/terms-and-conditions" element={<Policies type="terms" />} />
+            <Route path="/refund-cancellation-policy" element={<Policies type="refund" />} />
+            <Route path="/shipping-policy" element={<Policies type="shipping" />} />
           </Route>
 
           <Route path="/admin/login" element={<AdminLogin />} />

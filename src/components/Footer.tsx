@@ -68,6 +68,13 @@ const Footer = () => (
         </Link>
       </div>
 
+      <nav aria-label="Legal policies" className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+        <Link to="/privacy-policy" className="opacity-80 hover:opacity-100">Privacy Policy</Link>
+        <Link to="/terms-and-conditions" className="opacity-80 hover:opacity-100">Terms &amp; Conditions</Link>
+        <Link to="/refund-cancellation-policy" className="opacity-80 hover:opacity-100">Refund &amp; Cancellation</Link>
+        <Link to="/shipping-policy" className="opacity-80 hover:opacity-100">Shipping Policy</Link>
+      </nav>
+
       <div className="border-t border-primary-foreground/20 mt-12 pt-6 text-center text-sm opacity-60">
         © {new Date().getFullYear()} Vaidyam Hospital & HealthCare. All rights reserved.
       </div>

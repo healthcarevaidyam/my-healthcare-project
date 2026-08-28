@@ -25,6 +25,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://vaidyamhealthcare.in/services/ayurvedic-skin-treatment</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://vaidyamhealthcare.in/services/back-pain-treatment</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -79,12 +85,6 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://vaidyamhealthcare.in/services/online-consultation</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
     <loc>https://vaidyamhealthcare.in/services/panchakarma-treatment</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -92,12 +92,6 @@
   </url>
   <url>
     <loc>https://vaidyamhealthcare.in/services/pcos-treatment</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://vaidyamhealthcare.in/services/skin-care-ayurveda</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -133,10 +127,34 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaidyamhealthcare.in/ayurvedic-consultation</loc>
+    <loc>https://vaidyamhealthcare.in/services/ayurvedic-consultation</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vaidyamhealthcare.in/privacy-policy</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vaidyamhealthcare.in/terms-and-conditions</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vaidyamhealthcare.in/refund-cancellation-policy</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vaidyamhealthcare.in/shipping-policy</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://vaidyamhealthcare.in/blog</loc>

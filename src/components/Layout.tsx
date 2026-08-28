@@ -60,9 +60,9 @@ const Layout = () => {
   const desktopBanner = desktopBanners[location.pathname];
   const mobileBanner = mobileBanners[location.pathname];
 
-  // Don't show the shared banner on the root, service-detail pages, or the Store page
-  const showBanner =
-    location.pathname !== "/" && !location.pathname.startsWith("/store") && !isServiceDetail;
+  // Render the shared banner only when the current route has a configured image.
+  // This prevents an empty fixed-height header on policy and other custom pages.
+  const showBanner = Boolean(desktopBanner) && !isServiceDetail;
 
   useEffect(() => {
     window.scrollTo({
@@ -91,7 +91,7 @@ const Layout = () => {
             <img
               src={desktopBanner}
               alt={`${bannerTitle} banner`}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-contain bg-[#f7efe4]"
               loading="eager"
               decoding="async"
             />

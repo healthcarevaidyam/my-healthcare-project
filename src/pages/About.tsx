@@ -75,6 +75,18 @@ const About = () => {
 
   return (
     <>
+      <section className="bg-background py-12 md:py-16">
+        <div className="container mx-auto max-w-4xl px-4 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">About Vaidyam Healthcare</p>
+          <h1 className="mt-4 font-heading text-4xl font-bold text-foreground md:text-5xl">
+            Ayurvedic care guided by a collaborative healthcare team
+          </h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">
+            Learn about our approach, values, and team supporting personalized Ayurvedic consultations and wellness care.
+          </p>
+        </div>
+      </section>
+
       {/* Vision & Values */}
       <section className="py-20 bg-secondary/50">
         <div className="container mx-auto px-4">

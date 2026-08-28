@@ -38,12 +38,11 @@ const Navbar = () => {
             decoding="async"
           />
 
-        <div>
-          <span className="font-serif text-[10px] font-semibold uppercase tracking-[0.4em] text-black-700">
-          BALKRISHNA's
-        </span>
-
-          <span className="font-heading text-3xl font-bold text-slate-800">
+        <div className="flex flex-col items-start leading-none">
+          <span className="mb-1 font-serif text-[10px] font-semibold uppercase tracking-[0.4em] text-slate-700">
+            BALKRISHNA&apos;S
+          </span>
+          <span className="font-heading text-xl font-bold text-slate-800 sm:text-3xl">
             Vaidyam Hospital &amp; HealthCare
           </span>
         </div>

@@ -288,7 +288,7 @@ const Index = () => {
   
   return (
     <>
-      <section className="relative min-h-[85vh] overflow-hidden">
+      <section className="relative min-h-[85vh] overflow-hidden bg-[#f7efe4]">
         {/* Background Image */}
         <div className="absolute inset-0 bg-[#f7efe4]">
           {currentHeroImage && (
@@ -298,7 +298,7 @@ const Index = () => {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className={`w-full h-full object-cover object-left md:object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
+              className={`w-full h-full object-contain object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
               key={currentHeroImage}
               onLoad={() => setHeroImageLoaded(true)}
             />

@@ -34,7 +34,7 @@ const values = [
   {
     icon: Eye,
     title: "Holistic Vision",
-    desc: "We treat the whole person — body, mind, and spirit — not just symptoms.",
+    desc: "We consider the whole person — body, mind, and lifestyle — alongside their symptoms.",
   },
   {
     icon: Target,
@@ -49,12 +49,12 @@ const values = [
   {
     icon: Baby,
     title: "Infertility Management",
-    desc: "Personalized Ayurvedic care focused on improving reproductive health and supporting natural Infertility.",
+    desc: "Personalized Ayurvedic care designed to support reproductive health and overall well-being.",
   },
   {
     icon: Activity,
     title: "Diabetes Care",
-    desc: "Comprehensive Ayurvedic management to help maintain healthy blood sugar levels and overall well-being.",
+    desc: "Ayurvedic guidance intended to complement healthy lifestyle habits and overall well-being.",
   },
 ];
 

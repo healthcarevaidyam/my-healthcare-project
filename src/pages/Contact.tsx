@@ -69,9 +69,9 @@ const Contact = () => {
         <SectionHeading subtitle="Common Questions" title="Frequently Asked Questions" />
         <div className="space-y-4">
           {[
-            { q: "What should I expect during my first visit?", a: "Your first consultation includes a detailed health assessment, pulse diagnosis (Nadi Pariksha), and discussion of your health goals. Dr. Sharma will then create a personalized treatment plan." },
-            { q: "How long does a Panchakarma treatment take?", a: "A typical Panchakarma program ranges from 7 to 21 days depending on your condition and treatment goals. Dr. Sharma will recommend the ideal duration." },
-            { q: "Are Ayurvedic medicines safe?", a: "Yes, Ayurvedic medicines prescribed by qualified practitioners are natural and safe. Dr. Sharma uses only high-quality, tested herbal formulations." },
+            { q: "What should I expect during my first visit?", a: "Your first consultation includes a detailed health assessment and a discussion of your health goals. One of our Ayurvedic doctors will then recommend a personalized care plan." },
+            { q: "How long does a Panchakarma treatment take?", a: "A Panchakarma program may range from 7 to 21 days depending on individual needs and assessment. A qualified practitioner will recommend an appropriate duration." },
+            { q: "Are Ayurvedic medicines safe?", a: "Ayurvedic medicines should be used under guidance from a qualified practitioner, especially alongside existing medication. Our team prioritizes carefully selected formulations and individualized advice." },
             { q: "Do you offer online consultations?", a: "Yes! We offer online consultations via video call and WhatsApp for patients who cannot visit the clinic in person." },
             { q: "Is Ayurveda effective for chronic conditions?", a: "Ayurveda has shown excellent results for chronic conditions by addressing the root cause rather than just symptoms. Results vary by individual." },
           ].map((faq) => (

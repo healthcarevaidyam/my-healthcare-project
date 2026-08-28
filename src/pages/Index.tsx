@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeading from "@/components/SectionHeading";
@@ -245,26 +245,6 @@ const Index = () => {
   const selectedImage = isMobile ? mobileHeroImage : heroImage;
   const nextHeroImage = `${selectedImage}?v=${imageKey}`;
 
-  const testimonialScrollRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const el = testimonialScrollRef.current;
-    if (!el) return;
-
-    let rafId: number;
-    const scrollStep = () => {
-      if (!el) return;
-      el.scrollLeft += 0.35;
-      if (el.scrollLeft >= el.scrollWidth / 2) {
-        el.scrollLeft = 0;
-      }
-      rafId = requestAnimationFrame(scrollStep);
-    };
-
-    rafId = requestAnimationFrame(scrollStep);
-    return () => cancelAnimationFrame(rafId);
-  }, []);
-
   useEffect(() => {
     if (!selectedImage) return;
 
@@ -359,11 +339,11 @@ const Index = () => {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
             Natural healing • Panchakarma • Herbal care
           </p>
-          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
+          <h1 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
             Trusted Ayurvedic Doctor in India & Uttarakhand
-          </h2>
+          </h1>
           <p className="mt-3 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Personalized Ayurvedic treatment for diabetes, digestive health, Infertility, skin care, and lasting wellness for patients across India and beyond.
+            Personalized Ayurvedic care to support diabetes management, digestive health, reproductive wellness, skin care, and long-term well-being for patients across India and beyond.
           </p>
         </div>
       </section>
@@ -418,8 +398,8 @@ const Index = () => {
             description="Real experiences from patients who found healing through our Ayurvedic treatments."
           />
           <div className="overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-r from-primary/5 via-background to-secondary/20 p-4 sm:p-6">
-            <div ref={testimonialScrollRef} className="flex gap-4 overflow-x-hidden">
-              {[...testimonials, ...testimonials].map((t, i) => (
+            <div className="flex gap-4 overflow-x-auto pb-2" aria-label="Patient testimonials">
+              {testimonials.slice(0, 6).map((t, i) => (
                 <motion.div
                   key={`${t.name}-${i}`}
                   custom={i}

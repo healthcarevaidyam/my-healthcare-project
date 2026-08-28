@@ -16,7 +16,7 @@ const orgAddress = {
   streetAddress: "Ranikhet, Almora",
   addressLocality: "Ranikhet",
   addressRegion: "Uttarakhand",
-  postalCode: "263645",
+  postalCode: "263663",
   addressCountry: "IN",
 };
 
@@ -126,12 +126,12 @@ const seoConfigByPath: Record<string, SeoConfig> = {
       "Ayurvedic doctor India, Ayurveda treatment India, Panchakarma clinic, herbal medicine doctor, holistic healing, online Ayurveda consultation, Ayurvedic clinic Ranikhet, natural healing India",
   },
   "/about": {
-    title: "About Dr. Harsh Vardhan Sharma | Ayurvedic Doctor in India",
+    title: "About Vaidyam Healthcare | Ayurvedic Doctors in Ranikhet",
     description:
-      "Meet Dr. Harsh Vardhan Sharma, expert Ayurvedic physician at Vaidyam Healthcare, helping patients in India with chronic disease, Infertility, digestion, and holistic wellness.",
+      "Meet the team at Vaidyam Healthcare, including qualified Ayurvedic physicians providing personalized consultations and wellness care in Ranikhet.",
     canonical: "https://vaidyamhealthcare.in/about",
     keywords:
-      "Ayurvedic physician India, Dr Harsh Vardhan Sharma, Ayurveda practitioner, holistic healing doctor, natural medicine specialist, Ayurvedic clinic Uttarakhand",
+      "Ayurvedic doctors Ranikhet, Ayurvedic physicians Uttarakhand, Ayurveda practitioners, Vaidyam Healthcare team, Ayurvedic clinic Ranikhet",
   },
   "/services": {
     title: "Ayurvedic Treatments in India | Panchakarma & Herbal Care",

@@ -20,6 +20,7 @@ const Consultation = () => {
     email: "",
     problem: "",
     date: "",
+    consent: false,
   });
 
   const GOOGLE_SCRIPT_URL =
@@ -29,10 +30,10 @@ const Consultation = () => {
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
-  if (!form.name || !form.phone || !form.email) {
+  if (!form.name || !form.phone || !form.email || !form.consent) {
     toast({
       title: "Please fill in all required fields",
-      description: "Name, phone number, and email are required.",
+      description: "Name, phone number, email, and consent are required.",
       variant: "destructive",
     });
     return;
@@ -49,6 +50,7 @@ const Consultation = () => {
         date: form.date
           ? new Date(form.date).toISOString()
           : new Date().toISOString(),
+        consent: form.consent,
       }),
     });
 
@@ -68,6 +70,7 @@ const Consultation = () => {
       email: "",
       problem: "",
       date: "",
+      consent: false,
     });
 
     toast({
@@ -118,7 +121,7 @@ const Consultation = () => {
                   {
                     icon: ShieldCheck,
                     title: "Trusted Ayurvedic Care",
-                    desc: "Expert assessment, root-cause treatment, and follow-up support through video consultation.",
+                    desc: "Individual assessment, personalized guidance, and follow-up support through video consultation.",
                   },
                   {
                     icon: HeartPulse,
@@ -170,7 +173,7 @@ const Consultation = () => {
                     },
                     {
                       title: "2. Speak with an Ayurvedic doctor",
-                      description: "Join a secure video call for a full health assessment, pulse evaluation, and personalized plan.",
+                      description: "Join a video call to discuss your health history, concerns, and a personalized care plan.",
                     },
                     {
                       title: "3. Receive your treatment plan",
@@ -216,25 +219,39 @@ const Consultation = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name">Full Name *</Label>
-                        <Input id="name" value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="Your name" className="mt-1" />
+                        <Input id="name" name="name" autoComplete="name" required value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="Your name" className="mt-1" />
                       </div>
                       <div>
                         <Label htmlFor="phone">Phone Number *</Label>
-                        <Input id="phone" type="tel" value={form.phone} onChange={(e) => update("phone", e.target.value)} placeholder="+91-XXXXX-XXXXX" className="mt-1" />
+                        <Input id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" required pattern="(?:\\+91[ -]?)?[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" value={form.phone} onChange={(e) => update("phone", e.target.value)} placeholder="98765 43210" className="mt-1" />
                       </div>
                     </div>
                     <div>
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" type="email" value={form.email} onChange={(e) => update("email", e.target.value)} placeholder="your@email.com" className="mt-1" />
+                      <Input id="email" name="email" type="email" autoComplete="email" required value={form.email} onChange={(e) => update("email", e.target.value)} placeholder="your@email.com" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="date">Preferred Date</Label>
-                      <Input id="date" type="date" value={form.date} onChange={(e) => update("date", e.target.value)} className="mt-1" />
+                      <Input id="date" name="preferredDate" type="date" value={form.date} onChange={(e) => update("date", e.target.value)} className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="problem">Describe Your Health Concern</Label>
-                      <Textarea id="problem" value={form.problem} onChange={(e) => update("problem", e.target.value)} placeholder="Tell us about your symptoms or health concern..." rows={4} className="mt-1" />
+                      <Textarea id="problem" name="healthConcern" value={form.problem} onChange={(e) => update("problem", e.target.value)} placeholder="Tell us about your symptoms or health concern..." rows={4} className="mt-1" />
                     </div>
+                    <label className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
+                      <input
+                        type="checkbox"
+                        name="consent"
+                        required
+                        checked={form.consent}
+                        onChange={(e) => setForm((prev) => ({ ...prev, consent: e.target.checked }))}
+                        className="mt-1 h-4 w-4 rounded border-border accent-primary"
+                      />
+                      <span>I consent to Vaidyam Healthcare using these details to contact me and arrange my consultation.</span>
+                    </label>
+                    <p className="text-xs leading-5 text-muted-foreground">
+                      Online consultation is not an emergency service. For urgent or life-threatening symptoms, contact local emergency services immediately.
+                    </p>
                     <Button type="submit" size="lg" className="w-full sm:w-auto">
                       Submit Request
                     </Button>
@@ -251,7 +268,7 @@ const Consultation = () => {
                 {
                   icon: Phone,
                   title: "Trusted Ayurvedic guidance",
-                  desc: "Advice from qualified Ayurvedic doctors with a focus on safe, natural results.",
+                  desc: "Guidance from Ayurvedic doctors with a focus on responsible, personalized care.",
                 },
                 {
                   icon: Video,
@@ -294,11 +311,11 @@ const Consultation = () => {
               },
               {
                 q: "Is online Ayurvedic consultation effective?",
-                a: "Yes. Our doctors provide complete health assessment, personalized treatment plans, and follow-up advice to support natural healing through Ayurveda.",
+                a: "An online consultation can be useful for discussing health concerns, lifestyle guidance, and follow-up care. Suitability depends on the individual, and some concerns may require an in-person examination.",
               },
               {
-                q: "What conditions can be treated through video consultation?",
-                a: "We treat diabetes, PCOS, thyroid imbalance, back pain, digestive issues, stress, and many chronic health concerns with Ayurveda.",
+                q: "What concerns can be discussed through video consultation?",
+                a: "You can discuss concerns such as diabetes management, PCOS, thyroid health, back pain, digestive issues, stress, and general wellness. The doctor will advise whether an in-person examination or other medical care is needed.",
               },
               {
                 q: "Is this an affordable Ayurvedic consultation?",

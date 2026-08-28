@@ -43,9 +43,9 @@ const Navbar = () => {
           BALKRISHNA's
         </span>
 
-          <h1 className="font-heading text-3xl font-bold text-slate-800">
+          <span className="font-heading text-3xl font-bold text-slate-800">
             Vaidyam Hospital &amp; HealthCare
-          </h1>
+          </span>
         </div>
         </Link>
 

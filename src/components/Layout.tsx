@@ -91,7 +91,7 @@ const Layout = () => {
             <img
               src={desktopBanner}
               alt={`${bannerTitle} banner`}
-              className="absolute inset-0 h-full w-full object-contain bg-[#f7efe4]"
+              className="absolute inset-0 h-full w-full object-cover object-center"
               loading="eager"
               decoding="async"
             />

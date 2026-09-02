@@ -298,7 +298,7 @@ const Index = () => {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className={`w-full h-full object-contain object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
+              className={`w-full h-full object-cover object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
               key={currentHeroImage}
               onLoad={() => setHeroImageLoaded(true)}
             />

@@ -1,0 +1,281 @@
+[
+  {
+    "slug": "chyawanprash",
+    "name": "Ayurvedic Chyawanprash",
+    "price": "₹199",
+    "startingPrice": 199,
+    "variants": [
+      { "label": "250 g", "mrp": 249, "price": 199 },
+      { "label": "500 g", "mrp": 499, "price": 349 },
+      { "label": "1 kg", "mrp": 899, "price": 649 }
+    ],
+    "desktopImage": "chyawanprash.png",
+    "mobileImage": "chyawanprash.png",
+    "category": "Herbal Foods & Spreads",
+    "tags": ["food", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "In stock",
+    "featured": true,
+    "shortDescription": "A traditional herbal wellness blend for everyday nourishment, strength, and seasonal immunity support.",
+    "seo": { "title": "Buy Ayurvedic Chyawanprash Online | Vaidyam", "description": "Shop Vaidyam Ayurvedic Chyawanprash in 250 g, 500 g and 1 kg packs. Compare pack prices and order online for delivery across India.", "imageAlt": "Vaidyam Ayurvedic Chyawanprash jar" }
+  },
+  {
+  "slug": "giloy-powder",
+  "name": "Giloy Powder",
+  "price": "₹199",
+  "startingPrice": 199,
+  "variants": [
+    { "label": "250 g", "mrp": 349, "price": 199 },
+    { "label": "500 g", "mrp": 649, "price": 349 },
+    { "label": "1 kg", "mrp": 1199, "price": 599 }
+  ],
+  "desktopImage": "giloy-powder.png",
+  "mobileImage": "giloy-powder.png",
+  "category": "Herbal Powders",
+  "tags": ["giloy", "powder", "herbal"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "Pure herbal Giloy powder, traditionally used in Ayurveda as part of a natural daily wellness routine.",
+  "seo": { "title": "Buy Giloy Powder Online | Vaidyam Healthcare", "description": "Shop Vaidyam Giloy Powder in 250 g, 500 g and 1 kg packs with transparent MRP, website pricing and delivery across India.", "imageAlt": "Vaidyam Giloy herbal powder pack" }
+},
+  {
+    "slug": "ayurvedic-massage-oil",
+    "name": "Ayurvedic Massage Oil",
+    "price": "₹249",
+    "startingPrice": 249,
+    "variants": [
+      { "label": "100 ml", "mrp": 349, "price": 249 },
+      { "label": "250 ml", "mrp": 699, "price": 449 },
+      { "label": "500 ml", "mrp": 1299, "price": 799 }
+    ],
+    "desktopImage": "ayurvedic-massage-oil.png",
+    "mobileImage": "ayurvedic-massage-oil.png",
+    "category": "Oils & Personal Care",
+    "tags": ["oil", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "In stock",
+    "shortDescription": "A nourishing herbal oil for a relaxing daily body-care and massage ritual.",
+    "seo": { "title": "Buy Ayurvedic Massage Oil Online | Vaidyam", "description": "Shop Vaidyam Ayurvedic Massage Oil in 100 ml, 250 ml and 500 ml sizes with transparent pricing and delivery across India.", "imageAlt": "Vaidyam Ayurvedic herbal massage oil bottle" }
+  },
+  {
+    "slug": "herbal-achar",
+    "name": "Traditional Herbal Achar",
+    "price": "₹199",
+    "startingPrice": 199,
+    "variants": [
+      { "label": "250 g", "mrp": 249, "price": 199 },
+      { "label": "500 g", "mrp": 449, "price": 349 },
+      { "label": "1 kg", "mrp": 799, "price": 649 }
+    ],
+    "desktopImage": "herbal-achar.png",
+    "mobileImage": "herbal-achar.png",
+    "category": "Herbal Foods & Spreads",
+    "tags": ["food", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "Limited stock",
+    "shortDescription": "A flavourful traditional preparation made to complement everyday meals and mindful eating.",
+    "seo": { "title": "Buy Traditional Herbal Achar Online | Vaidyam", "description": "Shop traditional Herbal Achar from Vaidyam in 250 g, 500 g and 1 kg packs with pack pricing and delivery across India.", "imageAlt": "Vaidyam Traditional Herbal Achar jar" }
+  },
+  {
+    "slug": "natural-honey",
+    "name": "Natural Wellness Honey",
+    "price": "₹199",
+    "startingPrice": 199,
+    "variants": [
+      { "label": "250 g", "mrp": 299, "price": 199 },
+      { "label": "500 g", "mrp": 549, "price": 379 },
+      { "label": "1 kg", "mrp": 999, "price": 699 }
+    ],
+    "desktopImage": "natural-honey.png",
+    "mobileImage": "natural-honey.png",
+    "category": "Herbal Foods & Spreads",
+    "tags": ["food", "herbal"],
+    "productType": "wellness",
+    "stockStatus": "In stock",
+    "shortDescription": "Naturally sweet honey for warm drinks, herbal preparations, and everyday wellness use.",
+    "seo": { "title": "Buy Natural Wellness Honey Online | Vaidyam", "description": "Shop Vaidyam Natural Wellness Honey in 250 g, 500 g and 1 kg packs with transparent pricing and delivery across India.", "imageAlt": "Vaidyam Natural Wellness Honey jar" }
+  },
+  {
+  "slug": "triphala-powder",
+  "name": "Triphala Powder",
+  "price": "₹199",
+  "startingPrice": 199,
+  "variants": [
+    { "label": "250 g", "mrp": 349, "price": 199 },
+    { "label": "500 g", "mrp": 649, "price": 349 },
+    { "label": "1 kg", "mrp": 1199, "price": 649 }
+  ],
+  "desktopImage": "triphala-powder.png",
+  "mobileImage": "triphala-powder.png",
+  "category": "Herbal Powders",
+  "tags": ["triphala", "powder", "herbal", "ayurvedic"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "A traditional Ayurvedic herbal powder made from Triphala, commonly used as part of a natural daily wellness routine.",
+  "seo": { "title": "Buy Triphala Powder Online | Vaidyam Healthcare", "description": "Shop Vaidyam Triphala Powder in 250 g, 500 g and 1 kg packs with transparent MRP, website pricing and India-wide delivery.", "imageAlt": "Vaidyam Triphala Ayurvedic powder pack" }
+},
+{
+  "slug": "kesh-vardhak",
+  "name": "Kesh Vardhak",
+  "price": "₹299",
+  "startingPrice": 299,
+  "variants": [
+    { "label": "250 g", "mrp": 349, "price": 299 },
+    { "label": "500 g", "mrp": 649, "price": 549 },
+    { "label": "1 kg", "mrp": 1199, "price": 999 }
+  ],
+  "desktopImage": "kesh-vardhak.png",
+  "mobileImage": "kesh-vardhak.png",
+  "category": "Oils & Personal Care",
+  "tags": ["kesh-vardhak", "hair-wash", "hair-care", "powder", "herbal", "ayurvedic"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "A traditional Ayurvedic herbal hair wash powder for gentle cleansing and natural hair care.",
+  "seo": { "title": "Buy Kesh Vardhak Hair Wash Online | Vaidyam", "description": "Shop Vaidyam Kesh Vardhak herbal hair wash powder in 250 g, 500 g and 1 kg packs with delivery across India.", "imageAlt": "Vaidyam Kesh Vardhak herbal hair wash powder" }
+},
+{
+  "slug": "buransh-juice",
+  "name": "Buransh Juice",
+  "price": "₹149",
+  "startingPrice": 149,
+  "variants": [
+    { "label": "250 ml", "mrp": 199, "price": 149 },
+    { "label": "500 ml", "mrp": 349, "price": 249 },
+    { "label": "1 litre", "mrp": 599, "price": 449 }
+  ],
+  "desktopImage": "buransh-juice.png",
+  "mobileImage": "buransh-juice.png",
+  "category": "Juices & Beverages",
+  "tags": ["buransh", "rhododendron", "juice", "drink", "herbal", "wellness"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "featured": true,
+  "shortDescription": "A refreshing traditional Buransh flower drink for everyday enjoyment and seasonal wellness.",
+  "aboutProduct": "Buransh Juice is a traditional Himalayan-style beverage inspired by the bright red flowers of Rhododendron arboreum, a tree closely associated with Uttarakhand's hill landscape. It offers a distinctive floral and fruity drinking experience and is available in convenient pack sizes for individual or family use.",
+  "benefits": [
+    "A refreshing flower-based beverage for everyday enjoyment",
+    "Inspired by a well-known traditional drink from the Himalayan region",
+    "Available in 250 ml, 500 ml and 1 litre pack sizes",
+    "An easy alternative to ordinary packaged refreshments"
+  ],
+  "usageInstructions": "Serve chilled or use according to the directions printed on the product label. Shake the bottle before serving if directed on the packaging.",
+  "storageInstructions": "Store in a cool, dry place away from direct sunlight. Follow the package instructions for refrigeration and use after opening.",
+  "seo": { "title": "Buy Buransh Juice Online | Uttarakhand | Vaidyam", "description": "Shop Vaidyam Buransh Juice in 250 ml, 500 ml and 1 litre bottles. View pack prices and order online for delivery across India.", "imageAlt": "Vaidyam Buransh rhododendron flower juice bottle" }
+},
+{
+  "slug": "malta-juice",
+  "name": "Malta Juice",
+  "price": "₹149",
+  "startingPrice": 149,
+  "variants": [
+    { "label": "250 ml", "mrp": 199, "price": 149 },
+    { "label": "500 ml", "mrp": 349, "price": 249 },
+    { "label": "1 litre", "mrp": 599, "price": 449 }
+  ],
+  "desktopImage": "malta-juice.png",
+  "mobileImage": "malta-juice.png",
+  "category": "Juices & Beverages",
+  "tags": ["malta", "citrus", "juice", "drink", "fruit", "wellness"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "A refreshing Malta citrus drink with a bright, naturally fruity flavour for everyday enjoyment.",
+  "seo": { "title": "Buy Malta Juice Online | Uttarakhand | Vaidyam", "description": "Shop Vaidyam Malta Juice in 250 ml, 500 ml and 1 litre bottles. View pack prices and order online for delivery across India.", "imageAlt": "Vaidyam Uttarakhand Malta citrus juice bottle" }
+},
+{
+  "slug": "apple-jam",
+  "name": "Apple Jam",
+  "price": "₹199",
+  "startingPrice": 199,
+  "variants": [
+    { "label": "250 g", "mrp": 249, "price": 199 },
+    { "label": "500 g", "mrp": 449, "price": 349 },
+    { "label": "1 kg", "mrp": 799, "price": 649 }
+  ],
+  "desktopImage": "apple-jam.png",
+  "mobileImage": "apple-jam.png",
+  "category": "Herbal Foods & Spreads",
+  "tags": ["apple", "jam", "fruit", "spread", "food", "wellness"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "A smooth and fruity apple spread for breakfast, snacks, and everyday family enjoyment.",
+  "seo": { "title": "Buy Apple Jam Online | Vaidyam Healthcare", "description": "Shop Vaidyam Apple Jam in 250 g, 500 g and 1 kg packs. Compare MRP and website prices with delivery across India.", "imageAlt": "Vaidyam Apple Jam jar and apples" }
+},
+{
+  "slug": "ragi-atta",
+  "name": "Ragi Atta",
+  "price": "₹99",
+  "startingPrice": 99,
+  "variants": [
+    { "label": "500 g", "mrp": 149, "price": 99 },
+    { "label": "1 kg", "mrp": 249, "price": 179 },
+    { "label": "5 kg", "mrp": 999, "price": 799 }
+  ],
+  "desktopImage": "ragi-atta.png",
+  "mobileImage": "ragi-atta.png",
+  "category": "Grains, Flour & Pulses",
+  "tags": ["ragi", "atta", "flour", "millet", "grain", "food", "wellness"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "Finely milled ragi flour for rotis, porridge, baking, and nutritious everyday meals.",
+  "seo": { "title": "Buy Ragi Atta Online | Finger Millet Flour | Vaidyam", "description": "Shop Vaidyam Ragi Atta, also known as finger millet flour, in 500 g, 1 kg and 5 kg packs with India-wide delivery.", "imageAlt": "Vaidyam Ragi Atta finger millet flour pack" }
+},
+{
+  "slug": "pahadi-rajma",
+  "name": "Pahadi Rajma",
+  "price": "₹199",
+  "startingPrice": 199,
+  "variants": [
+    { "label": "500 g", "mrp": 249, "price": 199 },
+    { "label": "1 kg", "mrp": 449, "price": 349 },
+    { "label": "5 kg", "mrp": 1999, "price": 1599 }
+  ],
+  "desktopImage": "pahadi-rajma.png",
+  "mobileImage": "pahadi-rajma.png",
+  "category": "Grains, Flour & Pulses",
+  "tags": ["pahadi", "rajma", "kidney beans", "pulses", "beans", "food", "wellness"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "Traditional hill-grown rajma with a rich flavour and hearty texture for wholesome everyday meals.",
+  "seo": { "title": "Buy Pahadi Rajma Online | Uttarakhand Rajma | Vaidyam", "description": "Shop Vaidyam Pahadi Rajma in 500 g, 1 kg and 5 kg packs. View transparent pack pricing and order for delivery across India.", "imageAlt": "Vaidyam Pahadi Rajma kidney beans pack" }
+},
+{
+  "slug": "gahat-dal",
+  "name": "Gahat Dal",
+  "price": "₹199",
+  "startingPrice": 199,
+  "variants": [
+    { "label": "500 g", "mrp": 249, "price": 199 },
+    { "label": "1 kg", "mrp": 499, "price": 379 },
+    { "label": "5 kg", "mrp": 2199, "price": 1749 }
+  ],
+  "desktopImage": "gahat-dal.png",
+  "mobileImage": "gahat-dal.png",
+  "category": "Grains, Flour & Pulses",
+  "tags": ["gahat", "kulthi", "horse gram", "dal", "pulses", "food", "wellness"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "shortDescription": "Traditional hill-grown Gahat, also known as Kulthi or horse gram, for hearty dals and wholesome everyday meals.",
+  "seo": { "title": "Buy Gahat Dal Online | Kulthi Horse Gram | Vaidyam", "description": "Shop Vaidyam Gahat Dal, also known as Kulthi or horse gram, in 500 g, 1 kg and 5 kg packs with delivery across India.", "imageAlt": "Vaidyam Gahat Dal Kulthi horse gram pack" }
+},
+{
+  "slug": "pahadi-masala-kit",
+  "name": "Pahadi Masala Kit",
+  "price": "₹399",
+  "startingPrice": 399,
+  "variants": [
+    { "label": "Starter Kit (3 jars)", "mrp": 499, "price": 399 },
+    { "label": "Family Kit (5 jars)", "mrp": 899, "price": 699 },
+    { "label": "Complete Kit (8 jars)", "mrp": 1399, "price": 1099 }
+  ],
+  "desktopImage": "pahadi-masala-kit.png",
+  "mobileImage": "pahadi-masala-kit.png",
+  "category": "Pahadi Spices & Kits",
+  "tags": ["pahadi masala", "jakhiya", "jakhya", "lakhori chilli", "bhang salt", "hemp salt", "spices", "uttarakhand", "food"],
+  "productType": "wellness",
+  "stockStatus": "In stock",
+  "featured": true,
+  "shortDescription": "A curated collection of traditional Uttarakhand flavours, including Jakhiya, Lakhori chilli, Bhang salt, and other selected Pahadi spices. Kit contents vary by selected size.",
+  "seo": { "title": "Buy Pahadi Masala Kit Online | Uttarakhand Spices", "description": "Shop a Pahadi Masala Kit featuring Jakhiya, Lakhori chilli, Bhang salt and selected Uttarakhand spices in three kit sizes.", "imageAlt": "Pahadi Masala Kit with traditional Uttarakhand spices" }
+}
+  
+]

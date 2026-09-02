@@ -1,0 +1,119 @@
+[
+{
+  "id": 1,
+  "name": "Prafull Sharma",
+  "qualification": [
+    "MCA , BCA"
+  ],
+  "designation": "Managing Director",
+  "specialization": [
+    "Healthcare Management",
+    "Hospital Operations & Administration",
+    "Digital Healthcare Solutions",
+    "Technology & Digital Transformation",
+    "Custom CRM & ERP Solutions",
+    "Software & Business Automation",
+    "AI Integration & Automation",
+    "Strategic Business Development"
+  ],
+  "image": "Prafull.png",
+  "shortBio": "Managing Director with a strong technology background and 6 years of experience in software development, focused on driving efficient hospital operations, digital transformation and cost-effective technology solutions.",
+  "description": [
+   "Prafull Sharma is the Managing Director of the organization, responsible for providing strategic leadership and overseeing the overall growth and development of the hospital.",
+
+"With a strong focus on healthcare management and organizational development, he works towards maintaining efficient operations, improving patient services and supporting a high standard of care across the organization.",
+
+"His responsibilities include strategic planning, business development, team coordination, operational management and identifying opportunities to improve healthcare services and patient experiences.",
+
+"As Managing Director, he focuses on building a patient-centered organization, strengthening healthcare services, supporting the team and driving the long-term growth and development of the hospital."
+  ],
+  "approach": [
+   "Patient-focused healthcare management",
+  "Efficient and ethical hospital operations",
+  "Quality-focused healthcare services",
+  "Strategic planning and organizational growth",
+  "Team leadership and collaboration",
+  "Improved patient experience",
+  "Continuous improvement in healthcare services"
+  ],
+  "consultation": {
+    "online": true,
+    "inClinic": false
+  },
+  "featured": true
+},
+ 
+ {
+    "id": 3,
+    "name": "Dr. Naman Singhal",
+    "qualification": [
+      "BAMS"
+    ],
+    "designation": "Ayurvedic Physician",
+    "specialization": [
+      "General Ayurveda",
+      "Preventive Healthcare",
+      "Holistic Wellness",
+      "Hypertension",
+      "Fever",
+      "Infection",
+      "Diabetes",
+      "Vomiting & Loose Stools"
+    ],
+    "image": "Naman.png",
+    "shortBio": "A dedicated Ayurvedic physician committed to personalized care and sustainable wellness.",
+    "description": [
+      "Dr. Naman Singhal is a dedicated Ayurvedic physician providing personalized and holistic healthcare.",
+      "His approach combines traditional Ayurvedic principles with a patient-centered approach to support long-term health and well-being.",
+      "He focuses on helping patients understand their health needs and adopt sustainable Ayurvedic lifestyle practices for better overall wellness.",
+      "He provides authentic Ayurvedic treatments integrated with a modern scientific approach for effective and satisfactory outcomes."
+    ],
+    "approach": [
+      "Patient-centered consultation",
+      "Preventive healthcare",
+      "Ayurvedic lifestyle guidance",
+      "Holistic wellness",
+      "Integrated Ayurvedic & modern approach"
+    ],
+    "consultation": {
+      "online": true,
+      "inClinic": false
+    },
+    "featured": false
+},
+{
+  "id": 4,
+  "name": "Dr Shivam Pant",
+  "qualification": [
+    "BAMS , PG Scholar (Ay)"
+  ],
+  "designation": "Ayurvedic Physician",
+  "specialization": [
+    "Personalized Ayurvedic Treatment",
+    "Disease-Specific Ayurvedic Medicine Formulation",
+    "Individualized Treatment Planning",
+    "Ayurvedic Medicine & Therapeutics",
+    "Dietary & Lifestyle Management"
+  ],
+  "image": "Pant.png",
+  "shortBio": "An Ayurvedic physician specializing in personalized treatment, disease-specific Ayurvedic medicine formulation, and individualized therapeutic care.",
+  "description": [
+    "Dr. Shivam Pant is an Ayurvedic physician with a focused approach to personalized and disease-specific Ayurvedic healthcare.",
+    "He specializes in developing individualized treatment protocols and selecting or formulating Ayurvedic medicines based on the patient's clinical condition, presenting symptoms, individual requirements, and Ayurvedic assessment.",
+    "His clinical approach integrates classical Ayurvedic principles with systematic patient assessment, appropriate therapeutic planning, personalized medicine selection, and guidance on diet and lifestyle to support comprehensive patient care."
+  ],
+  "approach": [
+    "Personalized Ayurvedic consultation",
+    "Disease-specific treatment planning",
+    "Individualized Ayurvedic medicine formulation",
+    "Personalized medicine selection",
+    "Dietary and lifestyle guidance",
+    "Patient-specific therapeutic care"
+  ],
+  "consultation": {
+    "online": true,
+    "inClinic": false
+  },
+  "featured": false
+}
+]

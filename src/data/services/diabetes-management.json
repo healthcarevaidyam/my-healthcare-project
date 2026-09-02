@@ -1,0 +1,150 @@
+{
+  "slug": "diabetes-management",
+
+  "title": "Ayurvedic Diabetes Management",
+
+  "subtitle": "Personalized Diet, Lifestyle & Wellness Support",
+
+  "metaTitle": "Ayurvedic Diabetes Management in India | Diet & Lifestyle Support | Vaidyam Healthcare",
+
+  "metaDescription": "Explore Ayurvedic diabetes management in India with personalized diet planning, lifestyle guidance, wellness support and complementary Ayurvedic care alongside appropriate medical treatment.",
+
+  "summary": "Our Ayurvedic approach to diabetes management focuses on personalized diet, lifestyle and wellness guidance to support healthy blood sugar management and overall wellbeing. Ayurvedic care can be used as complementary support alongside appropriate medical care and regular monitoring.",
+
+  "highlights": [
+    "Personalized diabetes wellness assessment",
+    "Diet and nutrition guidance",
+    "Lifestyle management support",
+    "Ayurvedic wellness guidance",
+    "Personalized daily routine planning",
+    "Regular progress guidance"
+  ],
+
+  "problems": [
+    {
+      "slug": "type-2-diabetes",
+      "title": "Type 2 Diabetes",
+      "description": "Personalized lifestyle, diet and wellness support for people managing type 2 diabetes alongside their prescribed medical care."
+    },
+    {
+      "slug": "prediabetes",
+      "title": "Prediabetes",
+      "description": "Lifestyle and dietary guidance focused on developing healthier habits and supporting metabolic wellness."
+    },
+    {
+      "slug": "high-blood-sugar",
+      "title": "High Blood Sugar",
+      "description": "Personalized lifestyle and dietary support for people managing elevated blood sugar levels under appropriate medical supervision."
+    },
+    {
+      "slug": "diabetes-lifestyle-management",
+      "title": "Diabetes Lifestyle Management",
+      "description": "Guidance on diet, physical activity, sleep, stress management and daily routines for comprehensive diabetes care."
+    }
+  ],
+
+  "symptoms": [
+    "Increased thirst",
+    "Frequent urination",
+    "Increased hunger",
+    "Fatigue",
+    "Blurred vision",
+    "Slow-healing wounds",
+    "Unexplained weight changes",
+    "Recurring infections"
+  ],
+
+  "possibleCauses": [
+    "Family history and genetic factors",
+    "Excess body weight",
+    "Physical inactivity",
+    "Unbalanced dietary patterns",
+    "Insulin resistance",
+    "Age-related metabolic changes",
+    "Lifestyle factors"
+  ],
+
+  "ayurvedicApproach": {
+    "title": "Ayurvedic Approach to Diabetes Management",
+
+    "description": "Ayurvedic diabetes care focuses on individualized diet, lifestyle and wellness recommendations based on the person's health, constitution and current condition. These recommendations are intended as complementary support and should not replace prescribed diabetes medication or medical monitoring.",
+
+    "therapies": [
+      "Personalized Ayurvedic consultation",
+      "Dietary and nutrition guidance",
+      "Daily routine recommendations",
+      "Lifestyle management guidance",
+      "Ayurvedic herbal support when appropriate",
+      "Stress management guidance",
+      "Physical activity recommendations"
+    ]
+  },
+
+  "benefits": [
+    "Better understanding of healthy lifestyle habits",
+    "Personalized dietary guidance",
+    "Support for healthy blood sugar management",
+    "Improved daily routine",
+    "Support for healthy weight management",
+    "Lifestyle and wellness planning",
+    "Long-term diabetes self-management support"
+  ],
+
+  "treatmentSteps": [
+    "Initial health and diabetes assessment",
+    "Review of medical history and current treatment",
+    "Diet and lifestyle evaluation",
+    "Personalized Ayurvedic wellness planning",
+    "Dietary and daily routine recommendations",
+    "Lifestyle and physical activity guidance",
+    "Regular progress monitoring and follow-up"
+  ],
+
+  "whoCanBenefit": [
+    "People managing type 2 diabetes",
+    "People with prediabetes",
+    "People looking for personalized diabetes diet guidance",
+    "People wanting support with healthier lifestyle habits",
+    "People seeking complementary Ayurvedic wellness support",
+    "People looking for structured long-term lifestyle guidance"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Ayurvedic diabetes management?",
+      "answer": "Ayurvedic diabetes management focuses on personalized diet, lifestyle and wellness recommendations that may complement conventional diabetes care. It should be used alongside appropriate medical treatment and regular blood sugar monitoring."
+    },
+    {
+      "question": "Can Ayurveda cure diabetes?",
+      "answer": "Ayurveda should not be presented as a cure for diabetes. Ayurvedic lifestyle and wellness approaches may provide complementary support, but prescribed diabetes treatment and medical monitoring should continue as advised by a qualified healthcare professional."
+    },
+    {
+      "question": "Can Ayurvedic treatment help manage blood sugar?",
+      "answer": "Personalized diet, physical activity, lifestyle and wellness guidance may support healthy blood sugar management. Any Ayurvedic herbal products should be discussed with your healthcare provider, particularly if you take diabetes medication."
+    },
+    {
+      "question": "What diet is recommended for diabetes in Ayurveda?",
+      "answer": "Dietary recommendations should be personalized according to the individual's health, diabetes status, medications, lifestyle and nutritional needs. A qualified practitioner can provide individualized guidance."
+    },
+    {
+      "question": "Can I stop my diabetes medicine during Ayurvedic treatment?",
+      "answer": "No. Do not stop, reduce or change prescribed diabetes medication without speaking with the healthcare professional who manages your diabetes."
+    },
+    {
+      "question": "Is Ayurvedic diabetes management suitable for everyone?",
+      "answer": "The appropriate approach depends on the individual's health, diabetes type, medications and other medical factors. A qualified healthcare professional should assess the person before making changes to their treatment or lifestyle plan."
+    },
+    {
+      "question": "How long does diabetes management take?",
+      "answer": "Diabetes management is generally an ongoing process rather than a short-term treatment. The appropriate follow-up schedule depends on the individual's condition, treatment plan and blood sugar monitoring."
+    },
+    {
+      "question": "How much does Ayurvedic diabetes management cost?",
+      "answer": "The listed price for this service ranges from ₹500 to ₹8,000. The final cost depends on the consultation, care plan and services recommended."
+    }
+  ],
+
+  "isCore": false,
+
+  "price": "500 - 8000"
+}

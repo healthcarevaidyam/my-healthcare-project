@@ -17,7 +17,7 @@ describe("Store", () => {
     expect(screen.getByRole("heading", { name: "Ayurveda Store" })).toBeInTheDocument();
     expect(screen.getByText("Medical products")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Ayurvedic medical products" })).toBeInTheDocument();
-    expect(screen.getByText("Infertility Management Kit")).toBeInTheDocument();
+    expect(screen.getByText("Women Wellness Kit")).toBeInTheDocument();
     expect(screen.getByText("₹1,499–₹3,100")).toBeInTheDocument();
   });
 

@@ -14,7 +14,7 @@ const imageModules = import.meta.glob(
     eager: true,
     import: "default",
   }
-);
+) as Record<string, string>;
 
 // Create a map with lowercase filenames for consistent matching
 const doctorImageMap = Object.fromEntries(

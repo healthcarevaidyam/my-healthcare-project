@@ -296,7 +296,7 @@ const Index = () => {
               src={currentHeroImage}
               alt="Ayurvedic herbs and healing oils"
               loading="eager"
-              fetchPriority="high"
+              {...{ fetchpriority: "high" }}
               decoding="async"
               className={`w-full h-full object-cover object-center transition-opacity duration-700 ${heroImageLoaded ? "opacity-100" : "opacity-0"}`}
               key={currentHeroImage}

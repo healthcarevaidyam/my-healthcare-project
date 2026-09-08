@@ -1,44 +1,45 @@
 [
- 
 {
-  "id": 1,
-  "name": "Prafull Sharma",
-  "qualification": [
-     
-    ],
-  "designation": "Managing Director",
-  "specialization": [
-    "Healthcare Leadership & Governance",
-    "Hospital Operations & Administration",
-    "Digital Healthcare Transformation",
-    "Strategic Planning & Business Development",
-    "Technology-Led Process Innovation",
-    "Patient Experience & Service Excellence",
-    "Organizational Growth & Team Leadership"
-  ],
-  "image": "Prafull.png",
-  "shortBio": "Managing Director providing strategic leadership to strengthen hospital operations, elevate patient experiences and guide the organization’s sustainable growth through responsible management and technology-led innovation.",
-  "description": [
-    "Prafull Sharma serves as the Managing Director of the organization, providing strategic direction and leadership across its healthcare services, operations and long-term development.",
-    "He oversees organizational planning, hospital administration, service quality and cross-functional coordination to ensure that every department works toward a shared standard of patient-centered care.",
-    "His leadership focuses on strengthening operational systems, enabling teams, improving patient experiences and integrating appropriate technology to support efficient and accessible healthcare delivery.",
-    "As Managing Director, he remains committed to responsible governance, ethical operations and building a trusted healthcare institution prepared to serve the evolving needs of patients and the community."
-  ],
-  "approach": [
-    "Patient-centered leadership and decision-making",
-    "Responsible governance and ethical operations",
-    "Quality-driven healthcare delivery",
-    "Efficient hospital administration",
-    "Collaborative and accountable team culture",
-    "Technology-enabled service improvement",
-    "Sustainable organizational growth"
-  ],
-  "consultation": {
-    "online": false,
-    "inClinic": false
-  },
-  "featured": true
+"id": 1,
+"name": "Prafull Sharma",
+"qualification": [
+
+],
+"designation": "Managing Director",
+"specialization": [
+"Healthcare Leadership & Governance",
+"Hospital Operations & Administration",
+"Digital Healthcare Transformation",
+"Strategic Planning & Business Development",
+"Technology-Led Process Innovation",
+"Patient Experience & Service Excellence",
+"Organizational Growth & Team Leadership"
+],
+"image": "Prafull.png",
+"shortBio": "Managing Director providing strategic leadership to strengthen hospital operations, elevate patient experiences and guide the organization’s sustainable growth through responsible management and technology-led innovation.",
+"description": [
+"Prafull Sharma serves as the Managing Director of the organization, providing strategic direction and leadership across its healthcare services, operations and long-term development.",
+"He oversees organizational planning, hospital administration, service quality and cross-functional coordination to ensure that every department works toward a shared standard of patient-centered care.",
+"His leadership focuses on strengthening operational systems, enabling teams, improving patient experiences and integrating appropriate technology to support efficient and accessible healthcare delivery.",
+"As Managing Director, he remains committed to responsible governance, ethical operations and building a trusted healthcare institution prepared to serve the evolving needs of patients and the community."
+],
+"approach": [
+"Patient-centered leadership and decision-making",
+"Responsible governance and ethical operations",
+"Quality-driven healthcare delivery",
+"Efficient hospital administration",
+"Collaborative and accountable team culture",
+"Technology-enabled service improvement",
+"Sustainable organizational growth"
+],
+"consultation": {
+"online": false,
+"inClinic": false
 },
+"featured": true
+},
+
+ 
  {
     "id": 3,
     "name": "Dr. Naman Singhal",

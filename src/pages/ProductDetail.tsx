@@ -102,7 +102,7 @@ const ProductDetail = () => {
 
       <div className="mt-6 grid gap-8 rounded-3xl border bg-background p-5 shadow-sm md:grid-cols-2 md:p-8">
         <div className="overflow-hidden rounded-2xl bg-secondary/40">
-          <img src={image} alt={product.seo?.imageAlt ?? product.name} className="aspect-square h-full w-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={image} alt={product.seo?.imageAlt ?? product.name} className="aspect-square h-full w-full object-cover" {...{ fetchpriority: "high" }} decoding="async" />
         </div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-wrap gap-2">

@@ -9,7 +9,7 @@ describe("Layout banner behavior", () => {
     render(
       React.createElement(
         MemoryRouter,
-        { initialEntries: ["/services/arthritis-treatment"] },
+        { initialEntries: ["/services/arthritis-treatment/"] },
         React.createElement(
           Routes,
           null,
@@ -26,5 +26,28 @@ describe("Layout banner behavior", () => {
     );
 
     expect(screen.getByRole("img", { name: "Our Services banner" })).toBeInTheDocument();
+  });
+
+  it("shows the about banner on a refreshed about page with a trailing slash", () => {
+    render(
+      React.createElement(
+        MemoryRouter,
+        { initialEntries: ["/about/"] },
+        React.createElement(
+          Routes,
+          null,
+          React.createElement(
+            Route,
+            { element: React.createElement(Layout) },
+            React.createElement(Route, {
+              path: "/about",
+              element: React.createElement("div", null, "About page"),
+            })
+          )
+        )
+      )
+    );
+
+    expect(screen.getByRole("img", { name: "About Us banner" })).toBeInTheDocument();
   });
 });

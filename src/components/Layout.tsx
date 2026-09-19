@@ -52,20 +52,21 @@ const mobileBanners: Record<string, string> = {
 const Layout = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const isAiDoctorOpen = location.pathname === "/aidoctor" || location.pathname === "/aidoctor/";
+  const normalizedPath = location.pathname.replace(/\/+$/, "") || "/";
+  const isAiDoctorOpen = normalizedPath === "/aidoctor" || normalizedPath === "/aidoctor/";
 
   const bannerKey = (() => {
-    if (location.pathname === "/") return "/";
-    if (location.pathname.startsWith("/services/")) return "/services";
-    if (location.pathname.startsWith("/store/")) return "/store";
-    return location.pathname;
+    if (normalizedPath === "/") return "/";
+    if (normalizedPath.startsWith("/services/")) return "/services";
+    if (normalizedPath.startsWith("/store/")) return "/store";
+    return normalizedPath;
   })();
 
   const bannerTitle =
-    pageTitles[bannerKey] ?? pageTitles[location.pathname] ?? "Ayurveda Wellness";
+    pageTitles[bannerKey] ?? pageTitles[normalizedPath] ?? "Ayurveda Wellness";
 
-  const desktopBanner = desktopBanners[bannerKey] ?? desktopBanners[location.pathname];
-  const mobileBanner = mobileBanners[bannerKey] ?? mobileBanners[location.pathname];
+  const desktopBanner = desktopBanners[bannerKey] ?? desktopBanners[normalizedPath];
+  const mobileBanner = mobileBanners[bannerKey] ?? mobileBanners[normalizedPath];
 
   // Render the shared banner for public pages, including dynamic detail routes.
   const showBanner = Boolean(desktopBanner);

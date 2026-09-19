@@ -1,0 +1,6 @@
+functions:
+  - path: /api/*
+    function: api
+
+# Cloudflare Pages automatic SPA routing
+# This file enables client-side routing for single-page apps

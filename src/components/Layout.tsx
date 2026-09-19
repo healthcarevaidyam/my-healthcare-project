@@ -53,16 +53,22 @@ const Layout = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isAiDoctorOpen = location.pathname === "/aidoctor" || location.pathname === "/aidoctor/";
-  const isServiceDetail = location.pathname.startsWith("/services/");
+
+  const bannerKey = (() => {
+    if (location.pathname === "/") return "/";
+    if (location.pathname.startsWith("/services/")) return "/services";
+    if (location.pathname.startsWith("/store/")) return "/store";
+    return location.pathname;
+  })();
+
   const bannerTitle =
-    pageTitles[location.pathname] ?? "Ayurveda Wellness";
+    pageTitles[bannerKey] ?? pageTitles[location.pathname] ?? "Ayurveda Wellness";
 
-  const desktopBanner = desktopBanners[location.pathname];
-  const mobileBanner = mobileBanners[location.pathname];
+  const desktopBanner = desktopBanners[bannerKey] ?? desktopBanners[location.pathname];
+  const mobileBanner = mobileBanners[bannerKey] ?? mobileBanners[location.pathname];
 
-  // Render the shared banner only when the current route has a configured image.
-  // This prevents an empty fixed-height header on policy and other custom pages.
-  const showBanner = Boolean(desktopBanner) && !isServiceDetail;
+  // Render the shared banner for public pages, including dynamic detail routes.
+  const showBanner = Boolean(desktopBanner);
 
   useEffect(() => {
     window.scrollTo({

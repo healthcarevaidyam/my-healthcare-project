@@ -81,8 +81,8 @@ const ServiceDetail = () => {
   };
 
   const serviceImage = isMobile
-    ? extendedService.imageMobile
-    : extendedService.imageDesktop;
+    ? extendedService.imageMobile ?? extendedService.imageDesktop
+    : extendedService.imageDesktop ?? extendedService.imageMobile;
 
   return (
     <div className="min-h-screen bg-background">

@@ -67,9 +67,9 @@ const Layout = () => {
 
   const desktopBanner = desktopBanners[bannerKey] ?? desktopBanners[normalizedPath];
   const mobileBanner = mobileBanners[bannerKey] ?? mobileBanners[normalizedPath];
+  const isServiceDetail = normalizedPath.startsWith("/services/");
 
-  // Render the shared banner for public pages, including dynamic detail routes.
-  const showBanner = Boolean(desktopBanner);
+  const showBanner = !isServiceDetail && Boolean(desktopBanner);
 
   useEffect(() => {
     window.scrollTo({

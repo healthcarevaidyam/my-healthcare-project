@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Mic, MicOff, Send } from "lucide-react";
+import { X, Mic, MicOff, Send, MessageCircle } from "lucide-react";
 import { DoctorAvatar } from "./DoctorAvatar";
 import { VoiceRecorder } from "./VoiceRecorder";
 import { TypingIndicator } from "./TypingIndicator";
@@ -173,6 +173,21 @@ export const AiDoctorModal = ({ isOpen, onClose }: AiDoctorModalProps) => {
                     <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                       I'm here to understand your health concerns and guide you with Ayurvedic wisdom.
                     </p>
+                  </div>
+
+                  <div className="w-full max-w-xs rounded-2xl border border-amber-200 bg-amber-50 p-4 text-left">
+                    <p className="text-xs leading-relaxed text-amber-900">
+                      This AI Doctor is in development and is only a prototype. Please do not rely on its suggestions as medical advice. Contact a professional doctor before trying any treatment.
+                    </p>
+                    <a
+                      href="https://wa.me/918377085976?text=Hello%20Vaidyam%20Healthcare%20Team%2C%20I%20would%20like%20to%20speak%20with%20a%20professional%20doctor."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800"
+                    >
+                      <MessageCircle size={16} />
+                      Contact a professional doctor on WhatsApp
+                    </a>
                   </div>
 
                   <button

@@ -34,7 +34,7 @@ const createStructuredData = (
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+918377085976",
+        telephone: "+917818085195",
         contactType: "customer service",
         areaServed: "IN",
         availableLanguage: ["English"],
@@ -51,7 +51,7 @@ const createStructuredData = (
     "@type": "MedicalBusiness",
     name: siteName,
     url: baseUrl,
-    telephone: "+918377085976",
+    telephone: "+917818085195",
     description: seo.description,
     address: {
       "@type": "PostalAddress",

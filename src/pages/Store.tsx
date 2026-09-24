@@ -308,7 +308,7 @@ const Store = () => {
               <p className="mt-2 text-sm leading-6 text-primary-foreground/80">Ayurvedic care is personal. Speak with our team before ordering a condition-specific wellness kit.</p></div>
           </div>
           <Button asChild variant="secondary" className="mt-6 w-full rounded-xl lg:mt-0 lg:w-auto">
-            <a href="tel:+918377085976"><Stethoscope className="mr-2 h-4 w-4" />Talk to our team</a>
+            <a href="tel:+917818085195"><Stethoscope className="mr-2 h-4 w-4" />Talk to our team</a>
           </Button>
         </section>
         <p className="mx-auto mt-8 max-w-4xl text-center text-xs leading-5 text-muted-foreground">

@@ -41,23 +41,23 @@
   {
     "slug": "giloy-powder",
     "name": "Giloy Powder",
-    "price": "₹149",
-    "startingPrice": 149,
+    "price": "₹79",
+    "startingPrice": 79,
     "variants": [
       {
-        "label": "250 g",
-        "mrp": 349,
-        "price": 149
+        "label": "200 g",
+        "mrp": 199,
+        "price": 79
       },
       {
         "label": "500 g",
-        "mrp": 649,
-        "price": 269
+        "mrp": 500,
+        "price": 199
       },
       {
         "label": "1 kg",
-        "mrp": 1199,
-        "price": 499
+        "mrp": 999,
+        "price": 399
       }
     ],
     "desktopImage": "giloy-powder.png",
@@ -118,23 +118,23 @@
   {
     "slug": "herbal-achar",
     "name": "Traditional Herbal Achar",
-    "price": "₹129",
-    "startingPrice": 129,
+    "price": "₹99",
+    "startingPrice": 99,
     "variants": [
       {
         "label": "250 g",
-        "mrp": 249,
-        "price": 129
+        "mrp": 149,
+        "price": 99
       },
       {
         "label": "500 g",
-        "mrp": 449,
-        "price": 239
+        "mrp": 299,
+        "price": 159
       },
       {
         "label": "1 kg",
-        "mrp": 799,
-        "price": 449
+        "mrp": 399,
+        "price": 349
       }
     ],
     "desktopImage": "herbal-achar.png",
@@ -156,23 +156,23 @@
   {
     "slug": "natural-honey",
     "name": "Natural Wellness Honey",
-    "price": "₹119",
-    "startingPrice": 119,
+    "price": "₹199",
+    "startingPrice": 199,
     "variants": [
       {
         "label": "250 g",
         "mrp": 299,
-        "price": 119
+        "price": 199
       },
       {
         "label": "500 g",
-        "mrp": 549,
-        "price": 219
+        "mrp": 499,
+        "price": 349
       },
       {
         "label": "1 kg",
-        "mrp": 999,
-        "price": 399
+        "mrp": 799,
+        "price": 699
       }
     ],
     "desktopImage": "natural-honey.png",
@@ -194,23 +194,23 @@
   {
     "slug": "triphala-powder",
     "name": "Triphala Powder",
-    "price": "₹149",
-    "startingPrice": 149,
+    "price": "₹99",
+    "startingPrice": 99,
     "variants": [
       {
         "label": "250 g",
         "mrp": 349,
-        "price": 149
+        "price": 99
       },
       {
         "label": "500 g",
-        "mrp": 649,
-        "price": 269
+        "mrp": 699,
+        "price": 199
       },
       {
         "label": "1 kg",
-        "mrp": 1199,
-        "price": 499
+        "mrp": 999,
+        "price": 399
       }
     ],
     "desktopImage": "triphala-powder.png",
@@ -234,23 +234,23 @@
   {
     "slug": "kesh-vardhak",
     "name": "Kesh Vardhak",
-    "price": "₹229",
-    "startingPrice": 229,
+    "price": "₹99",
+    "startingPrice": 99,
     "variants": [
       {
         "label": "250 g",
-        "mrp": 349,
-        "price": 229
+        "mrp": 149,
+        "price": 99
       },
       {
         "label": "500 g",
-        "mrp": 649,
-        "price": 399
+        "mrp": 349,
+        "price": 299
       },
       {
         "label": "1 kg",
-        "mrp": 1199,
-        "price": 749
+        "mrp": 899,
+        "price": 649
       }
     ],
     "desktopImage": "kesh-vardhak.png",
@@ -286,13 +286,13 @@
       },
       {
         "label": "500 ml",
-        "mrp": 349,
+        "mrp": 399,
         "price": 179
       },
       {
         "label": "1 litre",
-        "mrp": 599,
-        "price": 329
+        "mrp": 799,
+        "price": 249
       }
     ],
     "desktopImage": "buransh-juice.png",
@@ -328,23 +328,23 @@
   {
     "slug": "malta-juice",
     "name": "Malta Juice",
-    "price": "₹99",
-    "startingPrice": 99,
+    "price": "₹59",
+    "startingPrice": 59,
     "variants": [
       {
         "label": "250 ml",
+        "mrp": 99,
+        "price": 59
+      },
+      {
+        "label": "500 ml",
         "mrp": 199,
         "price": 99
       },
       {
-        "label": "500 ml",
-        "mrp": 349,
-        "price": 179
-      },
-      {
         "label": "1 litre",
-        "mrp": 599,
-        "price": 329
+        "mrp": 399,
+        "price": 149
       }
     ],
     "desktopImage": "malta-juice.png",
@@ -422,8 +422,8 @@
       },
       {
         "label": "1 kg",
-        "mrp": 249,
-        "price": 109
+        "mrp": 299,
+        "price": 119
       },
       {
         "label": "5 kg",
@@ -455,23 +455,23 @@
   {
     "slug": "pahadi-rajma",
     "name": "Pahadi Rajma",
-    "price": "₹149",
-    "startingPrice": 149,
+    "price": "₹99",
+    "startingPrice": 99,
     "variants": [
       {
         "label": "500 g",
-        "mrp": 249,
-        "price": 149
+        "mrp": 199,
+        "price": 99
       },
       {
         "label": "1 kg",
-        "mrp": 449,
-        "price": 279
+        "mrp": 399,
+        "price": 199
       },
       {
         "label": "5 kg",
-        "mrp": 1999,
-        "price": 1299
+        "mrp": 999,
+        "price": 499
       }
     ],
     "desktopImage": "pahadi-rajma.png",
@@ -498,23 +498,23 @@
   {
     "slug": "gahat-dal",
     "name": "Gahat Dal",
-    "price": "₹149",
-    "startingPrice": 149,
+    "price": "₹79",
+    "startingPrice": 79,
     "variants": [
       {
         "label": "500 g",
-        "mrp": 249,
-        "price": 149
+        "mrp": 149,
+        "price": 79
       },
       {
         "label": "1 kg",
-        "mrp": 499,
-        "price": 279
+        "mrp": 299,
+        "price": 159
       },
       {
         "label": "5 kg",
-        "mrp": 2199,
-        "price": 1299
+        "mrp": 1499,
+        "price": 799
       }
     ],
     "desktopImage": "gahat-dal.png",

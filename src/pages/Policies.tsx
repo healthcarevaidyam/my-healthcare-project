@@ -196,9 +196,9 @@ const Policies = ({ type }: PoliciesProps) => {
                 <Mail className="h-5 w-5 shrink-0" aria-hidden="true" />
                 <span className="break-all">healthcarevaidyam@gmail.com</span>
               </a>
-              <a href="tel:+918377085976" className="flex items-center gap-3 rounded-xl bg-primary-foreground/10 p-3 text-sm hover:bg-primary-foreground/15">
+              <a href="tel:+917818085195" className="flex items-center gap-3 rounded-xl bg-primary-foreground/10 p-3 text-sm hover:bg-primary-foreground/15">
                 <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
-                +91 83770 85976
+                +91 78180 85195
               </a>
             </div>
             <Link to="/contact" className="mt-6 flex items-center justify-between rounded-xl bg-background px-4 py-3 font-semibold text-primary transition-transform hover:-translate-y-0.5">

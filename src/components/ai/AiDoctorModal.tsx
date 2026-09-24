@@ -180,7 +180,7 @@ export const AiDoctorModal = ({ isOpen, onClose }: AiDoctorModalProps) => {
                       This AI Doctor is in development and is only a prototype. Please do not rely on its suggestions as medical advice. Contact a professional doctor before trying any treatment.
                     </p>
                     <a
-                      href="https://wa.me/918377085976?text=Hello%20Vaidyam%20Healthcare%20Team%2C%20I%20would%20like%20to%20speak%20with%20a%20professional%20doctor."
+                      href="https://wa.me/917818085195?text=Hello%20Vaidyam%20Healthcare%20Team%2C%20I%20would%20like%20to%20speak%20with%20a%20professional%20doctor."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800"

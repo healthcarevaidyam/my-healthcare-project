@@ -35,7 +35,7 @@ const policies: Record<PolicyType, { title: string; intro: string; sections: Arr
     sections: [
       { heading: "Consultations", text: "Contact us as early as possible if you need to cancel or reschedule. Eligibility for a refund depends on whether the appointment has been confirmed or the consultation has begun." },
       { heading: "Product orders", text: "Contact us promptly with your order details. Eligibility depends on whether the order has been confirmed, packed, dispatched, delivered, damaged, or opened." },
-      { heading: "How to request help", text: "Email healthcarevaidyam@gmail.com or call +91-8377085976 with your name, order or appointment details, and the reason for your request." },
+      { heading: "How to request help", text: "Email healthcarevaidyam@gmail.com or call +91-7818085195 with your name, order or appointment details, and the reason for your request." },
     ],
   },
   shipping: {
@@ -45,7 +45,7 @@ const policies: Record<PolicyType, { title: string; intro: string; sections: Arr
       { heading: "Service area", text: "Orders are currently accepted for delivery within India, subject to product and courier availability at the destination PIN code." },
       { heading: "Processing and delivery", text: "Processing time and the estimated delivery period are confirmed after an order is reviewed. Delays may occur because of courier, weather, public holidays, or address issues." },
       { heading: "Delivery details", text: "Customers are responsible for providing a complete address and reachable Indian mobile number. Additional charges may apply if a parcel must be resent because the supplied details were incomplete or incorrect." },
-      { heading: "Order support", text: "For shipping questions, email healthcarevaidyam@gmail.com or call +91-8377085976." },
+      { heading: "Order support", text: "For shipping questions, email healthcarevaidyam@gmail.com or call +91-7818085195." },
     ],
   },
 };

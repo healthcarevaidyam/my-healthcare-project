@@ -23,7 +23,7 @@ const Contact = () => {
               {[
                 // { icon: MapPin, title: "Clinic Address", lines: ["House No. 88, Village & P.O, Tehsil, Sauni, Ranikhet, Uttarakhand 263663, India"] },
                  { icon: MapPin, title: "Clinic Address", lines: ["Sauni, Ranikhet, Uttarakhand 263663, India"] },
-                { icon: Phone, title: "Phone", lines: ["+91-8377085976"] },
+                { icon: Phone, title: "Phone", lines: ["+91-7818085195"] },
                 { icon: Mail, title: "Email", lines: ["healthcarevaidyam@gmail.com"] },
                 { icon: Clock, title: "Working Hours", lines: ["Mon – Sat: 9:00 AM – 7:00 PM", "Sunday: By Appointment Only"] },
               ].map((item) => (
